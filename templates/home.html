@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <!-- Page content -->
+
+
+
+ 
+
+ <div class="container mt-5">
+  <h1 class="mb-4">Bem-vindo ao Sistema de Agendamento de Aulas</h1>
+  <p>Este sistema foi desenvolvido para facilitar o agendamento e a visualização de aulas realizadas via Google Meet. O calendário mostra as aulas marcadas para cada dia, e você pode navegar entre os meses usando os botões "Mês Anterior" e "Próximo Mês".</p>
+  
+  <h3 class="mt-4">Funcionalidades:</h3>
+  <ul>
+    <li><strong>Visualização de Aulas:</strong> Veja todas as aulas agendadas organizadas por dia.</li>
+    <li><strong>Agendamento de Aulas:</strong> Cadastre novas aulas clicando em “Nova Aula”.</li>
+    <li><strong>Responsividade:</strong> A interface é adaptável para dispositivos móveis.</li>
+  </ul>
+</div>
+
+   
+   <a href="{% url 'cal:calendar' %}" class="btn btn-primary mt-3">Ver Calendário</a>
+ </div>
+ 
+ 
+{% endblock %}
+
+
+
