@@ -1,0 +1,126 @@
+/* TABLE - Custom Styles */
+.vermelho {
+    background-color: #f2929c;
+    border-left: 4px solid #ffebee;
+}
+
+.amarelo {
+    background-color: #ffc107;
+    border-left: 4px solid #e9dcb7;
+}
+
+.verde {
+    background-color: #28a745;
+    border-left: 4px solid #a7d3b1;
+}
+
+.normal {
+    background-color: #0d6efd;
+    border-left: 4px solid #a3bfec !important;
+}
+
+/* Estilos personalizados */
+body {
+  padding-top: 56px;
+}
+
+/* Ajustes para o offcanvas em mobile */
+@media (max-width: 767.98px) {
+  .offcanvas {
+      width: 75%;
+  }
+  
+  .navbar-nav {
+      padding-top: 1rem;
+  }
+  
+  .nav-link {
+      padding: 0.5rem 1rem;
+      margin: 0.25rem 0;
+  }
+}
+
+/* Ajustes para o offcanvas */
+.offcanvas {
+  width: 280px;
+}
+
+/* Estilo para links ativos */
+.nav-link.active {
+  font-weight: 600;
+}
+
+/* Espaçamento para o conteúdo principal */
+main {
+  min-height: calc(100vh - 120px);
+}
+
+/* Rodapé fixo na parte inferior */
+footer {
+  background-color: #f8f9fa;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 767.98px) {
+  .card {
+      margin-bottom: 1rem;
+  }
+  
+  h1, h2, h3 {
+      word-wrap: break-word;
+  }
+  
+  .list-unstyled li {
+      margin-bottom: 0.5rem;
+  }
+}
+
+/* Melhoria para cards de deveres */
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Espaçamento melhorado */
+section {
+  padding: 1.5rem 0;
+}
+
+
+    /* Ajustes para mobile */
+    @media (max-width: 767.98px) {
+      .btn-sm {
+          padding: 0.25rem 0.5rem;
+          font-size: 0.875rem;
+      }
+      
+      
+      
+      .border-vermelho {
+          border-left-color: #f4727f !important;
+      }
+      
+      .border-amarelo {
+          border-left-color: #ffc107 !important;
+      }
+      .border-verde {
+        border-left-color: #28a745 !important;
+    }
+      
+      .border-normal {
+          border-left-color: #0d6efd !important;
+      }
+  }
+
+
+  .alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
