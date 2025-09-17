@@ -1,0 +1,42 @@
+{% extends 'base.html' %} <!-- Se tiver um template base -->
+
+{% block content %}
+<h1>Lista de Livros</h1>
+<!-- Bloco para exibir mensagens -->
+
+<p><a href="{% url 'cal:cria_livro' %}" class="btn btn-primary">Cadastrar Novo Livro</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome dos Livros</th>
+            <th>Matéria</th>
+            <th>Escola</th>
+
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for livro in livros %}
+            <tr>
+                <td>{{ livro.nome_livro }}</td>
+                <td>{{ livro.fk_materia.nome_materia }}</td>
+                <td>{{ livro.fk_escola.nome_escola }}</td>
+                <td>
+                    <a href="{% url 'cal:atualiza_livro' livro.pk %}" class="btn btn-warning"> <i class="fas fa-edit"></i>Editar</a>
+                    <a href="{% url 'cal:deleta_livro' livro.pk %}" class="btn btn-danger" 
+                    onclick="return confirm('Tem certeza que deseja deletar {{ livro.nome_livro }}? Esta ação é irreversível!');">
+                    <i class="fas fa-trash-alt"></i> Deletar
+                    </a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="2">Nenhuma livro cadastrado.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+  
+{% endblock %}
+

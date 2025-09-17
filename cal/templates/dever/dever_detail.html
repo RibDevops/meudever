@@ -1,0 +1,26 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Dever</title>
+
+
+</head>
+<body>
+    <header>
+        <h1>Detalhes do Dever</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>{{ cal.fk_materia.nome_materia }} - {{ cal.descricao }}</h2>
+            <p><strong>Professor:</strong> {{ cal.fk_professor.nome_professor }}</p>
+            <p><strong>Escola:</strong> {{ cal.fk_escola.nome_escola }}</p>
+            <p><strong>Livro:</strong> {{ cal.fk_livro.nome_livro }}</p>
+            <p><strong>Descrição:</strong> {{ cal.descricao }}</p>
+            <a href="{% url 'dever_list' %}" class="btn">Voltar para a Lista</a>
+        </div>
+    </div>
+</body>
+</html>

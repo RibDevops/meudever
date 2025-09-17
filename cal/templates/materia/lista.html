@@ -1,0 +1,36 @@
+{% extends 'base.html' %} <!-- Se tiver um template base -->
+
+{% block content %}
+<h1>Lista de Matérias</h1>
+
+<p><a href="{% url 'cal:cria_materia' %}" class="btn btn-primary">Cadastrar Nova Matéria</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome das Matérias</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for materia in materias %}
+            <tr>
+                <td>{{ materia.nome_materia }}</td>
+                <td>
+                    <a href="{% url 'cal:atualiza_materia' materia.pk %}" class="btn btn-warning"><i class="fas fa-edit"></i> Editar</a>
+                    <a href="{% url 'cal:deleta_materia' materia.pk %}" class="btn btn-danger"
+                    onclick="return confirm('Tem certeza que deseja deletar {{ materia.nome_materia }}? Esta ação é irreversível!');">
+                    <i class="fas fa-trash-alt"></i> Deletar
+                    </a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="2">Nenhuma matéria cadastrada.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}
+

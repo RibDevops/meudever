@@ -1,97 +1,139 @@
 {% extends 'base.html' %}
-{% load static %}
-
-{% block page_title %}Fazer Escala{% endblock %}
-
-{% block content_title %}Fazer Escala{% endblock %}
-
 {% block content %}
-<div class="clearfix mb-3">
-  <!-- <a class="btn btn-info left" href="{% url 'cal:calendar' %}"> Voltar para Calendário </a> -->
-</div>
+    
+    <div class="container">
+        <header>
+            <h1>Adicionar Novo Dever de Casa</h1>
+        </header>
+        
+            <form method="post" id="dever-form">
+                {% csrf_token %}
+                <label for="id_fk_escola">Escola:</label>
+                <select id="id_fk_escola" name="fk_escola" class="form-control">
+                    <option value="">Selecione uma Escola</option>
+                    {% for escola in escolas %}
+                        <option value="{{ escola.id }}">{{ escola.nome_escola }}</option>
+                    {% endfor %}
+                </select>
 
-{% if form.errors %}
-    {% for field in form %}
-        {% for error in field.errors %}
-            <div class="alert alert-danger">
-                {{ field.label }} <strong>{{ error|escape }}</strong>
-            </div>
-        {% endfor %}
-    {% endfor %}
-    {% for error in form.non_field_errors %}
-        <div class="alert alert-danger">
-            <strong>{{ error|escape }}</strong>
-        </div>
-    {% endfor %}
-{% endif %}
+                <label for="id_fk_turma">Turma:</label>
+                <select id="id_fk_turma" name="fk_turma" class="form-control">
+                    <option value="">Selecione uma Turma</option>
+                </select>
 
-<form method="post" class="mt-4">
-  {% csrf_token %}
-  <div class="form-group row">
-    {% for field in form %}
-    <div class="col-md-6 mb-3">
-      <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
-      {{ field }}
-      {% if field.help_text %}
-      <small class="form-text text-muted">{{ field.help_text }}</small>
-      {% endif %}
+                <label for="id_fk_professor">Professor:</label>
+                <select id="id_fk_professor" name="fk_professor" class="form-control">
+                    <option value="">Selecione um Professor</option>
+                </select>
+
+                <label for="id_fk_materia_display">Matéria:</label>
+                <!-- campo apenas para exibição (NÃO enviar ao servidor) -->
+                <input id="id_fk_materia_display" class="form-control" readonly>
+
+                <!-- campo escondido que realmente envia o id da matéria -->
+                <input type="hidden" id="id_fk_materia_id" name="fk_materia" value="">
+
+                <label for="id_fk_livro">Livro:</label>
+                <select id="id_fk_livro" name="fk_livro" class="form-control">
+                    <option value="">Selecione um Livro</option>
+                </select>
+
+                <label for="id_conteudo">Conteúdo Ministrado:</label>
+                <textarea id="id_conteudo" name="conteudo" class="form-control"></textarea>
+
+                <label for="id_dever">cal:</label>
+                <textarea id="id_dever" name="dever" class="form-control"></textarea>
+
+                <label for="id_data_entrega">Data de Entrega:</label>
+                <input type="date" id="id_data_entrega" name="data_entrega" class="form-control">
+
+                <label for="id_data_conteudo">Data do conteúdo ministrado:</label>
+                <!-- name corrigido para o que o form/model espera: data_conteudo -->
+                <input type="date" id="id_data_conteudo" name="data_conteudo" class="form-control">
+
+                <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+            </form>
+        
     </div>
-    {% endfor %}
-  </div>
-  <div class="form-group row">
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary">Salvar</button>
-      <button type="submit" class="btn btn-danger">Cancelar</button>
-    </div>
-  </div>
-</form>
 
-<style>
-  /* Estilos responsivos para o formulário */
-  @media (max-width: 768px) {
-    .form-group.row {
-      display: block;
-    }
-    
-    .col-md-6 {
-      width: 100%;
-      margin-bottom: 15px;
-    }
-    
-    .left {
-      width: 100%;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-    
-    form {
-      padding: 15px;
-    }
-  }
-  
-  /* Melhorias para campos de formulário */
-  select, input, textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  .btn {
-    padding: 8px 20px;
-  }
-</style>
-
-<script>
-  // Script para melhorar a experiência mobile
-  $(document).ready(function() {
-    // Ajustar datepicker para mobile
-    if ($(window).width() <= 768) {
-      $('input[type="date"]').attr('type', 'text')
-        .datepicker({
-          dateFormat: 'yy-mm-dd'
+    <script>
+        document.getElementById("id_fk_escola").addEventListener("change", function () {
+            var escolaId = this.value;
+        
+            // Carrega turmas da escola
+            fetch(`/ajax/get-turmas/${escolaId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    var turmaSelect = document.getElementById("id_fk_turma");
+                    turmaSelect.innerHTML = '<option value="">Selecione uma Turma</option>';
+                    data.forEach(turma => {
+                        var option = document.createElement("option");
+                        option.value = turma.id;
+                        option.textContent = turma.nome;
+                        turmaSelect.appendChild(option);
+                    });
+                });
+        
+            // Carrega professores da escola
+            fetch(`/ajax/get-professores/${escolaId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    var professorSelect = document.getElementById("id_fk_professor");
+                    professorSelect.innerHTML = '<option value="">Selecione um Professor</option>';
+                    data.forEach(professor => {
+                        var option = document.createElement("option");
+                        option.value = professor.id;
+                        option.textContent = professor.nome;
+                        professorSelect.appendChild(option);
+                    });
+        
+                    // Limpa os campos de matéria e livro
+                    document.getElementById("id_fk_materia_display").value = '';
+                    document.getElementById("id_fk_materia_id").value = '';
+                    document.getElementById("id_fk_livro").innerHTML = '<option value="">Selecione um Livro</option>';
+                });
         });
-    }
-  });
-</script>
+        
+        // Quando o professor for selecionado, carrega a matéria e os livros
+        document.getElementById("id_fk_professor").addEventListener("change", function () {
+            var professorId = this.value;
+            
+            if (professorId) {
+                // Busca a matéria do professor
+                fetch(`/ajax/get-materia/${professorId}/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (!data.error) {
+                            // Preenche a matéria de exibição (não tem name) e o hidden com o id
+                            document.getElementById("id_fk_materia_display").value = data.nome;
+                            document.getElementById("id_fk_materia_id").value = data.id;
+
+                            // Busca os livros da matéria e da escola
+                            var escolaId = document.getElementById("id_fk_escola").value;
+                            fetch(`/ajax/get-livros/${data.id}/${escolaId}/`)
+                                .then(response => response.json())
+                                .then(livros => {
+                                    var livroSelect = document.getElementById("id_fk_livro");
+                                    livroSelect.innerHTML = '<option value="">Selecione um Livro</option>';
+                                    livros.forEach(livro => {
+                                        var option = document.createElement("option");
+                                        option.value = livro.id;
+                                        option.textContent = livro.nome;
+                                        livroSelect.appendChild(option);
+                                    });
+                                });
+                        } else {
+                            document.getElementById("id_fk_materia_display").value = '';
+                            document.getElementById("id_fk_materia_id").value = '';
+                            document.getElementById("id_fk_livro").innerHTML = '<option value="">Selecione um Livro</option>';
+                        }
+                    });
+            } else {
+                document.getElementById("id_fk_materia_display").value = '';
+                document.getElementById("id_fk_materia_id").value = '';
+                document.getElementById("id_fk_livro").innerHTML = '<option value="">Selecione um Livro</option>';
+            }
+        });
+    </script>
+        
 {% endblock %}

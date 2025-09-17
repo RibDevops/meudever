@@ -1,0 +1,42 @@
+{% extends 'base.html' %} <!-- Se tiver um template base -->
+
+{% block content %}
+<h1>Lista de Alunos</h1>
+
+<p><a href="{% url 'cal:cria_alunos' %}" class="btn btn-primary">Cadastrar Novo Aluno</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome dos Alunos</th>
+            <th>Escola</th>
+            <th>Turma</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for aluno in alunos %}
+            <tr>
+                <td>{{ aluno.nome_aluno }}</td>
+                <td>{{ aluno.fk_escola.nome_escola }}</td>
+                <td>{{ aluno.fk_turma.turma }}</td>
+                <td>
+                    <a href="{% url 'cal:atualiza_alunos' aluno.pk %}" class="btn btn-warning"> <i class="fas fa-edit"></i>Editar</a>
+                    <a href="{% url 'cal:deleta_alunos' aluno.pk %}" 
+                    class="btn btn-danger" 
+                    onclick="return confirm('Tem certeza que deseja deletar {{ aluno.nome_aluno }}? Esta ação é irreversível!');">
+                    <i class="fas fa-trash-alt"></i> Deletar
+                    </a>
+		
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="2">Nenhuma aluno cadastrado.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+  
+{% endblock %}
+

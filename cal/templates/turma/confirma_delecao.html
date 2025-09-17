@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Confirmar Deleção</h1>
+  <p>Deseja realmente deletar o aluno "{{ aluno.nome_escola }}"?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Sim, Deletar</button>
+    <a href="{% url 'cal:lista_turma' %}" class="btn btn-info">Voltar</a>
+  </form>
+{% endblock %}

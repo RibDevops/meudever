@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Lista de Usuários</h2>
+<a href="{% url 'login:registro' %}" class="btn btn-primary">Adicionar Usuário</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Escola</th>
+            <th>Username</th>
+            <th>Primeiro Nome</th>
+            <th>Último Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{ usuario.fk_escola.nome_escola }}</td>
+            <td>{{ usuario.username }}</td>
+            <td>{{ usuario.first_name }}</td>
+            <td>{{ usuario.last_name }}</td>
+            <td>{{ usuario.email }}</td>
+            <td>
+                <a href="{% url 'login:update_user' usuario.id %}" class="btn btn-warning"><i class="fas fa-edit"></i>Editar</a>
+                <a href="{% url 'login:delete_user' usuario.id %}" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
