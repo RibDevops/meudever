@@ -2,7 +2,7 @@ from rolepermissions.roles import AbstractUserRole
 
 class Coordenador(AbstractUserRole):
     available_permissions = {
-        'dever_list': True,
+        'listar_eventos': True,
         'dever_detail': True,
         'dever_create': True,
         'dever_update': True,
@@ -12,7 +12,7 @@ class Coordenador(AbstractUserRole):
 
 class Professor(AbstractUserRole):
     available_permissions = {
-        'dever_list': True,
+        'listar_eventos': True,
         'dever_detail': True,
         'dever_create': True,
         'dever_update': True,
@@ -22,7 +22,7 @@ class Professor(AbstractUserRole):
 
 class Pai(AbstractUserRole):
     available_permissions = {
-        'dever_list': True,
+        'listar_eventos': True,
         'dever_detail': True,
 
     }

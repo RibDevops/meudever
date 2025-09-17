@@ -109,7 +109,7 @@ def login_view(request):
                 if hasattr(user, 'escola'):
                     request.session['escola_id'] = user.escola.id
                 # return redirect('login:home')
-                return redirect('cal:dever_list')
+                return redirect('cal:listar_eventos')
 
             else:
                 messages.error(request, 'Credenciais inválidas.')

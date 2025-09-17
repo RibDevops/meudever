@@ -20,7 +20,7 @@ urlpatterns = [
 
     re_path(r'^event/edit/(?P<event_id>\d+)/$', views.event, name='event_edit'),
 
-    path('lista/', dever_list, name='dever_list'),
+    path('lista/', listar_eventos, name='listar_eventos'),
     path('<int:pk>/', dever_detail, name='dever_detail'),
     path('novo/', dever_create, name='dever_create'),
     path('<int:pk>/editar/', dever_update, name='dever_update'),

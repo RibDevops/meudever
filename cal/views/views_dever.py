@@ -11,7 +11,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 #@login_required
-def dever_list(request):
+def listar_eventos(request):
     deveres_por_escola = defaultdict(lambda: defaultdict(list))
 
     deveres = Event.objects.select_related(
@@ -43,7 +43,7 @@ def dever_list(request):
         'tem_deveres': any(deveres)
     }
 
-    return render(request, 'dever/dever_list.html', context)
+    return render(request, 'dever/listar_eventos.html', context)
 
 
 def dever_detail(request, pk):
@@ -59,7 +59,7 @@ def dever_create(request):
         if form.is_valid():
             dever = form.save()
             messages.success(request, "Dever cadastrado com sucesso.")
-            return redirect('cal:dever_list')
+            return redirect('cal:listar_eventos')
         else:
             # loga e mostra os erros campo a campo
             logger.warning("Form inválido ao tentar criar cal: %s", form.errors)
@@ -83,7 +83,7 @@ def dever_update(request, pk):
         if form.is_valid():
             form.save()
             messages.success(request, "Atualizado com sucesso.")
-            return redirect('cal:dever_list')
+            return redirect('cal:listar_eventos')
         else:
             for field, error_list in form.errors.items():
                 for error in error_list:
@@ -101,4 +101,4 @@ def dever_delete(request, pk):
         messages.success(request, "Dever deletado com sucesso.")
     except Exception as e:
         messages.error(request, f"Erro ao deletar: {str(e)}")
-    return redirect('cal:dever_list')
+    return redirect('cal:listar_eventos')

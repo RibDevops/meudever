@@ -15,9 +15,6 @@ from ..forms import EventForm
 import logging
 from django.shortcuts import redirect
 
-
-
-
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -29,12 +26,6 @@ from collections import defaultdict
 import logging
 
 logger = logging.getLogger(__name__)
-
-
-
-
-
-
 
 def home(request):
     return render(request, 'home.html', {})
@@ -107,7 +98,7 @@ def event(request, event_id=None):
         if form.is_valid():
             dever = form.save()
             messages.success(request, "Dever cadastrado com sucesso.")
-            return redirect('cal:dever_list')
+            return redirect('cal:listar_eventos')
         else:
             # loga e mostra os erros campo a campo
             logger.warning("Form inválido ao tentar criar cal: %s", form.errors)
@@ -184,7 +175,7 @@ def dever_create(request):
         if form.is_valid():
             dever = form.save()
             messages.success(request, "Dever cadastrado com sucesso.")
-            return redirect('cal:dever_list')
+            return redirect('cal:listar_eventos')
         else:
             # loga e mostra os erros campo a campo
             logger.warning("Form inválido ao tentar criar cal: %s", form.errors)
@@ -208,7 +199,7 @@ def dever_update(request, pk):
         if form.is_valid():
             form.save()
             messages.success(request, "Atualizado com sucesso.")
-            return redirect('cal:dever_list')
+            return redirect('cal:listar_eventos')
         else:
             for field, error_list in form.errors.items():
                 for error in error_list:
@@ -225,4 +216,4 @@ def dever_delete(request, pk):
         messages.success(request, "Dever deletado com sucesso.")
     except Exception as e:
         messages.error(request, f"Erro ao deletar: {str(e)}")
-    return redirect('cal:dever_list')
+    return redirect('cal:listar_eventos')
