@@ -92,6 +92,7 @@ class Event(models.Model):
     def dias_para_entrega(self):
         return (self.data_entrega - date.today()).days
 
+
     def data_formatada(self):
         try:
             locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')

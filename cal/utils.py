@@ -28,7 +28,8 @@ class Calendar(calendar.HTMLCalendar):
         events_per_day = events.filter(start_time__day=day)
         d = ''
         for event in events_per_day:
-            d += f'<li>{event.get_html_url}</li>'
+            d += f'<li>{event.fk_materia.nome_materia}: {event.get_html_url}</li>'
+            
         
         if day != 0:
             css_class = 'today' if date(self.year, self.month, day) == datetime.today().date() else ''

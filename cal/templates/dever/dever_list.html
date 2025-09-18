@@ -27,8 +27,8 @@
                                 <table class="table table-striped table-hover">
                                     <thead class="table-info">
                                         <tr>
-                                            <th>DIA DO CONTEÚDO MINISTRADO</th>
-                                            <th>MATÉRIA</th>
+                                            <th>DIA</th>
+                                            <th>LIVRO</th>
                                             <th>PROFESSOR</th>
                                             <th>CONTEÚDO MINISTRADO</th>
                                             <th>DEVER</th>
@@ -39,9 +39,9 @@
                                     <tbody>
                                         {% for dever in deveres %}
                                         
-                                        <tr class="{{ cal.cor_fundo|default:'normal' }}">
+                                        <tr class="{{ dever.cor_fundo|default:'normal' }}">
                                             <td>{{ dever.data_formatada_conteudo|default:"N/A" }}</td>
-                                            <td>{{ dever.fk_materia.nome_materia }}/{{ cal.fk_livro.nome_livro }}</td>
+                                            <td>{{ dever.fk_livro.nome_livro }}</td>
                                             <td>{{ dever.fk_professor.nome_professor }}</td>
                                             <td>{{ dever.title }}</td>
                                             <td>{{ dever.dever }}</td>
@@ -67,19 +67,19 @@
                             <div class="d-md-none">
                                 {% for dever in deveres %}
                                 
-                                <div class="card mb-2 {{ cal.cor_fundo }}">
+                                <div class="card mb-2 {{ dever.cor_fundo }}">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between">
-                                            <strong>{{ cal.data_formatada }}</strong>
-                                            <span>{{ cal.fk_materia.nome_materia }}</span>
+                                            <strong>{{ dever.data_formatada }}</strong>
+                                            <span>{{ dever.fk_materia.nome_materia }}</span>
                                         </div>
                                         <div class="my-1"><small>Professor:</small></div>
-                                        <div class="my-1"><small>{{ cal.fk_professor.nome_professor }}</small></div>
+                                        <div class="my-1"><small>{{ dever.fk_professor.nome_professor }}</small></div>
                                         <div class="my-2"><small>Dia e Conteúdo:</small></div>
-                                        <div class="my-2"><small>{{ cal.data_formatada_conteudo }} - {{ cal.conteudo }}</small></div>
-                                        <div class="my-2"><small>cal:</small></div>
-                                        <div class="my-2"><small>{{ cal.dever }}</small></div><td>
-                
+                                        <div class="my-2"><small>{{ dever.data_formatada_conteudo }} - {{ dever.title }}</small></div>
+                                        <div class="my-2"><small>Dever:</small></div>
+                                        <div class="my-2"><small>{{ dever.dever }} - {{ dever.data_formatada }}</small></div><td>
+
                                     
                                         
                                         <div class="d-flex gap-2 justify-content-end">

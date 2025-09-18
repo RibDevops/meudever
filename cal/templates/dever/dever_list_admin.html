@@ -44,10 +44,10 @@
         }
 
         /* Estilos de fundo para cada categoria de prazo */
-        .vermelho { background-color: #dc3545; }
-        .amarelo { background-color: #ffc107; }
-        .verde { background-color: #28a745; }
-        .normal { background-color: #ffffff; }
+        .vermelho { background-color: #f99da6; }
+        .amarelo { background-color: #f5d576; }
+        .verde { background-color: #89f9a3; }
+        .normal { background-color: #a3bfec; }
 
         /* Estilo dos botões */
         .btn {
@@ -105,14 +105,14 @@
             </thead>
             <tbody>
                 {% for dever in deveres %}
-                    <tr class="{{ cal.cor_fundo|default:'normal' }}">
-                        <td>{{ cal.data_formatada }}</td>
-                        <td>{{ cal.fk_materia.nome_materia }}</td>
-                        <td>{{ cal.dever }}</td>
+                    <tr class="{{ dever.cor_fundo|default:'normal' }}">
+                        <td>{{ dever.data_formatada }}</td>
+                        <td>{{ dever.fk_materia.nome_materia }}</td>
+                        <td>{{ dever.dever }}</td>
                         <td>
-                            <a href="{% url 'dever_detail' cal.pk %}" class="btn btn-detail">Detalhes</a><p>
-                            <a href="{% url 'dever_update' cal.pk %}" class="btn btn-edit">Editar</a><p>
-                            <a href="{% url 'dever_delete' cal.pk %}" class="btn btn-delete">Excluir</a><p>
+                            <a href="{% url 'dever_detail' dever.pk %}" class="btn btn-detail">Detalhes</a><p>
+                            <a href="{% url 'dever_update' dever.pk %}" class="btn btn-edit">Editar</a><p>
+                            <a href="{% url 'dever_delete' dever.pk %}" class="btn btn-delete">Excluir</a><p>
                         </td>
                     </tr>
                 {% endfor %}

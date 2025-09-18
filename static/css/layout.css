@@ -1,21 +1,21 @@
 /* TABLE - Custom Styles */
 .vermelho {
-    background-color: #f2929c;
+    background-color: #f299c2;
     border-left: 4px solid #ffebee;
 }
 
 .amarelo {
-    background-color: #ffc107;
+    background-color: #f5d576;
     border-left: 4px solid #e9dcb7;
 }
 
 .verde {
-    background-color: #28a745;
+    background-color: #89f9a3;
     border-left: 4px solid #a7d3b1;
 }
 
 .normal {
-    background-color: #0d6efd;
+    background-color: #8db6f3;
     border-left: 4px solid #a3bfec !important;
 }
 
@@ -100,18 +100,18 @@ section {
       
       
       .border-vermelho {
-          border-left-color: #f4727f !important;
+          border-left-color: #f299c2 !important;
       }
       
       .border-amarelo {
-          border-left-color: #ffc107 !important;
+          border-left-color: #f5d576 !important;
       }
       .border-verde {
-        border-left-color: #28a745 !important;
+        border-left-color: #89f9a3 !important;
     }
       
       .border-normal {
-          border-left-color: #0d6efd !important;
+          border-left-color: #8db6f3 !important;
       }
   }
 

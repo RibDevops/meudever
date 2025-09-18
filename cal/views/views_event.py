@@ -42,7 +42,8 @@ class CalendarView(generic.ListView):
         d = get_date(self.request.GET.get('month', None))
         
         # Obter todos os eventos do mês
-        events = Event.objects.filter(
+        # events = Event.objects.filter(
+        events = Event.objects.select_related('fk_materia').filter(
             start_time__year=d.year,
             start_time__month=d.month
         )
@@ -129,12 +130,14 @@ def excluir_evento(request, event_id):
 #@login_required
 def listar_eventos(request):
     deveres_por_escola = defaultdict(lambda: defaultdict(list))
+    
 
     deveres = Event.objects.select_related(
         'fk_turma', 'fk_turma__fk_escola', 'fk_materia', 'fk_professor'
     ).all().order_by('fk_turma__fk_escola__nome_escola', 'fk_turma__turma', 'data_entrega')
 
     for dever in deveres:
+        print(f'qtd: {dever.dias_para_entrega()}')
         dias_para_entrega = dever.dias_para_entrega()  # CORREÇÃO: usar 'dever'
         if dias_para_entrega <= 1:
             dever.cor_fundo = "vermelho"  # CORREÇÃO: usar 'dever'
