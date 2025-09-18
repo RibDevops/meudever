@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid py-3">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="h4">Horários</h1>
+        <a href="{% url 'cal:horario_create' %}" class="btn btn-primary btn-sm">
+            <i class="fas fa-plus"></i> Novo Horário
+        </a>
+    </div>
+
+    {% if tem_horarios %}
+        {% for escola, turmas in horarios_por_escola.items %}
+            <div class="card mb-4">
+                <div class="card-header bg-secondary text-white">
+                    <h4 class="mb-0">{{ escola }}</h4>
+                </div>
+                <div class="card-body">
+                    {% for turma, horarios in turmas.items %}
+                        <h5 class="text-secondary">{{ turma }}</h5>
+                        <table class="table table-striped">
+                            <thead class="table-info">
+                                <tr>
+                                    <th>Ordem</th>
+                                    <th>Professor</th>
+                                    <th>Matéria</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for h in horarios %}
+                                <tr>
+                                    <td>{{ h.fk_ordem.ordem }}</td>
+                                    <td>{{ h.fk_professor.nome_professor }}</td>
+                                    <td>{{ h.fk_materia.nome_materia }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-info text-center">Nenhum horário cadastrado ainda.</div>
+    {% endif %}
+</div>
+{% endblock %}

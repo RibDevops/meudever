@@ -7,6 +7,7 @@ from .views_materia import *
 from .views_professor import *
 from .views_turmas import *
 from .views_event import *
+from .views_horarios import *
 
 
 

@@ -27,6 +27,9 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+from django.db.models import F, Value
+from django.db.models.functions import Coalesce
+
 def home(request):
     return render(request, 'home.html', {})
 
@@ -126,18 +129,28 @@ def excluir_evento(request, event_id):
     evento.delete()
     return redirect('cal:listar_eventos')
 
+from django.db.models import F
+from django.db.models.functions import Coalesce, Cast
+from django.db.models import DateField
 
 #@login_required
 def listar_eventos(request):
     deveres_por_escola = defaultdict(lambda: defaultdict(list))
-    
-
+    # deveres = Event.objects.select_related('fk_turma', 'fk_turma__fk_escola', 'fk_materia', 'fk_professor').annotate(data_ordem=Coalesce('data_entrega', F('data_postagem'))).order_by('fk_turma__fk_escola__nome_escola', 'fk_turma__turma', 'data_ordem')
     deveres = Event.objects.select_related(
-        'fk_turma', 'fk_turma__fk_escola', 'fk_materia', 'fk_professor'
-    ).all().order_by('fk_turma__fk_escola__nome_escola', 'fk_turma__turma', 'data_entrega')
-
+            'fk_turma', 'fk_turma__fk_escola', 'fk_materia', 'fk_professor'
+        ).annotate(
+            data_ordem=Coalesce(
+                'data_entrega',
+                Cast('data_postagem', output_field=DateField())
+            )
+        ).order_by(
+            'fk_turma__fk_escola__nome_escola',
+            'fk_turma__turma',
+            'data_ordem'
+        )
     for dever in deveres:
-        print(f'qtd: {dever.dias_para_entrega()}')
+        # print(f'qtd: {dever.dias_para_entrega()}')
         dias_para_entrega = dever.dias_para_entrega()  # CORREÇÃO: usar 'dever'
         if dias_para_entrega <= 1:
             dever.cor_fundo = "vermelho"  # CORREÇÃO: usar 'dever'
@@ -220,3 +233,31 @@ def dever_delete(request, pk):
     except Exception as e:
         messages.error(request, f"Erro ao deletar: {str(e)}")
     return redirect('cal:listar_eventos')
+
+
+# @login_required
+def listar_horarios(request):
+    horarios_por_escola = defaultdict(lambda: defaultdict(list))
+
+    horarios = Horarios.objects.select_related(
+        'fk_ordem', 'fk_turma', 'fk_turma__fk_escola', 'fk_professor', 'fk_materia'
+    ).order_by('fk_turma__fk_escola__nome_escola', 'fk_turma__turma', 'fk_ordem__id')
+
+    for h in horarios:
+        escola_nome = h.fk_turma.fk_escola.nome_escola
+        turma_nome = h.fk_turma.turma
+        horarios_por_escola[escola_nome][turma_nome].append(h)
+
+    def convert_defaultdict_to_dict(d):
+        if isinstance(d, defaultdict):
+            d = {k: convert_defaultdict_to_dict(v) for k, v in d.items()}
+        elif isinstance(d, dict):
+            d = {k: convert_defaultdict_to_dict(v) for k, v in d.items()}
+        return d
+
+    context = {
+        'horarios_por_escola': convert_defaultdict_to_dict(horarios_por_escola),
+        'tem_horarios': any(horarios)
+    }
+
+    return render(request, 'horarios/horario_list.html', context)

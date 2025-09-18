@@ -99,3 +99,13 @@ class AlunosForm(forms.ModelForm):
     class Meta:
         model = Alunos
         fields = ('fk_user', 'fk_escola', 'fk_turma', 'nome_aluno')
+
+
+from django import forms
+from .models import Horarios
+
+class HorariosForm(forms.ModelForm):
+    class Meta:
+        model = Horarios
+        # fields = '__all__'
+        fields = ['fk_escola', 'fk_dias', 'fk_ordem', 'fk_turma', 'fk_professor', 'fk_materia']

@@ -1,0 +1,140 @@
+[
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 14,
+        "id": 1,
+        "nome_professor": "Andreia"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 15,
+        "id": 2,
+        "nome_professor": "Angel"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 11,
+        "id": 3,
+        "nome_professor": "Breno"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 5,
+        "id": 4,
+        "nome_professor": "Bruno"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 9,
+        "id": 5,
+        "nome_professor": "Cida"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 8,
+        "id": 6,
+        "nome_professor": "Elvis"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 11,
+        "id": 7,
+        "nome_professor": "Guilherme"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 1,
+        "id": 8,
+        "nome_professor": "Hamilton"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 3,
+        "id": 9,
+        "nome_professor": "Ianca"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 20,
+        "id": 10,
+        "nome_professor": "Leonardo"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 1,
+        "id": 11,
+        "nome_professor": "Letícia"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 2,
+        "id": 12,
+        "nome_professor": "Lucas"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 18,
+        "id": 13,
+        "nome_professor": "Marília"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 15,
+        "id": 14,
+        "nome_professor": "Nara"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 17,
+        "id": 15,
+        "nome_professor": "Nildo"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 4,
+        "id": 16,
+        "nome_professor": "Pablo"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 9,
+        "id": 17,
+        "nome_professor": "Phylipe"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 14,
+        "id": 18,
+        "nome_professor": "Rafael"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 19,
+        "id": 19,
+        "nome_professor": "Reinaldo"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 13,
+        "id": 20,
+        "nome_professor": "Stéphanie"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 4,
+        "id": 22,
+        "nome_professor": "Thaís"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 6,
+        "id": 23,
+        "nome_professor": "Viviane"
+    },
+    {
+        "fk_escola_id": 1,
+        "fk_materia_id": 2,
+        "id": 24,
+        "nome_professor": "Yasmin"
+    }
+]

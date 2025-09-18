@@ -75,4 +75,10 @@ urlpatterns = [
     path('alunos/nova/', views.cria_alunos, name='cria_alunos'),
     path('alunos/<pk>/atualiza/', views.atualiza_alunos, name='atualiza_alunos'),
     path('alunos/<pk>/deleta/', views.deleta_alunos, name='deleta_alunos'),
+
+    # novos para Horarios
+    path('horarios/', views_horarios.listar_horarios, name='listar_horarios'),
+    path('horarios/create/', views_horarios.horario_create, name='horario_create'),
+    path('horarios/<int:pk>/update/', views_horarios.horario_update, name='horario_update'),
+    path('horarios/<int:pk>/delete/', views_horarios.horario_delete, name='horario_delete'),
 ]

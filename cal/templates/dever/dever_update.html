@@ -46,27 +46,25 @@
         </select>
 
         <!-- Conteúdo -->
-        <label for="id_conteudo">Conteúdo Ministrado:</label>
-        <textarea id="id_conteudo" name="conteudo" class="form-control">{{ form.initial.conteudo }}</textarea>
+        <label for="id_title">Conteúdo Ministrado:</label>
+        <textarea id="id_title" name="title" class="form-control">{{ form.initial.conteudo }}</textarea>
+
+        <!-- Data conteúdo -->
+        <label for="id_start_time">Data do Conteúdo ministrado:</label>
+        <input type="date" id="id_start_time" name="start_time" class="form-control"
+               value="{{ form.initial.start_time|date:'Y-m-d' }}">
+               <p></p>
 
         <!-- Dever -->
-        <label for="id_dever">cal:</label>
+        <label for="id_dever">Dever:</label>
         <textarea id="id_dever" name="dever" class="form-control">{{ form.initial.dever }}</textarea>
-
-
         
 
         <!-- Data de Entrega -->
         <label for="id_data_entrega">Data de Entrega:</label>
         <input type="date" id="id_data_entrega" name="data_entrega" class="form-control"
-               value="{{ form.initial.data_entrega|date:'Y-m-d' }}">
+               value="{{ form.initial.data_entrega|date:'Y-m-d' }}">      
         
-
-        <!-- Data de Entrega -->
-        <label for="id_data_conteudo">Data do Conteúdo ministrado:</label>
-        <input type="date" id="id_data_conteudo" name="data_conteudo" class="form-control"
-               value="{{ form.initial.data_conteudo|date:'Y-m-d' }}">
-               <p></p>
         <button type="submit" class="btn btn-primary mt-3">Atualizar</button>
     </form>
 </div>

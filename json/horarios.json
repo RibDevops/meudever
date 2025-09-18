@@ -1,0 +1,3458 @@
+[
+  {
+    "model": "cal.horarios",
+    "pk": 1,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 1,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 2,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 1,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 3,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 1,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 4,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 1,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 5,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 1,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 6,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 1,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 7,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 2,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 8,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 2,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 9,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 2,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 10,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 2,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 11,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 2,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 12,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 2,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 13,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 3,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 14,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 3,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 15,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 3,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 16,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 3,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 17,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 3,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 18,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 3,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 19,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 4,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 20,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 4,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 21,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 4,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 22,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 4,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 23,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 4,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 24,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 4,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 25,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 5,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 26,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 5,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 27,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 5,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 28,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 5,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 29,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 5,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 30,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 5,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 31,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 6,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 32,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 6,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 33,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 6,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 34,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 6,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 35,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 6,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 36,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 1,
+      "fk_dias": 6,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 37,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 1,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 38,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 1,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 39,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 1,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 40,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 1,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 41,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 1,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 42,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 1,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 43,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 2,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 44,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 2,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 45,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 2,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 46,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 2,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 47,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 2,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 48,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 2,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 49,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 3,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 50,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 3,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 51,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 3,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 52,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 3,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 53,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 3,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 54,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 3,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 55,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 4,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 56,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 4,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 57,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 4,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 58,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 4,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 59,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 4,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 60,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 4,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 61,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 5,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 62,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 5,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 63,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 5,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 64,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 5,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 65,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 5,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 66,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 5,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 67,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 6,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 68,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 6,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 69,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 6,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 70,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 6,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 71,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 6,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 72,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 2,
+      "fk_dias": 6,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 73,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 1,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 74,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 1,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 75,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 1,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 76,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 1,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 77,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 1,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 78,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 1,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 79,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 2,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 80,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 2,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 81,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 2,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 82,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 2,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 83,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 2,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 84,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 2,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 85,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 3,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 86,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 3,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 87,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 3,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 88,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 3,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 89,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 3,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 90,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 3,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 91,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 4,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 92,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 4,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 93,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 4,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 94,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 4,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 95,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 4,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 96,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 4,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 97,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 5,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 98,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 5,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 99,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 5,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 100,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 5,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 101,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 5,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 102,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 5,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 103,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 6,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 104,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 6,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 105,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 6,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 106,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 6,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 107,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 6,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 108,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 4,
+      "fk_dias": 6,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 109,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 1,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 110,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 1,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 111,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 1,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 112,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 1,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 113,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 1,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 114,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 1,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 115,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 2,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 116,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 2,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 117,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 2,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 118,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 2,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 119,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 2,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 120,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 2,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 121,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 3,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 122,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 3,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 123,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 3,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 124,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 3,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 125,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 3,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 126,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 3,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 127,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 4,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 128,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 4,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 129,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 4,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 130,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 4,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 131,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 4,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 132,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 4,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 133,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 5,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 134,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 5,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 135,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 5,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 136,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 5,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 137,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 5,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 138,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 5,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 139,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 6,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 140,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 6,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 141,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 6,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 142,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 6,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 143,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 6,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 144,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 5,
+      "fk_dias": 6,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 145,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 1,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 146,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 1,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 147,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 1,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 148,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 1,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 149,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 1,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 150,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 1,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 151,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 2,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 152,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 2,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 153,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 2,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 154,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 2,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 155,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 2,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 156,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 2,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 157,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 3,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 158,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 3,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 159,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 3,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 160,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 3,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 161,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 3,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 162,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 3,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 163,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 4,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 164,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 4,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 165,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 4,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 166,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 4,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 167,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 4,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 168,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 4,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 169,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 5,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 170,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 5,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 171,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 5,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 172,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 5,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 173,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 5,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 174,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 5,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 175,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 6,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 176,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 6,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 177,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 6,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 178,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 6,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 179,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 6,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 180,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 7,
+      "fk_dias": 6,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 181,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 1,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 182,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 1,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 183,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 1,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 184,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 1,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 185,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 1,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 186,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 1,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 187,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 2,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 188,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 2,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 189,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 2,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 190,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 2,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 191,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 2,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 192,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 2,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 193,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 3,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 194,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 3,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 195,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 3,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 196,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 3,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 197,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 3,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 198,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 3,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 199,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 4,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 200,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 4,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 201,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 4,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 202,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 4,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 203,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 4,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 204,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 4,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 205,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 5,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 206,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 5,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 207,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 5,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 208,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 5,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 209,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 5,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 210,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 5,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 211,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 6,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 212,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 6,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 213,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 6,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 214,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 6,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 215,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 6,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 216,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 8,
+      "fk_dias": 6,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 217,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 1,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 218,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 1,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 219,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 1,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 220,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 1,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 221,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 1,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 222,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 1,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 223,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 2,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 224,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 2,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 225,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 2,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 226,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 2,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 227,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 2,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 228,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 2,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 229,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 3,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 230,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 3,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 231,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 3,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 232,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 3,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 233,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 3,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 234,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 3,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 235,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 4,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 236,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 4,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 237,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 4,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 238,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 4,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 239,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 4,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 240,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 4,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 241,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 5,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 242,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 5,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 243,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 5,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 244,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 5,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 245,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 5,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 246,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 5,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 247,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 6,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 248,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 6,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 249,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 6,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 250,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 6,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 251,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 6,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 252,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 10,
+      "fk_dias": 6,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 253,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 1,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 254,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 1,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 255,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 1,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 256,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 1,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 257,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 1,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 258,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 1,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 259,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 2,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 260,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 2,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 261,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 2,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 262,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 2,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 263,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 2,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 264,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 2,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 265,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 3,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 266,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 3,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 267,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 3,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 268,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 3,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 269,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 3,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 270,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 3,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 271,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 4,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 272,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 4,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 273,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 4,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 274,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 4,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 275,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 4,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 276,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 4,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 277,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 5,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 278,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 5,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 279,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 5,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 280,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 5,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 281,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 5,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 282,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 5,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 283,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 6,
+      "fk_ordem": 1,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 284,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 6,
+      "fk_ordem": 2,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 285,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 6,
+      "fk_ordem": 3,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 286,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 6,
+      "fk_ordem": 4,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 287,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 6,
+      "fk_ordem": 5,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  },
+  {
+    "model": "cal.horarios",
+    "pk": 288,
+    "fields": {
+      "fk_escola": 1,
+      "fk_turma": 11,
+      "fk_dias": 6,
+      "fk_ordem": 6,
+      "fk_materia": 1,
+      "fk_professor": 1
+    }
+  }
+]
