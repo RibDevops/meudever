@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "ordem": "1º Horário"
+    },
+    {
+        "id": 2,
+        "ordem": "2º Horário"
+    },
+    {
+        "id": 3,
+        "ordem": "3º Horário"
+    },
+    {
+        "id": 4,
+        "ordem": "4º Horário"
+    },
+    {
+        "id": 5,
+        "ordem": "5º Horário"
+    },
+    {
+        "id": 6,
+        "ordem": "6º Horário"
+    }
+]

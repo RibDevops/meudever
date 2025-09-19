@@ -1,0 +1,1056 @@
+veja os erro e me diga para eu corrigir nos csv
+
+Carregando arquivos JSON...
+
+Dias mapeados: {'segunda-feira': 1, 'terça-feira': 2, 'quarta-feira': 3, 'quinta-feira': 4, 'sexta-feira': 5, 'sábado': 6, 'domingo': 7}
+Ordens mapeadas: {'1º horário': 1, '2º horário': 2, '3º horário': 3, '4º horário': 4, '5º horário': 5, '6º horário': 6}
+Matérias mapeadas: ['artes', 'bilingue', 'biologia', 'ciências', 'ed. física'] ...
+Professores mapeados: ['andreia', 'angel', 'breno', 'bruno', 'cida'] ...
+Turmas mapeadas: {'6°a': 1, '6°b': 2, '6°c': 3, '7°a': 4, '7°b': 5, '7°c': 6, '8°a': 7, '8°b': 8, '8°c': 9, '9°a': 10, '9°b': 11, '9°c': 12, '1°a': 13, '1°b': 14, '1°c': 15, '2°a': 16, '2°b': 17, '2°c': 18, '3°a': 19, '3°b': 20, '3°c': 21}
+Arquivos CSV encontrados: ['2b.csv', '8a.csv', '9a.csv', '6a.csv', '3a.csv', '7b.csv', '8b.csv', '6b.csv', '1a.csv', '2a.csv', '9b.csv', '7a.csv']
+
+==================================================
+Processando 2b.csv...
+
+=== Processando 2b.csv ===
+Procurando turma: 2°B
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Filosofia', 'Reinaldo']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'Gramática', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'Inglês', 'Yasmin-123']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'História', 'Guilherme']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'Química', 'Nildo']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'Literatura', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'Química', 'Nildo']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'Artes', 'Hamilton']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'História', 'Guilherme']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'Redação', 'Marília']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'Sociologia', 'Reinaldo']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Ens. Religioso', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'Literatura', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'Artes', 'Hamilton']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'Tec. Integradas', 'Leonardo']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Biologia', 'Inca']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'Projeto de Vida', '']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'Projeto de Vida', '']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'Biologia', 'Inca']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'Gramática', 'Nara']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 2b.csv.
+
+==================================================
+Processando 8a.csv...
+
+=== Processando 8a.csv ===
+Procurando turma: 8°A
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Ciências', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'Tec. Integradas', 'Leonardo']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'Ciências', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'Redação', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'Ciências', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'Ciências', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Ens. Religioso', 'Viviane']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Artes', 'Letícia']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 8a.csv.
+
+==================================================
+Processando 9a.csv...
+
+=== Processando 9a.csv ===
+Procurando turma: 9°A
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'Biologia', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'Biologia', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Ens. Religioso', 'Viviane']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'Física', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'Ciências', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'Matemática', 'Thaís']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'Matemática', 'Thaís']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Química', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'Redação', 'Marília']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'Tec. Integradas', 'Leonardo']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Matemática', 'Thaís']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Matemática', 'Thaís']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Redação', 'Marília']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'Artes', 'Letícia']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'Matemática', 'Thaís']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'Geografia ', 'Phylipe']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 9a.csv.
+
+==================================================
+Processando 6a.csv...
+
+=== Processando 6a.csv ===
+Procurando turma: 6°A
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'Português', 'Angel']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Português', 'Angel']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'Ens. Religioso', 'Viviane']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'Ciências', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'Tec. Integradas', 'Leonardo']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'Ciências', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'Português', 'Angel']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'Artes', 'Letícia']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Português', 'Angel']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Português', 'Angel']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'Ciências', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'Ciências', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'Redação', 'Angel']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 6a.csv.
+
+==================================================
+Processando 3a.csv...
+
+=== Processando 3a.csv ===
+Procurando turma: 3°A
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'Sociologia', 'Reinaldo']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'Inglês', 'Yasmin-123']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Literatura', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'Gramática', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'Artes', 'Hamilton']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'Química', 'Nildo']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'História', 'Guilherme']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'Química', 'Nildo']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'Tec. Integradas', 'Leonardo']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'Ens. Religioso', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'Literatura', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'Redação', 'Marília']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Filosofia', 'Reinaldo']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'Artes', 'Hamilton']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'História', 'Guilherme']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Biologia', 'Ianca']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Projeto de Vida', '']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Projeto de Vida', '']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'Biologia', 'Ianca']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 3a.csv.
+
+==================================================
+Processando 7b.csv...
+
+=== Processando 7b.csv ===
+Procurando turma: 7°B
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'Ciências', 'Thaís']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'Ens. Religioso', 'Viviane']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Português', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'Ciências', 'Thaís']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'Tec. Integradas', 'Leonardo']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'Redação ', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'Ciências', 'Thaís']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'Português', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'Português', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Artes', 'Letícia']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'Ciências', 'Thaís']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'Português', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'Português', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 7b.csv.
+
+==================================================
+Processando 8b.csv...
+
+=== Processando 8b.csv ===
+Procurando turma: 8°B
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'Ciências', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'Ens. Religioso', 'Viviane']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'Ciências', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'Ciências', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'Tec. Integradas', 'Leonardo']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'Redação', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'Ciências', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'Artes', 'Letícia']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 8b.csv.
+
+==================================================
+Processando 6b.csv...
+
+=== Processando 6b.csv ===
+Procurando turma: 6°B
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'Redação', 'Angel']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Ciências', 'Thaís']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'Português', 'Angel']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'Português', 'Angel']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'História', 'Breno ']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'História', 'Breno ']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'Tec. Integradas', 'Leonardo']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'Português', 'Angel']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'Ciências', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Português', 'Angel']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'Ens. Religioso', 'Viviane']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'Artes', 'Letícia']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Ciências', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Ciências', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'História', 'Breno ']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'Português', 'Angel']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 6b.csv.
+
+==================================================
+Processando 1a.csv...
+
+=== Processando 1a.csv ===
+Procurando turma: 1°A
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'Gramática', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'Gramática', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'Sociologia', 'Reinaldo']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'Química', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'Filosofia', 'Reinaldo']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'História', 'Guilherme']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'Artes', 'Hamilton']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'Inglês', 'Yasmin-123']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'Projeto de Vida', '']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'Projeto de Vida', '']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'Tec. Integradas', 'Leonardo']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'Literatura', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Literatura', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'Artes', 'Hamilton']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'História', 'Guilherme']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'Bilogia', 'Ianca']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Ens. Religioso', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Bilogia', 'Ianca']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'Redação', 'Marília']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'Química', 'Pablo']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 1a.csv.
+
+==================================================
+Processando 2a.csv...
+
+=== Processando 2a.csv ===
+Procurando turma: 2°A
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'Literatura', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'Sociologia', 'Reinaldo']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Ens. Religioso', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'Literatura', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'Filosofia', 'Reinaldo']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'Inglês', 'Yasmin-123']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'Química', 'Nildo']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'Tec. Integradas', 'Leonardo']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'Química', 'Nildo']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'História', 'Guilherme']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'Artes', 'Hamilton']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Gramática', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'Gramática', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'Matemática', 'Rafael']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'História', 'Guilherme']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'Biologia', 'Ianca']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Artes', 'Hamilton']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Redação', 'Marília']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Física', 'Elvis']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'Biologia', 'Ianca']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'Projeto de Vida', '']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'Projeto de Vida', '']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 2a.csv.
+
+==================================================
+Processando 9b.csv...
+
+=== Processando 9b.csv ===
+Procurando turma: 9°B
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'Ens. Religioso', 'Viviane']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'Química', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'Biologia', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'Química', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'Biologia', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'Tec. Integradas', 'Leonardo']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'Matemática', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'Física', 'Pablo']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Redação', 'Marília']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'Bilingue', 'Lucas']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'Português', 'Stéphanie']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'Matemática', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'Matemática', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Matemática', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'Matemática', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'Geografia', 'Phylipe']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'Artes', 'Letícia']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'Redação', 'Marília']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 9b.csv.
+
+==================================================
+Processando 7a.csv...
+
+=== Processando 7a.csv ===
+Procurando turma: 7°A
+Linha 0: ['SEGUNDA-FEIRA']
+Encontrado dia: segunda-feira
+Linha 1: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 2: ['1° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 3: ['2° Horário', 'Ciências', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 4: ['3° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 5: ['4° Horário', 'Ciências', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 6: ['5° Horário', 'Redação', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 7: ['6° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 8: ['TERÇA-FEIRA']
+Encontrado dia: terça-feira
+Linha 9: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 10: ['1° Horário', 'Português', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 11: ['2° Horário', 'Português', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 12: ['3° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 13: ['4° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 14: ['5° Horário', 'Tec. Integradas', 'Leonardo ']
+Cabeçalho da tabela encontrado
+Linha 15: ['6° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 16: ['QUARTA-FEIRA']
+Encontrado dia: quarta-feira
+Linha 17: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 18: ['1° Horário', 'Português', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 19: ['2° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 20: ['3° Horário', 'Ens. Religioso', 'Viviane']
+Cabeçalho da tabela encontrado
+Linha 21: ['4° Horário', 'Ed. Física', 'Bruno']
+Cabeçalho da tabela encontrado
+Linha 22: ['5° Horário', 'Ciências', 'Thais']
+Cabeçalho da tabela encontrado
+Linha 23: ['6° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 24: ['QUINTA-FEIRA']
+Encontrado dia: quinta-feira
+Linha 25: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 26: ['1° Horário', 'Português', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 27: ['2° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 28: ['3° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 29: ['4° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 30: ['5° Horário', 'Geografia', 'Cida']
+Cabeçalho da tabela encontrado
+Linha 31: ['6° Horário', 'Português', 'Nara']
+Cabeçalho da tabela encontrado
+Linha 32: ['SEXTA-FEIRA']
+Encontrado dia: sexta-feira
+Linha 33: ['HORÁRIO', 'DISCIPLINA', 'PROFESSOR']
+Cabeçalho da tabela encontrado
+Linha 34: ['1° Horário', 'Matemática', 'Andreia']
+Cabeçalho da tabela encontrado
+Linha 35: ['2° Horário', 'Bilingue', 'Yasmin']
+Cabeçalho da tabela encontrado
+Linha 36: ['3° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 37: ['4° Horário', 'Artes', 'Letícia']
+Cabeçalho da tabela encontrado
+Linha 38: ['5° Horário', 'História', 'Breno']
+Cabeçalho da tabela encontrado
+Linha 39: ['6° Horário', 'Ciências', 'Thais']
+Cabeçalho da tabela encontrado
+Nenhum horário válido encontrado em 7a.csv.
+
+

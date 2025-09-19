@@ -1,205 +1,164 @@
 import csv
 import json
-import re
-from collections import OrderedDict
+import os
+import glob
 
-# Carregar fixtures para mapeamento
-with open('cal_fixtures.json', 'r', encoding='utf-8') as f:
-    fixtures = json.load(f)
+# Definir o diretório onde os arquivos estão localizados
+BASE_DIR = '/home/suporte/dev/agendamento/json/csv/'
 
-# Criar dicionários de mapeamento
-turma_map = {item['fields']['turma']: item['pk'] for item in fixtures if item['model'] == 'cal.Turma'}
-dias_map = {item['fields']['dias']: item['pk'] for item in fixtures if item['model'] == 'cal.dias'}
-ordem_map = {item['fields']['ordem']: item['pk'] for item in fixtures if item['model'] == 'cal.ordem'}
-materia_map = {item['fields']['nome_materia']: item['pk'] for item in fixtures if item['model'] == 'cal.materia'}
+# Carregar os dados de referência
+def carregar_json(nome_arquivo):
+    caminho_completo = os.path.join(BASE_DIR, nome_arquivo)
+    with open(caminho_completo, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
-# Mapeamento de professores (nome + matéria para evitar conflitos)
-professor_map = {}
-for item in fixtures:
-    if item['model'] == 'cal.professor':
-        prof_name = item['fields']['nome_professor']
-        materia_id = item['fields']['fk_materia']
-        professor_map[(prof_name, materia_id)] = item['pk']
+# Carregar todos os dados de referência
+print("Carregando arquivos JSON...")
+dias_data = carregar_json('cal_dias.json')
+ordem_data = carregar_json('cal_ordem.json')
+materia_data = carregar_json('cal_materia.json')
+professor_data = carregar_json('cal_professor.json')
+turma_data = carregar_json('cal_turma.json')
+escola_data = carregar_json('cal_escola.json')
 
-# Função para detectar codificação
-def detect_encoding(filename):
-    encodings = ['utf-8', 'latin-1', 'iso-8859-1', 'windows-1252']
-    for encoding in encodings:
-        try:
-            with open(filename, 'r', encoding=encoding) as f:
-                f.read()
-            return encoding
-        except UnicodeDecodeError:
-            continue
-    return 'utf-8'  # fallback
+# Criar dicionários para busca rápida
+dias_map = {dia['dias'].lower(): dia['id'] for dia in dias_data}
+ordem_map = {ordem['ordem'].lower(): ordem['id'] for ordem in ordem_data}
+materia_map = {materia['nome_materia'].lower(): materia['id'] for materia in materia_data}
+professor_map = {prof['nome_professor'].lower(): prof['id'] for prof in professor_data}
+turma_map = {turma['turma'].lower(): turma['id'] for turma in turma_data}
 
-# Função para limpar e padronizar nomes
-def clean_name(name):
-    if not name:
-        return None
-    name = name.strip()
-    # Corrigir nomes conhecidos
-    name = name.replace('ẃ', 'ó').replace('ş', 'º').replace('Bilogia', 'Biologia')
-    name = name.replace('Inca', 'Ianca').replace('Elvia', 'Elvis')
-    name = name.replace('Yasmim', 'Yasmin').replace('Nildo', 'Nildo')
-    # Remover caracteres especiais problemáticos
-    name = re.sub(r'[^\w\sÀ-ÿ]', '', name)
-    return name.title()
+# A escola é fixa (id=1)
+escola_id = 1
 
-# Função para processar um arquivo CSV
-def process_csv_file(filename):
-    encoding = detect_encoding(filename)
+def processar_csv(arquivo_csv):
+    print(f"\n=== Processando {arquivo_csv} ===")
     
-    with open(filename, 'r', encoding=encoding) as f:
-        reader = csv.reader(f)
-        rows = list(reader)
+    # Extrair o nome da turma do nome do arquivo (ex: 2a.csv -> 2°A)
+    nome_arquivo = os.path.basename(arquivo_csv)
+    nome_turma = nome_arquivo.replace('.csv', '').upper()
     
-    # Encontrar a turma
-    turma_line = None
-    for i, row in enumerate(rows):
-        for cell in row:
-            if cell and 'TURMA' in cell.upper():
-                turma_line = i
-                break
-        if turma_line is not None:
-            break
+    # Formatar para o padrão (ex: 2A -> 2°A)
+    if len(nome_turma) == 2:
+        nome_turma = f"{nome_turma[0]}°{nome_turma[1]}"
     
-    if turma_line is None:
-        print(f"  Turma não encontrada em {filename}")
-        return []
+    print(f"Procurando turma: {nome_turma}")
     
-    # Extrair nome da turma
-    turma_text = rows[turma_line][0].strip()
-    turma_match = re.search(r'TURMA\s*[-:]?\s*(.+)', turma_text, re.IGNORECASE)
-    if turma_match:
-        turma_name = turma_match.group(1).strip()
-    else:
-        turma_name = turma_text.replace('TURMA', '').replace('-', '').strip()
-    
-    turma_id = turma_map.get(turma_name)
+    # Obter o ID da turma
+    turma_id = turma_map.get(nome_turma.lower())
     if not turma_id:
-        print(f"  Turma não mapeada: '{turma_name}'")
+        print(f"ERRO: Turma {nome_turma} não encontrada no arquivo cal_turma.json")
         return []
     
-    print(f"  Processando turma: {turma_name} (ID: {turma_id})")
+    horarios = []
+    dia_atual = None
+    pk_counter = 1
+    cabecalho_encontrado = False
     
-    # Encontrar dias da semana
-    results = []
-    pk_counter = 300  # Começar de um número alto para evitar conflitos
+    caminho_csv = os.path.join(BASE_DIR, arquivo_csv)
+    with open(caminho_csv, 'r', encoding='utf-8') as f:
+        reader = csv.reader(f)
+        
+        for i, linha in enumerate(reader):
+            # Pular linhas vazias
+            if not any(linha):
+                continue
+                
+            # Verificar se é um cabeçalho de dia
+            if len(linha) == 1:
+                linha_texto = linha[0].lower()
+                for dia in dias_map.keys():
+                    if dia in linha_texto:
+                        dia_atual = dia
+                        cabecalho_encontrado = False  # Resetar flag de cabeçalho
+                        print(f"Encontrado dia: {dia_atual}")
+                        break
+                continue
+                
+            # Verificar se é o cabeçalho da tabela (apenas uma vez por dia)
+            if not cabecalho_encontrado and linha and any('horário' in cell.lower() for cell in linha):
+                cabecalho_encontrado = True
+                print("Cabeçalho da tabela encontrado")
+                continue
+                
+            # Processar linha de horário (apenas se já encontramos o cabeçalho)
+            if cabecalho_encontrado and dia_atual and len(linha) >= 3:
+                horario = linha[0].strip().lower()
+                materia = linha[1].strip().lower()
+                professor = linha[2].strip().lower()
+                
+                # Pular linhas vazias ou incompletas
+                if not all([horario, materia, professor]):
+                    continue
+                
+                print(f"Processando: Dia={dia_atual}, Horário={horario}, Matéria={materia}, Professor={professor}")
+                
+                # Obter IDs das referências
+                dia_id = dias_map.get(dia_atual)
+                ordem_id = ordem_map.get(horario)
+                materia_id = materia_map.get(materia)
+                professor_id = professor_map.get(professor)
+                
+                # Debug das buscas
+                print(f"  Dia ID: {dia_id} (buscando: {dia_atual})")
+                print(f"  Ordem ID: {ordem_id} (buscando: {horario})")
+                print(f"  Matéria ID: {materia_id} (buscando: {materia})")
+                print(f"  Professor ID: {professor_id} (buscando: {professor})")
+                
+                # Validar se todos os IDs foram encontrados
+                if not all([dia_id, ordem_id, materia_id, professor_id]):
+                    print(f"AVISO: Dados não encontrados para - Dia: {dia_atual}, Horário: {horario}, Matéria: {materia}, Professor: {professor}")
+                    continue
+                
+                # Criar entrada de horário
+                horario_entry = {
+                    "model": "cal.Horarios",
+                    "pk": pk_counter,
+                    "fields": {
+                        "fk_dias": dia_id,
+                        "fk_ordem": ordem_id,
+                        "fk_escola": escola_id,
+                        "fk_turma": turma_id,
+                        "fk_professor": professor_id,
+                        "fk_materia": materia_id
+                    }
+                }
+                
+                horarios.append(horario_entry)
+                pk_counter += 1
+                print("Horário adicionado com sucesso!")
     
-    for i, row in enumerate(rows):
-        for cell in row:
-            if cell and 'FEIRA' in cell.upper() and '/' in cell:
-                # Encontrar o dia da semana
-                dia_text = cell.strip()
-                dia_match = re.search(r'([A-ZÇ]+-FEIRA)', dia_text, re.IGNORECASE)
-                if dia_match:
-                    dia_name = dia_match.group(1).upper()
-                    dia_id = dias_map.get(dia_name)
-                    
-                    if not dia_id:
-                        print(f"  Dia não encontrado: {dia_name}")
-                        continue
-                    
-                    # Próximas linhas contêm os horários
-                    header_found = False
-                    header_row = None
-                    for j in range(i+1, min(i+10, len(rows))):
-                        if any('HORÁRIO' in cell.upper() for cell in rows[j]) and any('DISCIPLINA' in cell.upper() for cell in rows[j]):
-                            header_found = True
-                            header_row = j
-                            break
-                    
-                    if not header_found:
-                        continue
-                    
-                    # Processar as linhas de horários
-                    for k in range(header_row+1, len(rows)):
-                        if not any(rows[k]):  # Linha vazia
-                            continue
-                        
-                        if any('FEIRA' in cell.upper() for cell in rows[k]):  # Novo dia encontrado
-                            break
-                        
-                        # Extrair dados da linha
-                        horario = rows[k][0].strip() if len(rows[k]) > 0 and rows[k][0] else ''
-                        disciplina = rows[k][1].strip() if len(rows[k]) > 1 and rows[k][1] else ''
-                        professor = rows[k][2].strip() if len(rows[k]) > 2 and rows[k][2] else ''
-                        conteudo = rows[k][3].strip() if len(rows[k]) > 3 and rows[k][3] else ''
-                        atividade = rows[k][4].strip() if len(rows[k]) > 4 and rows[k][4] else ''
-                        entrega = rows[k][5].strip() if len(rows[k]) > 5 and rows[k][5] else ''
-                        
-                        # Pular linhas inválidas
-                        if not horario or not disciplina or 'HORÁRIO' in horario.upper():
-                            continue
-                        
-                        # Mapear valores
-                        ordem_id = ordem_map.get(horario)
-                        materia_id = materia_map.get(disciplina)
-                        
-                        if not ordem_id:
-                            print(f"    Horário não mapeado: '{horario}'")
-                            continue
-                        if not materia_id:
-                            print(f"    Matéria não mapeada: '{disciplina}'")
-                            continue
-                        
-                        # Encontrar professor_id
-                        professor_clean = clean_name(professor)
-                        professor_id = None
-                        
-                        if professor_clean and materia_id:
-                            # Primeira tentativa: buscar por nome e matéria
-                            professor_id = professor_map.get((professor_clean, materia_id))
-                            
-                            # Segunda tentativa: buscar apenas por nome
-                            if not professor_id:
-                                for (prof_name, mat_id), prof_id in professor_map.items():
-                                    if prof_name == professor_clean:
-                                        professor_id = prof_id
-                                        break
-                        
-                        if not professor_id:
-                            print(f"    Professor não encontrado: '{professor}' -> '{professor_clean}' para matéria {disciplina}")
-                            professor_id = None
-                        
-                        # Criar entrada
-                        entry = OrderedDict([
-                            ("model", "cal.Horarios"),
-                            ("pk", pk_counter),
-                            ("fields", OrderedDict([
-                                ("fk_escola", 1),
-                                ("fk_turma", turma_id),
-                                # ("fk_dias", dia_id),
-                                ("fk_ordem", ordem_id),
-                                ("fk_materia", materia_id),
-                                ("fk_professor", professor_id),
-                                # ("conteudo_ministrado", conteudo),
-                                # ("atividade_casa", atividade),
-                                # ("data_entrega", entrega)
-                            ]))
-                        ])
-                        
-                        results.append(entry)
-                        pk_counter += 1
+    return horarios
+
+def main():
+    # Encontrar todos os arquivos CSV no diretório
+    padrao_csv = os.path.join(BASE_DIR, "*.csv")
+    arquivos_csv = glob.glob(padrao_csv)
     
-    print(f"  {len(results)} horários processados para {turma_name}")
-    return results
+    if not arquivos_csv:
+        print(f"Nenhum arquivo CSV encontrado em {BASE_DIR}.")
+        return
+    
+    print(f"Arquivos CSV encontrados: {[os.path.basename(f) for f in arquivos_csv]}")
+    
+    # Processar cada arquivo CSV
+    for arquivo_csv in arquivos_csv:
+        nome_arquivo = os.path.basename(arquivo_csv)
+        print(f"\n{'='*50}")
+        print(f"Processando {nome_arquivo}...")
+        horarios = processar_csv(nome_arquivo)
+        
+        if horarios:
+            # Gerar nome do arquivo de saída
+            nome_saida = arquivo_csv.replace('.csv', '.json')
+            
+            # Salvar como JSON
+            with open(nome_saida, 'w', encoding='utf-8') as f:
+                json.dump(horarios, f, indent=2, ensure_ascii=False)
+            
+            print(f"Arquivo {nome_saida} gerado com {len(horarios)} horários.")
+        else:
+            print(f"Nenhum horário válido encontrado em {nome_arquivo}.")
 
-# Processar todos os arquivos CSV
-csv_files = ['8b.csv', '9a.csv', '9b.csv', '1a.csv', '2a.csv', '2b.csv', '3a.csv', '6a.csv', '7a.csv', '7b.csv', '8a.csv']
-
-all_results = []
-for csv_file in csv_files:
-    print(f"Processando {csv_file}...")
-    try:
-        results = process_csv_file(csv_file)
-        all_results.extend(results)
-    except Exception as e:
-        print(f"  Erro ao processar {csv_file}: {e}")
-
-# Salvar resultados em um arquivo JSON
-with open('horarios_completos.json', 'w', encoding='utf-8') as f:
-    json.dump(all_results, f, ensure_ascii=False, indent=2)
-
-print(f"Conversão concluída! {len(all_results)} registros salvos em 'horarios_completos.json'")
+if __name__ == "__main__":
+    main()

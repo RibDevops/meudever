@@ -1,0 +1,37 @@
+[
+    {
+        "dias": "Segunda-feira",
+        "id": 1,
+        "ordem": "1°"
+    },
+    {
+        "dias": "Terça-feira",
+        "id": 2,
+        "ordem": "2°"
+    },
+    {
+        "dias": "Quarta-feira",
+        "id": 3,
+        "ordem": "3°"
+    },
+    {
+        "dias": "Quinta-feira",
+        "id": 4,
+        "ordem": "4°"
+    },
+    {
+        "dias": "Sexta-feira",
+        "id": 5,
+        "ordem": "5°"
+    },
+    {
+        "dias": "Sábado",
+        "id": 6,
+        "ordem": "6°"
+    },
+    {
+        "dias": "Domingo",
+        "id": 7,
+        "ordem": "7°"
+    }
+]
