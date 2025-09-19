@@ -75,10 +75,12 @@ class Ordem(models.Model):
     def __str__(self):
         return self.ordem
 
+# models.py - adicionar campo ordem ao modelo Dias se não existir
 class Dias(models.Model):
     id = models.AutoField(primary_key=True)
-    dias = models.CharField(max_length=20, verbose_name="Dias")  
-
+    dias = models.CharField(max_length=20, verbose_name="Dias")
+    ordem = models.IntegerField(verbose_name="Ordem", default=0)  # Adicionar este campo
+    
     def __str__(self):
         return self.dias
 

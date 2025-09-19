@@ -6,18 +6,37 @@ from django.contrib.auth.decorators import login_required
 from ..models import Horarios, Ordem, Escola
 from ..forms import HorariosForm
 
-# @login_required
-def listar_horarios(request):
-    horarios_por_escola = defaultdict(lambda: defaultdict(list))
+# views_horarios.py
+from collections import defaultdict
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 
-    horarios = Horarios.objects.select_related(
-        'fk_ordem', 'fk_turma', 'fk_turma__fk_escola', 'fk_professor', 'fk_materia'
-    ).order_by('fk_turma__fk_escola__nome_escola', 'fk_turma__turma', 'fk_ordem__id')
+from ..models import Horarios, Ordem, Escola, Turma, Dias
+from ..forms import HorariosForm
+
+# @login_required
+# views_horarios.py
+# views_horarios.py
+def listar_horarios(request, turma_id=None):
+    horarios_por_escola = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+    
+    # Filtra por turma específica se fornecida
+    if turma_id:
+        horarios = Horarios.objects.filter(fk_turma_id=turma_id)
+    else:
+        horarios = Horarios.objects.all()
+    
+    horarios = horarios.select_related(
+        'fk_ordem', 'fk_turma', 'fk_turma__fk_escola', 'fk_professor', 'fk_materia', 'fk_dias'
+    ).order_by('fk_turma__fk_escola__nome_escola', 'fk_turma__turma', 'fk_dias__id', 'fk_ordem__id')
 
     for h in horarios:
         escola_nome = h.fk_turma.fk_escola.nome_escola
         turma_nome = h.fk_turma.turma
-        horarios_por_escola[escola_nome][turma_nome].append(h)
+        dia_semana = h.fk_dias.dias if h.fk_dias else "Sem dia"
+        horarios_por_escola[escola_nome][turma_nome][dia_semana].append(h)
 
     def convert_defaultdict_to_dict(d):
         if isinstance(d, defaultdict):
@@ -28,7 +47,8 @@ def listar_horarios(request):
 
     context = {
         'horarios_por_escola': convert_defaultdict_to_dict(horarios_por_escola),
-        'tem_horarios': any(horarios)
+        'tem_horarios': any(horarios),
+        'turma_filtrada': turma_id
     }
     return render(request, 'horarios/horario_list.html', context)
 

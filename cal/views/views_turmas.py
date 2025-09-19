@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from..forms import TurmaForm
-from..models import Turma
+from..models import Horarios, Turma
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect
@@ -9,9 +9,15 @@ from django.contrib import messages
 # Views para Turmas
 
 #@login_required
+# def lista_turma(request):
+#     turmas = Turma.objects.all()
+#     return render(request, 'turma/lista.html', {'turmas': turmas})
 def lista_turma(request):
-    turmas = Turma.objects.all()
-    return render(request, 'turma/lista.html', {'turmas': turmas})
+    # Alternativa: usar o modelo Horarios para encontrar turmas com horários
+    turmas_com_horarios = Turma.objects.filter(
+        id__in=Horarios.objects.values('fk_turma_id').distinct()
+    )
+    return render(request, 'turma/lista.html', {'turmas': turmas_com_horarios})
 
 #@login_required
 def cria_turma(request):

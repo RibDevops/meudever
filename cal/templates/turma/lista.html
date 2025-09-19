@@ -1,14 +1,16 @@
-{% extends 'base.html' %} <!-- Se tiver um template base -->
+<!-- lista.html -->
+{% extends 'base.html' %}
 
 {% block content %}
 <h1>Lista de Turmas</h1>
 <!-- Bloco para exibir mensagens -->
 
-<p><a href="{% url 'cal:cria_turma' %}" class="btn btn-primary">Cadastrar Novo Turma</a></p>
+<p><a href="{% url 'cal:cria_turma' %}" class="btn btn-primary">Cadastrar Nova Turma</a></p>
+<p><a href="{% url 'cal:listar_horarios' %}" class="btn btn-info">Ver Todos os Horários</a></p>
 <table class="table">
     <thead>
         <tr>
-            <th>Nome dos Turmas</th>
+            <th>Nome das Turmas</th>
             <th>Escola</th>
             <th>Ações</th>
         </tr>
@@ -19,21 +21,23 @@
                 <td>{{ turma.turma }}</td>
                 <td>{{ turma.fk_escola.nome_escola }}</td>
                 <td>
-                    <a href="{% url 'cal:atualiza_turma' turma.pk %}" class="btn btn-warning"> <i class="fas fa-edit"></i>Editar</a>
+                    <a href="{% url 'cal:listar_horarios_turma' turma.pk %}" class="btn btn-info">
+                        <i class="fas fa-calendar"></i> Ver Horários
+                    </a>
+                    <a href="{% url 'cal:atualiza_turma' turma.pk %}" class="btn btn-warning">
+                        <i class="fas fa-edit"></i> Editar
+                    </a>
                     <a href="{% url 'cal:deleta_turma' turma.pk %}" class="btn btn-danger" 
                     onclick="return confirm('Tem certeza que deseja deletar {{ turma.turma }}? Esta ação é irreversível!');">
-                    <i class="fas fa-trash-alt"></i> Deletar
+                        <i class="fas fa-trash-alt"></i> Deletar
                     </a>
                 </td>
             </tr>
         {% empty %}
             <tr>
-                <td colspan="2">Nenhuma aluno cadastrado.</td>
+                <td colspan="3">Nenhuma turma com horários cadastrada.</td>
             </tr>
         {% endfor %}
     </tbody>
 </table>
-
-  
 {% endblock %}
-

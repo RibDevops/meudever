@@ -1,40 +1,66 @@
+<!-- horario_list.html -->
 {% extends 'base.html' %}
 {% block content %}
 <div class="container-fluid py-3">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1 class="h4">Horários</h1>
-        <a href="{% url 'cal:horario_create' %}" class="btn btn-primary btn-sm">
-            <i class="fas fa-plus"></i> Novo Horário
-        </a>
+        <div>
+            <a href="{% url 'cal:lista_turma' %}" class="btn btn-secondary btn-sm me-2">
+                <i class="fas fa-list"></i> Ver Turmas
+            </a>
+            <a href="{% url 'cal:horario_create' %}" class="btn btn-primary btn-sm">
+                <i class="fas fa-plus"></i> Novo Horário
+            </a>
+        </div>
     </div>
 
     {% if tem_horarios %}
         {% for escola, turmas in horarios_por_escola.items %}
-            <div class="card mb-4">
-                <div class="card-header bg-secondary text-white">
-                    <h4 class="mb-0">{{ escola }}</h4>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0 text-uppercase">{{ escola }}</h4>
                 </div>
                 <div class="card-body">
-                    {% for turma, horarios in turmas.items %}
-                        <h5 class="text-secondary">{{ turma }}</h5>
-                        <table class="table table-striped">
-                            <thead class="table-info">
-                                <tr>
-                                    <th>Ordem</th>
-                                    <th>Professor</th>
-                                    <th>Matéria</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for h in horarios %}
-                                <tr>
-                                    <td>{{ h.fk_ordem.ordem }}</td>
-                                    <td>{{ h.fk_professor.nome_professor }}</td>
-                                    <td>{{ h.fk_materia.nome_materia }}</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
+                    {% for turma, dias in turmas.items %}
+                        <!-- Nome da Turma -->
+                        <h5 class="fw-bold mb-3">{{ turma }}</h5>
+
+                        {% for dia, horarios in dias.items %}
+                            <!-- Dia da Semana -->
+                            <h6 class="text-primary mt-4 mb-2">{{ dia }}</h6>
+                            
+                            <!-- Tabela de Horários -->
+                            <table class="table table-bordered table-striped">
+                                <thead class="table-info">
+                                    <tr>
+                                        <th style="width: 15%">Horário</th>
+                                        <th style="width: 30%">Disciplina</th>
+                                        <th style="width: 30%">Professor</th>
+                                        <th style="width: 25%">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for h in horarios %}
+                                        <tr>
+                                            <td>{{ h.fk_ordem.ordem }}º Horário</td>
+                                            <td>{{ h.fk_materia.nome_materia }}</td>
+                                            <td>{{ h.fk_professor.nome_professor }}</td>
+                                            <td>
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="{% url 'cal:horario_update' h.id %}" class="btn btn-warning">
+                                                        <i class="fas fa-edit"></i> Editar
+                                                    </a>
+                                                    <button type="button" class="btn btn-danger" 
+                                                            onclick="confirmarExclusao({{ h.id }}, '{{ h.fk_materia.nome_materia }} - {{ h.fk_professor.nome_professor }}')">
+                                                        <i class="fas fa-trash"></i> Excluir
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        {% endfor %}
                     {% endfor %}
                 </div>
             </div>
@@ -43,4 +69,74 @@
         <div class="alert alert-info text-center">Nenhum horário cadastrado ainda.</div>
     {% endif %}
 </div>
+
+<!-- Modal de Confirmação -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar Exclusão</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir o horário de <strong id="horarioInfo"></strong>?</p>
+                <p class="text-danger">Esta ação não pode ser desfeita.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <form id="deleteForm" method="post" action="">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function confirmarExclusao(horarioId, horarioInfo) {
+    // Atualiza as informações no modal
+    document.getElementById('horarioInfo').textContent = horarioInfo;
+    
+    // Configura o action do formulário
+    const deleteForm = document.getElementById('deleteForm');
+    deleteForm.action = "{% url 'cal:horario_delete' 0 %}".replace('0', horarioId);
+    
+    // Abre o modal
+    const modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
+    modal.show();
+}
+
+// Função para excluir via AJAX (opcional)
+function excluirHorario(horarioId) {
+    if (confirm('Tem certeza que deseja excluir este horário?')) {
+        fetch(`/horarios/${horarioId}/delete/`, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}',
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(response => {
+            if (response.ok) {
+                // Recarrega a página após exclusão
+                window.location.reload();
+            } else {
+                alert('Erro ao excluir horário.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Erro ao excluir horário.');
+        });
+    }
+}
+</script>
+
+<style>
+.btn-group-sm .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+</style>
 {% endblock %}

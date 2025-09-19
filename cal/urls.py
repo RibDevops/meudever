@@ -47,11 +47,14 @@ urlpatterns = [
 
     # URLs para Turma
     path('turma/', views.lista_turma, name='lista_turma'),
+    # path('turmas/', views.lista_turma, name='lista_turma'),
     path('turma/nova/', views.cria_turma, name='cria_turma'),
     path('turma/<pk>/atualiza/', views.atualiza_turma, name='atualiza_turma'),
     path('turma/<pk>/deleta/', views.deleta_turma, name='deleta_turma'),
 
-    #... (Adicione URLs para Materia, , , )
+
+
+
     # Exemplo para Materia:
     path('materia/', views.lista_materia, name='lista_materia'),
     path('materia/nova/', views.cria_materia, name='cria_materia'),
@@ -77,8 +80,22 @@ urlpatterns = [
     path('alunos/<pk>/deleta/', views.deleta_alunos, name='deleta_alunos'),
 
     # novos para Horarios
-    path('horarios/', views_horarios.listar_horarios, name='listar_horarios'),
+    # path('horarios/', views_horarios.listar_horarios, name='listar_horarios'),
     path('horarios/create/', views_horarios.horario_create, name='horario_create'),
     path('horarios/<int:pk>/update/', views_horarios.horario_update, name='horario_update'),
+    # path('horarios/<int:pk>/update/', views.horario_update, name='horario_update'),
     path('horarios/<int:pk>/delete/', views_horarios.horario_delete, name='horario_delete'),
+    # path('horarios/<int:pk>/delete/', views.horario_delete, name='horario_delete'),
+
+        # ... outras URLs
+    path('horarios/', views.listar_horarios, name='listar_horarios'),
+    path('horarios/turma/<int:turma_id>/', views.listar_horarios, name='listar_horarios_turma'),
+
+
+
+    
+    # path('horarios/create/', views.horario_create, name='horario_create'),
+    
+    
+    
 ]
