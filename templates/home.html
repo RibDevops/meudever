@@ -1,22 +1,142 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
- <!-- Page content -->
- <div class="container mt-5">
-  <h1 class="mb-4">Bem-vindo ao Sistema de Agenda</h1>
-  <p>Este sistema foi desenvolvido para facilitar a visualização da agenda das aulas. O calendário mostra as aulas marcadas para cada dia, e você pode navegar entre os meses usando os botões "Mês Anterior" e "Próximo Mês".</p>
-  
-  <h3 class="mt-4">Funcionalidades:</h3>
-  <ul>
-    <li><strong>Visualização de Aulas:</strong> Veja todas as aulas agendadas organizadas por dia.</li>
-    <li><strong>Agendamento de Aulas:</strong> Cadastre novas aulas clicando em “Nova Aula”.</li>
-    <li><strong>Responsividade:</strong> A interface é adaptável para dispositivos móveis.</li>
-  </ul>
-</div>
 
-   
-   <a href="{% url 'cal:calendar' %}" class="btn btn-primary mt-3">Ver Calendário</a>
- </div>
+    <style>
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #6f42c1;
+            --accent-color: #36b9cc;
+            --light-bg: #f8f9fc;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 0.6rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .welcome-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+    </style>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Sistema de Agenda de Aulas</h1>
+            <p class="lead mb-4">Organize e visualize suas aulas de forma simples e eficiente</p>
+            <a href="#features" class="btn btn-light btn-lg px-4 me-3">Conheça as Funcionalidades</a>
+            <a href="{% url 'cal:calendar' %}" class="btn btn-outline-light btn-lg px-4">Ver Calendário</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow mb-4">
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-center mb-4">Bem-vindo ao Sistema de Agenda</h2>
+                        <p class="welcome-text">
+                            Este sistema foi desenvolvido para facilitar a visualização da agenda das aulas. 
+                            O calendário mostra as aulas marcadas para cada dia, e você pode navegar entre os meses 
+                            usando os botões "Mês Anterior" e "Próximo Mês".
+                        </p>
+                        
+                        <h3 class="mt-5 mb-4 text-center" id="features">Funcionalidades Principais</h3>
+                        
+                        <div class="row g-4">
+                            <!-- Feature 1 -->
+                            <div class="col-md-4">
+                                <div class="feature-card card h-100 py-4 text-center">
+                                    <div class="card-body">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <h5 class="card-title">Visualização de Aulas</h5>
+                                        <p class="card-text">Veja todas as aulas agendadas organizadas por dia no calendário interativo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Feature 2 -->
+                            <div class="col-md-4">
+                                <div class="feature-card card h-100 py-4 text-center">
+                                    <div class="card-body">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-plus-circle"></i>
+                                        </div>
+                                        <h5 class="card-title">Agendamento de Aulas</h5>
+                                        <p class="card-text">Cadastre novas aulas de forma rápida e intuitiva com apenas alguns cliques.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Feature 3 -->
+                            <div class="col-md-4">
+                                <div class="feature-card card h-100 py-4 text-center">
+                                    <div class="card-body">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-mobile-alt"></i>
+                                        </div>
+                                        <h5 class="card-title">Design Responsivo</h5>
+                                        <p class="card-text">Acesse o sistema de qualquer dispositivo, com interface adaptada para mobile.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-5">
+                            <a href="calendario.html" class="btn btn-primary btn-lg">
+                                <i class="fas fa-calendar me-2"></i>Ver Calendário
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
  
  
 {% endblock %}

@@ -76,6 +76,7 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 AUTH_USER_MODEL = 'login.User'
 
+
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
@@ -139,3 +140,8 @@ MEDIA_ROOT = '/home/agendamento/core/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/agendamento/core/static'
 STATIC_URL = '/static/'
+
+# settings.py
+LOGIN_URL = '/login/'  # Mude para usar /login/ em vez de /accounts/login/
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
