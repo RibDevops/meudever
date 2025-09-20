@@ -32,6 +32,24 @@
                         <!-- <a class="nav-link" href="#">Login</a> -->
                    
                 </div>
+                <ul class="navbar-nav ms-auto">
+                    {% if user.is_authenticated %}
+                    <li class="nav-link">
+                        <span class="navbar-text me-3">
+                          Olá, {{ user.username }}
+                        </span>
+                      </li>
+                    <li class="nav-item">                    
+                            <form method="post" action="{% url 'login:logout' %}" class="d-flex">
+                                {% csrf_token %}
+                                
+                                <button type="submit" class="btn btn-outline-danger">Sair</button>
+                            </form>
+                        {% else %}
+                            <a href="{% url 'login:login' %}" class="btn btn-outline-success">Login</a>
+                        {% endif %}
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

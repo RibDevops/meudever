@@ -3,12 +3,31 @@ from datetime import date, timedelta
 from collections import defaultdict
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.utils import timezone
 from ..models import Horarios, Event, Turma, Dias
 
 
 @login_required
 def semana_turma_completa(request, turma_id):
     turma = get_object_or_404(Turma, pk=turma_id)
+    
+    # Obter a semana a ser mostrada (parâmetro opcional)
+    data_referencia_str = request.GET.get('data')
+    if data_referencia_str:
+        try:
+            data_referencia = timezone.datetime.strptime(data_referencia_str, '%Y-%m-%d').date()
+        except (ValueError, TypeError):
+            data_referencia = date.today()
+    else:
+        data_referencia = date.today()
+    
+    # Calcular segunda e sexta da semana de referência
+    segunda = data_referencia - timedelta(days=data_referencia.weekday())
+    sexta = segunda + timedelta(days=4)
+    
+    # Datas para navegação
+    semana_anterior = segunda - timedelta(days=7)
+    proxima_semana = segunda + timedelta(days=7)
     
     # Buscar todos os horários da turma
     horarios = Horarios.objects.filter(fk_turma=turma).select_related(
@@ -29,11 +48,6 @@ def semana_turma_completa(request, turma_id):
         if evento.data_entrega:
             data_key = evento.data_entrega.strftime("%Y-%m-%d")
             eventos_por_data_materia[data_key][evento.fk_materia_id] = evento
-    
-    # Obter a semana atual (segunda a sexta)
-    hoje = date.today()
-    segunda = hoje - timedelta(days=hoje.weekday())
-    sexta = segunda + timedelta(days=4)
     
     # Gerar dados para cada dia da semana
     dias_semana = []
@@ -70,6 +84,10 @@ def semana_turma_completa(request, turma_id):
         'turma': turma,
         'dias_semana': dias_semana,
         'semana_range': f"{segunda:%d/%m} - {sexta:%d/%m}",
+        'semana_anterior': semana_anterior.strftime('%Y-%m-%d'),
+        'proxima_semana': proxima_semana.strftime('%Y-%m-%d'),
+        'data_atual': data_referencia.strftime('%Y-%m-%d'),
+        'hoje': date.today().strftime('%Y-%m-%d'),
         'tem_dados': any(linhas for dia in dias_semana for linhas in dia['linhas'])
     }
     

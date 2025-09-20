@@ -1,24 +1,49 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container-fluid py-3">
+    <!-- Cabeçalho com botões de navegação -->
     <div class="d-flex justify-content-between align-items-center mb-3">
         <div>
             <h1 class="h4 mb-0">Controle de Conteúdos e Atividades</h1>
             <h4 class="text-secondary">{{ turma.fk_escola.nome_escola }} - {{ turma.turma }}</h4>
-            <p class="text-muted">Semana: {{ semana_range }}</p>
         </div>
-        <a href="{% url 'cal:lista_turma' %}" class="btn btn-secondary">
-            <i class="fas fa-arrow-left"></i> Voltar
+        <div class="btn-group" role="group">
+            <a href="{% url 'cal:semana_completa' turma.pk %}?data={{ semana_anterior }}" 
+               class="btn btn-outline-primary">
+                <i class="fas fa-chevron-left"></i> Semana Anterior
+            </a>
+            <a href="{% url 'cal:semana_completa' turma.pk %}?data={{ hoje }}" 
+               class="btn btn-outline-secondary">
+                <i class="fas fa-calendar-day"></i> Hoje
+            </a>
+            <a href="{% url 'cal:semana_completa' turma.pk %}?data={{ proxima_semana }}" 
+               class="btn btn-outline-primary">
+                Próxima Semana <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Informação da semana -->
+    <div class="alert alert-info d-flex justify-content-between align-items-center">
+        <div>
+            <i class="fas fa-calendar-week"></i>
+            <strong>Semana:</strong> {{ semana_range }}
+        </div>
+        <a href="{% url 'cal:lista_turma' %}" class="btn btn-sm btn-secondary">
+            <i class="fas fa-arrow-left"></i> Voltar para Turmas
         </a>
     </div>
 
     {% if tem_dados %}
         {% for dia in dias_semana %}
             <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header {% if dia.data == today %}bg-success{% else %}bg-primary{% endif %} text-white">
                     <h5 class="mb-0">
                         <i class="fas fa-calendar-day"></i> 
                         {{ dia.nome_dia }} - {{ dia.data|date:"d/m/Y" }}
+                        {% if dia.data == today %}
+                            <span class="badge bg-light text-dark">Hoje</span>
+                        {% endif %}
                     </h5>
                 </div>
                 <div class="card-body p-0">
@@ -54,8 +79,8 @@
             </div>
         {% endfor %}
     {% else %}
-        <div class="alert alert-info">
-            <i class="fas fa-info-circle"></i> 
+        <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle"></i> 
             Nenhum dado encontrado para esta semana.
         </div>
     {% endif %}
@@ -73,5 +98,32 @@
 .card-header {
     font-weight: bold;
 }
+.btn-group .btn {
+    border-radius: 0.25rem;
+}
 </style>
+
+<script>
+// Adicionar classe today para comparação de datas
+document.addEventListener('DOMContentLoaded', function() {
+    const today = new Date('{{ hoje }}');
+    const todayFormatted = today.toISOString().split('T')[0];
+    
+    document.querySelectorAll('.card-header').forEach(header => {
+        const dateStr = header.textContent.match(/\d{2}\/\d{2}\/\d{4}/);
+        if (dateStr) {
+            const [day, month, year] = dateStr[0].split('/');
+            const rowDate = new Date(`${year}-${month}-${day}`);
+            const rowDateFormatted = rowDate.toISOString().split('T')[0];
+            
+            if (rowDateFormatted === todayFormatted) {
+                header.classList.add('bg-success');
+                if (!header.querySelector('.badge')) {
+                    header.innerHTML += ' <span class="badge bg-light text-dark">Hoje</span>';
+                }
+            }
+        }
+    });
+});
+</script>
 {% endblock %}
