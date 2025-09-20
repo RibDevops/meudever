@@ -1,0 +1,2318 @@
+Carregando arquivos JSON...
+Arquivos CSV encontrados: ['7a.csv', '7b.csv', '9a.csv', '6b.csv', '2a.csv', '6a.csv', '8a.csv', '1a.csv', '2b.csv', '9b.csv', '3a.csv', '8b.csv']
+
+==================================================
+Processando 7a.csv...
+
+=== Processando 7a.csv ===
+Procurando turma: 7°A
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=ciências, Professor=thais
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: ciências, Professor: thais
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=ciências, Professor=thais
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: ciências, Professor: thais
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=redação, Professor=nara
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: redação, Professor: nara
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=geografia, Professor=cida
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: geografia, Professor: cida
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=português, Professor=nara
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: português, Professor: nara
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=português, Professor=nara
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: português, Professor: nara
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=história, Professor=breno
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: história, Professor: breno
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: tec. integradas, Professor: leonardo
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: matemática, Professor: andreia
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=1° horário, Matéria=português, Professor=nara
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 1° horário, Matéria: português, Professor: nara
+Processando: Dia=quarta-feira, Horário=2° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 2° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=ens. religioso, Professor=viviane
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 23 (buscando: viviane)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: ens. religioso, Professor: viviane
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=ciências, Professor=thais
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: ciências, Professor: thais
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: bilingue, Professor: yasmin
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=português, Professor=nara
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: português, Professor: nara
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=geografia, Professor=cida
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: geografia, Professor: cida
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=geografia, Professor=cida
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: geografia, Professor: cida
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=português, Professor=nara
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: português, Professor: nara
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=1° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 1° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=sexta-feira, Horário=2° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 2° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=sexta-feira, Horário=3° horário, Matéria=história, Professor=breno
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 3° horário, Matéria: história, Professor: breno
+Processando: Dia=sexta-feira, Horário=4° horário, Matéria=artes, Professor=letícia
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 11 (buscando: letícia)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 4° horário, Matéria: artes, Professor: letícia
+Processando: Dia=sexta-feira, Horário=5° horário, Matéria=história, Professor=breno
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 5° horário, Matéria: história, Professor: breno
+Processando: Dia=sexta-feira, Horário=6° horário, Matéria=ciências, Professor=thais
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 6° horário, Matéria: ciências, Professor: thais
+Nenhum horário válido encontrado em 7a.csv.
+
+==================================================
+Processando 7b.csv...
+
+=== Processando 7b.csv ===
+Procurando turma: 7°B
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=ciências, Professor=thaís
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 22 (buscando: thaís)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: ciências, Professor: thaís
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=ens. religioso, Professor=viviane
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 23 (buscando: viviane)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: ens. religioso, Professor: viviane
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=português, Professor=nara
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: português, Professor: nara
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=ciências, Professor=thaís
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 22 (buscando: thaís)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: ciências, Professor: thaís
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: matemática, Professor: andreia
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: tec. integradas, Professor: leonardo
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=geografia, Professor=cida
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: geografia, Professor: cida
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=geografia, Professor=cida
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: geografia, Professor: cida
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=história, Professor=breno
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: história, Professor: breno
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: bilingue, Professor: yasmin
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=1° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 1° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=quarta-feira, Horário=2° horário, Matéria=redação, Professor=nara
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 2° horário, Matéria: redação, Professor: nara
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=história, Professor=breno
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: história, Professor: breno
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=geografia, Professor=cida
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: geografia, Professor: cida
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=ciências, Professor=thaís
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 22 (buscando: thaís)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: ciências, Professor: thaís
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=português, Professor=nara
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: português, Professor: nara
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=português, Professor=nara
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: português, Professor: nara
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=artes, Professor=letícia
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 11 (buscando: letícia)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: artes, Professor: letícia
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=1° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 1° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=sexta-feira, Horário=2° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 2° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=sexta-feira, Horário=3° horário, Matéria=ciências, Professor=thaís
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 22 (buscando: thaís)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 3° horário, Matéria: ciências, Professor: thaís
+Processando: Dia=sexta-feira, Horário=4° horário, Matéria=português, Professor=nara
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 4° horário, Matéria: português, Professor: nara
+Processando: Dia=sexta-feira, Horário=5° horário, Matéria=português, Professor=nara
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 5° horário, Matéria: português, Professor: nara
+Processando: Dia=sexta-feira, Horário=6° horário, Matéria=história, Professor=breno
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 6° horário, Matéria: história, Professor: breno
+Nenhum horário válido encontrado em 7b.csv.
+
+==================================================
+Processando 9a.csv...
+
+=== Processando 9a.csv ===
+Procurando turma: 9°A
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=biologia, Professor=pablo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 3 (buscando: biologia)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: biologia, Professor: pablo
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=biologia, Professor=pablo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 3 (buscando: biologia)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: biologia, Professor: pablo
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=ens. religioso, Professor=viviane
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 23 (buscando: viviane)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: ens. religioso, Professor: viviane
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=história, Professor=breno
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: história, Professor: breno
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=física, Professor=pablo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: física, Professor: pablo
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=ciências, Professor=pablo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: ciências, Professor: pablo
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=1° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 1° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=quarta-feira, Horário=2° horário, Matéria=matemática, Professor=thaís
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 22 (buscando: thaís)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 2° horário, Matéria: matemática, Professor: thaís
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=matemática, Professor=thaís
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 22 (buscando: thaís)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: matemática, Professor: thaís
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=química, Professor=pablo
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 17 (buscando: química)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: química, Professor: pablo
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=redação, Professor=marília
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 13 (buscando: marília)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: redação, Professor: marília
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: tec. integradas, Professor: leonardo
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=história, Professor=breno
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: história, Professor: breno
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=história, Professor=breno
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: história, Professor: breno
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=matemática, Professor=thaís
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 22 (buscando: thaís)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: matemática, Professor: thaís
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=1° horário, Matéria=matemática, Professor=thaís
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 22 (buscando: thaís)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 1° horário, Matéria: matemática, Professor: thaís
+Processando: Dia=sexta-feira, Horário=2° horário, Matéria=redação, Professor=marília
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 13 (buscando: marília)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 2° horário, Matéria: redação, Professor: marília
+Processando: Dia=sexta-feira, Horário=3° horário, Matéria=artes, Professor=letícia
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 11 (buscando: letícia)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 3° horário, Matéria: artes, Professor: letícia
+Processando: Dia=sexta-feira, Horário=4° horário, Matéria=matemática, Professor=thaís
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 22 (buscando: thaís)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 4° horário, Matéria: matemática, Professor: thaís
+Processando: Dia=sexta-feira, Horário=5° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 5° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=sexta-feira, Horário=6° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 6° horário, Matéria: geografia, Professor: phylipe
+Nenhum horário válido encontrado em 9a.csv.
+
+==================================================
+Processando 6b.csv...
+
+=== Processando 6b.csv ===
+Procurando turma: 6°B
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=redação, Professor=angel
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: redação, Professor: angel
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=ciências, Professor=thaís
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 22 (buscando: thaís)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: ciências, Professor: thaís
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=português, Professor=angel
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: português, Professor: angel
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=português, Professor=angel
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: português, Professor: angel
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=história, Professor=breno
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: história, Professor: breno
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=história, Professor=breno
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: história, Professor: breno
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=geografia, Professor=cida
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: geografia, Professor: cida
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: tec. integradas, Professor: leonardo
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=1° horário, Matéria=português, Professor=angel
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 1° horário, Matéria: português, Professor: angel
+Processando: Dia=quarta-feira, Horário=2° horário, Matéria=ciências, Professor=thais
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 2° horário, Matéria: ciências, Professor: thais
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=português, Professor=angel
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: português, Professor: angel
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=geografia, Professor=cida
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: geografia, Professor: cida
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=ens. religioso, Professor=viviane
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 23 (buscando: viviane)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: ens. religioso, Professor: viviane
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=geografia, Professor=cida
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: geografia, Professor: cida
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=artes, Professor=letícia
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 11 (buscando: letícia)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: artes, Professor: letícia
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: bilingue, Professor: yasmin
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=1° horário, Matéria=ciências, Professor=thais
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 1° horário, Matéria: ciências, Professor: thais
+Processando: Dia=sexta-feira, Horário=2° horário, Matéria=ciências, Professor=thais
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 2° horário, Matéria: ciências, Professor: thais
+Processando: Dia=sexta-feira, Horário=3° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 3° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=sexta-feira, Horário=4° horário, Matéria=história, Professor=breno
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 4° horário, Matéria: história, Professor: breno
+Processando: Dia=sexta-feira, Horário=5° horário, Matéria=português, Professor=angel
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 5° horário, Matéria: português, Professor: angel
+Processando: Dia=sexta-feira, Horário=6° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 6° horário, Matéria: matemática, Professor: andreia
+Nenhum horário válido encontrado em 6b.csv.
+
+==================================================
+Processando 2a.csv...
+
+=== Processando 2a.csv ===
+Procurando turma: 2°A
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=literatura, Professor=stéphanie
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 13 (buscando: literatura)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: literatura, Professor: stéphanie
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=sociologia, Professor=reinaldo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 19 (buscando: sociologia)
+  Professor ID: 19 (buscando: reinaldo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: sociologia, Professor: reinaldo
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=ens. religioso, Professor=breno
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: ens. religioso, Professor: breno
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=literatura, Professor=stéphanie
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 13 (buscando: literatura)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: literatura, Professor: stéphanie
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=filosofia, Professor=reinaldo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 7 (buscando: filosofia)
+  Professor ID: 19 (buscando: reinaldo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: filosofia, Professor: reinaldo
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=inglês, Professor=yasmin-123
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 12 (buscando: inglês)
+  Professor ID: 24 (buscando: yasmin-123)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: inglês, Professor: yasmin-123
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=química, Professor=nildo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 17 (buscando: química)
+  Professor ID: 15 (buscando: nildo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: química, Professor: nildo
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: tec. integradas, Professor: leonardo
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=física, Professor=elvis
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: física, Professor: elvis
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=física, Professor=elvis
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: física, Professor: elvis
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=química, Professor=nildo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 17 (buscando: química)
+  Professor ID: 15 (buscando: nildo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: química, Professor: nildo
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=1° horário, Matéria=história, Professor=guilherme
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 7 (buscando: guilherme)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 1° horário, Matéria: história, Professor: guilherme
+Processando: Dia=quarta-feira, Horário=2° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 2° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=artes, Professor=hamilton
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 8 (buscando: hamilton)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: artes, Professor: hamilton
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=gramática, Professor=nara
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 10 (buscando: gramática)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: gramática, Professor: nara
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=gramática, Professor=nara
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 10 (buscando: gramática)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: gramática, Professor: nara
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=história, Professor=guilherme
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 7 (buscando: guilherme)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: história, Professor: guilherme
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=biologia, Professor=ianca
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 3 (buscando: biologia)
+  Professor ID: 9 (buscando: ianca)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: biologia, Professor: ianca
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=artes, Professor=hamilton
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 8 (buscando: hamilton)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: artes, Professor: hamilton
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=1° horário, Matéria=redação, Professor=marília
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 13 (buscando: marília)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 1° horário, Matéria: redação, Professor: marília
+Processando: Dia=sexta-feira, Horário=2° horário, Matéria=física, Professor=elvis
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 2° horário, Matéria: física, Professor: elvis
+Processando: Dia=sexta-feira, Horário=3° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 3° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=sexta-feira, Horário=4° horário, Matéria=biologia, Professor=ianca
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 3 (buscando: biologia)
+  Professor ID: 9 (buscando: ianca)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 4° horário, Matéria: biologia, Professor: ianca
+Nenhum horário válido encontrado em 2a.csv.
+
+==================================================
+Processando 6a.csv...
+
+=== Processando 6a.csv ===
+Procurando turma: 6°A
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=português, Professor=angel
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: português, Professor: angel
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=português, Professor=angel
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: português, Professor: angel
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=ens. religioso, Professor=viviane
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 23 (buscando: viviane)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: ens. religioso, Professor: viviane
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=ciências, Professor=thais
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: ciências, Professor: thais
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: tec. integradas, Professor: leonardo
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=geografia, Professor=cida
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: geografia, Professor: cida
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=história, Professor=breno
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: história, Professor: breno
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=1° horário, Matéria=ciências, Professor=thais
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 1° horário, Matéria: ciências, Professor: thais
+Processando: Dia=quarta-feira, Horário=2° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 2° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=português, Professor=angel
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: português, Professor: angel
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=geografia, Professor=cida
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: geografia, Professor: cida
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: matemática, Professor: andreia
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=história, Professor=breno
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: história, Professor: breno
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=história, Professor=breno
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: história, Professor: breno
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=artes, Professor=letícia
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 11 (buscando: letícia)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: artes, Professor: letícia
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=bilingue, Professor=yasmin
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 25 (buscando: yasmin)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: bilingue, Professor: yasmin
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=geografia, Professor=cida
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: geografia, Professor: cida
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=1° horário, Matéria=português, Professor=angel
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 1° horário, Matéria: português, Professor: angel
+Processando: Dia=sexta-feira, Horário=2° horário, Matéria=português, Professor=angel
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 2° horário, Matéria: português, Professor: angel
+Processando: Dia=sexta-feira, Horário=3° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 3° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=sexta-feira, Horário=4° horário, Matéria=ciências, Professor=thais
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 4° horário, Matéria: ciências, Professor: thais
+Processando: Dia=sexta-feira, Horário=5° horário, Matéria=ciências, Professor=thais
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 5° horário, Matéria: ciências, Professor: thais
+Processando: Dia=sexta-feira, Horário=6° horário, Matéria=redação, Professor=angel
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 2 (buscando: angel)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 6° horário, Matéria: redação, Professor: angel
+Nenhum horário válido encontrado em 6a.csv.
+
+==================================================
+Processando 8a.csv...
+
+=== Processando 8a.csv ===
+Procurando turma: 8°A
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=história, Professor=breno
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: história, Professor: breno
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=história, Professor=breno
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: história, Professor: breno
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=ciências, Professor=pablo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: ciências, Professor: pablo
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=geografia, Professor=cida
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: geografia, Professor: cida
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: bilingue, Professor: lucas
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=história, Professor=breno
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: história, Professor: breno
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: tec. integradas, Professor: leonardo
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=ciências, Professor=pablo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: ciências, Professor: pablo
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=redação, Professor=stéphanie
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: redação, Professor: stéphanie
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=1° horário, Matéria=geografia, Professor=cida
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 1° horário, Matéria: geografia, Professor: cida
+Processando: Dia=quarta-feira, Horário=2° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 2° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=ciências, Professor=pablo
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: ciências, Professor: pablo
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=ciências, Professor=pablo
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: ciências, Professor: pablo
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=geografia, Professor=cida
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: geografia, Professor: cida
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: matemática, Professor: andreia
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=1° horário, Matéria=ens. religioso, Professor=viviane
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 23 (buscando: viviane)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 1° horário, Matéria: ens. religioso, Professor: viviane
+Processando: Dia=sexta-feira, Horário=2° horário, Matéria=artes, Professor=letícia
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 11 (buscando: letícia)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 2° horário, Matéria: artes, Professor: letícia
+Processando: Dia=sexta-feira, Horário=3° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 3° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=sexta-feira, Horário=4° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 4° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=sexta-feira, Horário=5° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 5° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=sexta-feira, Horário=6° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 6° horário, Matéria: português, Professor: stéphanie
+Nenhum horário válido encontrado em 8a.csv.
+
+==================================================
+Processando 1a.csv...
+
+=== Processando 1a.csv ===
+Procurando turma: 1°A
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=gramática, Professor=nara
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 10 (buscando: gramática)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: gramática, Professor: nara
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=gramática, Professor=nara
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 10 (buscando: gramática)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: gramática, Professor: nara
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=física, Professor=elvis
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: física, Professor: elvis
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=sociologia, Professor=reinaldo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 19 (buscando: sociologia)
+  Professor ID: 19 (buscando: reinaldo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: sociologia, Professor: reinaldo
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=química, Professor=pablo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 17 (buscando: química)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: química, Professor: pablo
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=filosofia, Professor=reinaldo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 7 (buscando: filosofia)
+  Professor ID: 19 (buscando: reinaldo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: filosofia, Professor: reinaldo
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=história, Professor=guilherme
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 7 (buscando: guilherme)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: história, Professor: guilherme
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=artes, Professor=hamilton
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 8 (buscando: hamilton)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: artes, Professor: hamilton
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=inglês, Professor=yasmin-123
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 12 (buscando: inglês)
+  Professor ID: 24 (buscando: yasmin-123)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: inglês, Professor: yasmin-123
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: geografia, Professor: phylipe
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: tec. integradas, Professor: leonardo
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=literatura, Professor=stéphanie
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 13 (buscando: literatura)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: literatura, Professor: stéphanie
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=literatura, Professor=stéphanie
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 13 (buscando: literatura)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: literatura, Professor: stéphanie
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=artes, Professor=hamilton
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 8 (buscando: hamilton)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: artes, Professor: hamilton
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=história, Professor=guilherme
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 7 (buscando: guilherme)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: história, Professor: guilherme
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=bilogia, Professor=ianca
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: None (buscando: bilogia)
+  Professor ID: 9 (buscando: ianca)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: bilogia, Professor: ianca
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=ens. religioso, Professor=breno
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: ens. religioso, Professor: breno
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=1° horário, Matéria=bilogia, Professor=ianca
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: None (buscando: bilogia)
+  Professor ID: 9 (buscando: ianca)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 1° horário, Matéria: bilogia, Professor: ianca
+Processando: Dia=sexta-feira, Horário=2° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 2° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=sexta-feira, Horário=3° horário, Matéria=redação, Professor=marília
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 13 (buscando: marília)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 3° horário, Matéria: redação, Professor: marília
+Processando: Dia=sexta-feira, Horário=4° horário, Matéria=física, Professor=elvis
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 4° horário, Matéria: física, Professor: elvis
+Processando: Dia=sexta-feira, Horário=5° horário, Matéria=física, Professor=elvis
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 5° horário, Matéria: física, Professor: elvis
+Processando: Dia=sexta-feira, Horário=6° horário, Matéria=química, Professor=pablo
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 17 (buscando: química)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 6° horário, Matéria: química, Professor: pablo
+Nenhum horário válido encontrado em 1a.csv.
+
+==================================================
+Processando 2b.csv...
+
+=== Processando 2b.csv ===
+Procurando turma: 2°B
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=física, Professor=elvis
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: física, Professor: elvis
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=física, Professor=elvis
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: física, Professor: elvis
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=filosofia, Professor=reinaldo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 7 (buscando: filosofia)
+  Professor ID: 19 (buscando: reinaldo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: filosofia, Professor: reinaldo
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=gramática, Professor=nara
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 10 (buscando: gramática)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: gramática, Professor: nara
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=inglês, Professor=yasmin-123
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 12 (buscando: inglês)
+  Professor ID: 24 (buscando: yasmin-123)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: inglês, Professor: yasmin-123
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: ed. física, Professor: bruno
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=história, Professor=guilherme
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 7 (buscando: guilherme)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: história, Professor: guilherme
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=química, Professor=nildo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 17 (buscando: química)
+  Professor ID: 15 (buscando: nildo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: química, Professor: nildo
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=literatura, Professor=stéphanie
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 13 (buscando: literatura)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: literatura, Professor: stéphanie
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=química, Professor=nildo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 17 (buscando: química)
+  Professor ID: 15 (buscando: nildo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: química, Professor: nildo
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=artes, Professor=hamilton
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 8 (buscando: hamilton)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: artes, Professor: hamilton
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=1° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 1° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=quarta-feira, Horário=2° horário, Matéria=história, Professor=guilherme
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 7 (buscando: guilherme)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 2° horário, Matéria: história, Professor: guilherme
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=redação, Professor=marília
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 13 (buscando: marília)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: redação, Professor: marília
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=sociologia, Professor=reinaldo
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 19 (buscando: sociologia)
+  Professor ID: 19 (buscando: reinaldo)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: sociologia, Professor: reinaldo
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=ens. religioso, Professor=breno
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: ens. religioso, Professor: breno
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=literatura, Professor=stéphanie
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 13 (buscando: literatura)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: literatura, Professor: stéphanie
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=artes, Professor=hamilton
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 8 (buscando: hamilton)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: artes, Professor: hamilton
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: tec. integradas, Professor: leonardo
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: matemática, Professor: rafael
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=1° horário, Matéria=física, Professor=elvis
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 1° horário, Matéria: física, Professor: elvis
+Processando: Dia=sexta-feira, Horário=2° horário, Matéria=biologia, Professor=inca
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 3 (buscando: biologia)
+  Professor ID: None (buscando: inca)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 2° horário, Matéria: biologia, Professor: inca
+Processando: Dia=sexta-feira, Horário=5° horário, Matéria=biologia, Professor=inca
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 3 (buscando: biologia)
+  Professor ID: None (buscando: inca)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 5° horário, Matéria: biologia, Professor: inca
+Processando: Dia=sexta-feira, Horário=6° horário, Matéria=gramática, Professor=nara
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 10 (buscando: gramática)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 6° horário, Matéria: gramática, Professor: nara
+Nenhum horário válido encontrado em 2b.csv.
+
+==================================================
+Processando 9b.csv...
+
+=== Processando 9b.csv ===
+Procurando turma: 9°B
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=ens. religioso, Professor=viviane
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 23 (buscando: viviane)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: ens. religioso, Professor: viviane
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=história, Professor=breno
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: história, Professor: breno
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=história, Professor=breno
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: história, Professor: breno
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=química, Professor=pablo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 17 (buscando: química)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: química, Professor: pablo
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=biologia, Professor=pablo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 3 (buscando: biologia)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: biologia, Professor: pablo
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=química, Professor=pablo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 17 (buscando: química)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: química, Professor: pablo
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=biologia, Professor=pablo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 3 (buscando: biologia)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: biologia, Professor: pablo
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: bilingue, Professor: lucas
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=1° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 1° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=quarta-feira, Horário=2° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 2° horário, Matéria: tec. integradas, Professor: leonardo
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=matemática, Professor=thais
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: matemática, Professor: thais
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=física, Professor=pablo
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: física, Professor: pablo
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=redação, Professor=marília
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 13 (buscando: marília)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: redação, Professor: marília
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=história, Professor=breno
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: história, Professor: breno
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=matemática, Professor=thais
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: matemática, Professor: thais
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=matemática, Professor=thais
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: matemática, Professor: thais
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: geografia, Professor: phylipe
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=1° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 1° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=sexta-feira, Horário=2° horário, Matéria=matemática, Professor=thais
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 2° horário, Matéria: matemática, Professor: thais
+Processando: Dia=sexta-feira, Horário=3° horário, Matéria=matemática, Professor=thais
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: None (buscando: thais)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 3° horário, Matéria: matemática, Professor: thais
+Processando: Dia=sexta-feira, Horário=4° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 4° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=sexta-feira, Horário=5° horário, Matéria=artes, Professor=letícia
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 11 (buscando: letícia)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 5° horário, Matéria: artes, Professor: letícia
+Processando: Dia=sexta-feira, Horário=6° horário, Matéria=redação, Professor=marília
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 13 (buscando: marília)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 6° horário, Matéria: redação, Professor: marília
+Nenhum horário válido encontrado em 9b.csv.
+
+==================================================
+Processando 3a.csv...
+
+=== Processando 3a.csv ===
+Procurando turma: 3°A
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=sociologia, Professor=reinaldo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 19 (buscando: sociologia)
+  Professor ID: 19 (buscando: reinaldo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: sociologia, Professor: reinaldo
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=inglês, Professor=yasmin-123
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 12 (buscando: inglês)
+  Professor ID: 24 (buscando: yasmin-123)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: inglês, Professor: yasmin-123
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=literatura, Professor=stéphanie
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 13 (buscando: literatura)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: literatura, Professor: stéphanie
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=física, Professor=elvis
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: física, Professor: elvis
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=física, Professor=elvis
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: física, Professor: elvis
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=gramática, Professor=nara
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 10 (buscando: gramática)
+  Professor ID: 14 (buscando: nara)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: gramática, Professor: nara
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=artes, Professor=hamilton
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 8 (buscando: hamilton)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: artes, Professor: hamilton
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=química, Professor=nildo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 17 (buscando: química)
+  Professor ID: 15 (buscando: nildo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: química, Professor: nildo
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=história, Professor=guilherme
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 7 (buscando: guilherme)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: história, Professor: guilherme
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=química, Professor=nildo
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 17 (buscando: química)
+  Professor ID: 15 (buscando: nildo)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: química, Professor: nildo
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: matemática, Professor: rafael
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=1° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 1° horário, Matéria: tec. integradas, Professor: leonardo
+Processando: Dia=quarta-feira, Horário=2° horário, Matéria=ens. religioso, Professor=breno
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 2° horário, Matéria: ens. religioso, Professor: breno
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=literatura, Professor=stéphanie
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 13 (buscando: literatura)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: literatura, Professor: stéphanie
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=redação, Professor=marília
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 13 (buscando: marília)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: redação, Professor: marília
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=filosofia, Professor=reinaldo
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 7 (buscando: filosofia)
+  Professor ID: 19 (buscando: reinaldo)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: filosofia, Professor: reinaldo
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: matemática, Professor: rafael
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=artes, Professor=hamilton
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 8 (buscando: hamilton)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: artes, Professor: hamilton
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=matemática, Professor=rafael
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 18 (buscando: rafael)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: matemática, Professor: rafael
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=história, Professor=guilherme
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 7 (buscando: guilherme)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: história, Professor: guilherme
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=biologia, Professor=ianca
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 3 (buscando: biologia)
+  Professor ID: 9 (buscando: ianca)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: biologia, Professor: ianca
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=3° horário, Matéria=física, Professor=elvis
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 8 (buscando: física)
+  Professor ID: 6 (buscando: elvis)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 3° horário, Matéria: física, Professor: elvis
+Processando: Dia=sexta-feira, Horário=4° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 4° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=sexta-feira, Horário=5° horário, Matéria=geografia, Professor=phylipe
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 17 (buscando: phylipe)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 5° horário, Matéria: geografia, Professor: phylipe
+Processando: Dia=sexta-feira, Horário=6° horário, Matéria=biologia, Professor=ianca
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 3 (buscando: biologia)
+  Professor ID: 9 (buscando: ianca)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 6° horário, Matéria: biologia, Professor: ianca
+Nenhum horário válido encontrado em 3a.csv.
+
+==================================================
+Processando 8b.csv...
+
+=== Processando 8b.csv ===
+Procurando turma: 8°B
+Encontrado dia: segunda-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=segunda-feira, Horário=1° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 1° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=segunda-feira, Horário=2° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 2° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=segunda-feira, Horário=3° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 3° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=segunda-feira, Horário=4° horário, Matéria=ciências, Professor=pablo
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 4° horário, Matéria: ciências, Professor: pablo
+Processando: Dia=segunda-feira, Horário=5° horário, Matéria=ed. física, Professor=bruno
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 5 (buscando: ed. física)
+  Professor ID: 4 (buscando: bruno)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 5° horário, Matéria: ed. física, Professor: bruno
+Processando: Dia=segunda-feira, Horário=6° horário, Matéria=ens. religioso, Professor=viviane
+  Dia ID: 1 (buscando: segunda-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 6 (buscando: ens. religioso)
+  Professor ID: 23 (buscando: viviane)
+AVISO: Dados não encontrados para - Dia: segunda-feira, Horário: 6° horário, Matéria: ens. religioso, Professor: viviane
+Encontrado dia: terça-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=terça-feira, Horário=1° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 1° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=terça-feira, Horário=2° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 2° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=terça-feira, Horário=3° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 3° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=terça-feira, Horário=4° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 4° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=terça-feira, Horário=5° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 5° horário, Matéria: bilingue, Professor: lucas
+Processando: Dia=terça-feira, Horário=6° horário, Matéria=geografia, Professor=cida
+  Dia ID: 2 (buscando: terça-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: terça-feira, Horário: 6° horário, Matéria: geografia, Professor: cida
+Encontrado dia: quarta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quarta-feira, Horário=1° horário, Matéria=história, Professor=breno
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 1° horário, Matéria: história, Professor: breno
+Processando: Dia=quarta-feira, Horário=2° horário, Matéria=geografia, Professor=cida
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 2° horário, Matéria: geografia, Professor: cida
+Processando: Dia=quarta-feira, Horário=3° horário, Matéria=ciências, Professor=pablo
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 3° horário, Matéria: ciências, Professor: pablo
+Processando: Dia=quarta-feira, Horário=4° horário, Matéria=história, Professor=breno
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 4° horário, Matéria: história, Professor: breno
+Processando: Dia=quarta-feira, Horário=5° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 5° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=quarta-feira, Horário=6° horário, Matéria=bilingue, Professor=lucas
+  Dia ID: 3 (buscando: quarta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 2 (buscando: bilingue)
+  Professor ID: 12 (buscando: lucas)
+AVISO: Dados não encontrados para - Dia: quarta-feira, Horário: 6° horário, Matéria: bilingue, Professor: lucas
+Encontrado dia: quinta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=quinta-feira, Horário=1° horário, Matéria=geografia, Professor=cida
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 9 (buscando: geografia)
+  Professor ID: 5 (buscando: cida)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 1° horário, Matéria: geografia, Professor: cida
+Processando: Dia=quinta-feira, Horário=2° horário, Matéria=história, Professor=breno
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 11 (buscando: história)
+  Professor ID: 3 (buscando: breno)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 2° horário, Matéria: história, Professor: breno
+Processando: Dia=quinta-feira, Horário=3° horário, Matéria=ciências, Professor=pablo
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 3° horário, Matéria: ciências, Professor: pablo
+Processando: Dia=quinta-feira, Horário=4° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 4° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=quinta-feira, Horário=5° horário, Matéria=tec. integradas, Professor=leonardo
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 20 (buscando: tec. integradas)
+  Professor ID: 10 (buscando: leonardo)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 5° horário, Matéria: tec. integradas, Professor: leonardo
+Processando: Dia=quinta-feira, Horário=6° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 4 (buscando: quinta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: quinta-feira, Horário: 6° horário, Matéria: português, Professor: stéphanie
+Encontrado dia: sexta-feira
+Cabeçalho da tabela encontrado
+Processando: Dia=sexta-feira, Horário=1° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 1° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 1° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=sexta-feira, Horário=2° horário, Matéria=português, Professor=stéphanie
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 2° horário)
+  Matéria ID: 15 (buscando: português)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 2° horário, Matéria: português, Professor: stéphanie
+Processando: Dia=sexta-feira, Horário=3° horário, Matéria=redação, Professor=stéphanie
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 3° horário)
+  Matéria ID: 18 (buscando: redação)
+  Professor ID: 20 (buscando: stéphanie)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 3° horário, Matéria: redação, Professor: stéphanie
+Processando: Dia=sexta-feira, Horário=4° horário, Matéria=matemática, Professor=andreia
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 4° horário)
+  Matéria ID: 14 (buscando: matemática)
+  Professor ID: 1 (buscando: andreia)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 4° horário, Matéria: matemática, Professor: andreia
+Processando: Dia=sexta-feira, Horário=5° horário, Matéria=ciências, Professor=pablo
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 5° horário)
+  Matéria ID: 4 (buscando: ciências)
+  Professor ID: 16 (buscando: pablo)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 5° horário, Matéria: ciências, Professor: pablo
+Processando: Dia=sexta-feira, Horário=6° horário, Matéria=artes, Professor=letícia
+  Dia ID: 5 (buscando: sexta-feira)
+  Ordem ID: None (buscando: 6° horário)
+  Matéria ID: 1 (buscando: artes)
+  Professor ID: 11 (buscando: letícia)
+AVISO: Dados não encontrados para - Dia: sexta-feira, Horário: 6° horário, Matéria: artes, Professor: letícia
+Nenhum horário válido encontrado em 8b.csv.
