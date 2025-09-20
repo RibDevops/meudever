@@ -8,6 +8,7 @@ from .views_professor import *
 from .views_turmas import *
 from .views_event import *
 from .views_horarios import *
+from .views_semana import *
 
 
 

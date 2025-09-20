@@ -3,6 +3,7 @@ from . import views
 from django.urls import path
 from cal.views.views_ajax import *
 from cal.views.views_dever import *
+from cal.views.views_semana import *
 from cal.views import *
 from django.urls import path
 # from cal.views import (home)
@@ -52,9 +53,6 @@ urlpatterns = [
     path('turma/<pk>/atualiza/', views.atualiza_turma, name='atualiza_turma'),
     path('turma/<pk>/deleta/', views.deleta_turma, name='deleta_turma'),
 
-
-
-
     # Exemplo para Materia:
     path('materia/', views.lista_materia, name='lista_materia'),
     path('materia/nova/', views.cria_materia, name='cria_materia'),
@@ -90,6 +88,8 @@ urlpatterns = [
         # ... outras URLs
     path('horarios/', views.listar_horarios, name='listar_horarios'),
     path('horarios/turma/<int:turma_id>/', views.listar_horarios, name='listar_horarios_turma'),
+
+    path('semana/completa/<int:turma_id>/', views_semana.semana_turma_completa, name='semana_completa'),
 
 
 

@@ -7,6 +7,7 @@
 
 <p><a href="{% url 'cal:cria_turma' %}" class="btn btn-primary">Cadastrar Nova Turma</a></p>
 <p><a href="{% url 'cal:listar_horarios' %}" class="btn btn-info">Ver Todos os Horários</a></p>
+
 <table class="table">
     <thead>
         <tr>
@@ -21,6 +22,9 @@
                 <td>{{ turma.turma }}</td>
                 <td>{{ turma.fk_escola.nome_escola }}</td>
                 <td>
+                    <a href="{% url 'cal:semana_completa' turma.pk %}" class="btn btn-success">
+                        <i class="fas fa-calendar-week"></i> Ver Semana
+                    </a>
                     <a href="{% url 'cal:listar_horarios_turma' turma.pk %}" class="btn btn-info">
                         <i class="fas fa-calendar"></i> Ver Horários
                     </a>

@@ -222,7 +222,7 @@ def dever_update(request, pk):
                     messages.error(request, f"Erro no campo {field}: {error}")
     else:
         form = EventForm(instance=dever)
-    escolas = Escola.objects.all()
+        escolas = Escola.objects.all()
     return render(request, 'dever/dever_update.html', {'form': form, 'escolas': escolas})
 
 def dever_delete(request, pk):

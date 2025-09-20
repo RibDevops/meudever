@@ -1,0 +1,25 @@
+<!-- semana/debug.html -->
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Debug Info</h1>
+    <p>Turma: {{ turma.turma }}</p>
+    <p>Horários encontrados: {{ horarios_count }}</p>
+    <p>Eventos encontrados: {{ eventos_count }}</p>
+    <p>Data de hoje: {{ debug_info.hoje }}</p>
+    
+    <h2>Horários:</h2>
+    <ul>
+    {% for h in turma.horarios_turma.all %}
+        <li>{{ h.fk_dias.dias }} - {{ h.fk_ordem.ordem }} - {{ h.fk_materia.nome_materia }}</li>
+    {% endfor %}
+    </ul>
+    
+    <h2>Eventos:</h2>
+    <ul>
+    {% for e in turma.dever_turma.all %}
+        <li>{{ e.start_time }} - {{ e.fk_materia.nome_materia }} - {{ e.title }}</li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}

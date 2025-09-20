@@ -39,8 +39,9 @@
                                     <tbody>
                                         {% for dever in deveres %}
                                         
+
                                         <tr class="{{ dever.cor_fundo|default:'normal' }}">
-                                            <td>{{ dever.data_formatada_conteudo|default:"N/A" }}</td>
+                                            <td>{{ dever.start_time|default:"N/A" }}</td>
                                             <td>{{ dever.fk_livro.nome_livro }}</td>
                                             <td>{{ dever.fk_professor.nome_professor }}</td>
                                             <td>{{ dever.title }}</td>

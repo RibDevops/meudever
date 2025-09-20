@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid py-3">
+    <h1 class="h4">Controle de Conteúdos e Atividades</h1>
+
+    {% if tem_dados %}
+        {% for semana, escolas in dados.items %}
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Semana: {{ semana }}</h4>
+                </div>
+                <div class="card-body">
+                    {% for escola, turmas in escolas.items %}
+                        <h5 class="text-secondary">{{ escola }}</h5>
+                        {% for turma, dias in turmas.items %}
+                            <h6 class="fw-bold mt-2">Turma: {{ turma }}</h6>
+                            {% for dia, linhas in dias.items %}
+                                <h6 class="text-muted mt-3">{{ dia }}</h6>
+                                <div class="table-responsive">
+                                    <table class="table table-sm table-bordered table-striped">
+                                        <thead class="table-info">
+                                            <tr>
+                                                <th>Horário</th>
+                                                <th>Disciplina</th>
+                                                <th>Professor</th>
+                                                <th>Conteúdo</th>
+                                                <th>Atividade</th>
+                                                <th>Entrega</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for l in linhas %}
+                                            <tr>
+                                                <td>{{ l.ordem }}</td>
+                                                <td>{{ l.materia }}</td>
+                                                <td>{{ l.professor }}</td>
+                                                <td>{{ l.conteudo }}</td>
+                                                <td>{{ l.dever }}</td>
+                                                <td>{{ l.entrega }}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-info">Nenhum dado encontrado.</div>
+    {% endif %}
+</div>
+{% endblock %}
