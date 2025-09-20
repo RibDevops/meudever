@@ -127,7 +127,7 @@
       "fk_ordem": 5,
       "fk_escola": 1,
       "fk_turma": 13,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 12
     }
   },
@@ -151,8 +151,8 @@
       "fk_ordem": 1,
       "fk_escola": 1,
       "fk_turma": 13,
-      "fk_professor": 26,
-      "fk_materia": 16
+      "fk_professor": 25,
+      "fk_materia": 21
     }
   },
   {
@@ -163,8 +163,8 @@
       "fk_ordem": 2,
       "fk_escola": 1,
       "fk_turma": 13,
-      "fk_professor": 26,
-      "fk_materia": 16
+      "fk_professor": 25,
+      "fk_materia": 21
     }
   },
   {
@@ -427,7 +427,7 @@
       "fk_ordem": 6,
       "fk_escola": 1,
       "fk_turma": 16,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 12
     }
   },
@@ -703,8 +703,8 @@
       "fk_ordem": 5,
       "fk_escola": 1,
       "fk_turma": 16,
-      "fk_professor": 26,
-      "fk_materia": 16
+      "fk_professor": 25,
+      "fk_materia": 21
     }
   },
   {
@@ -715,8 +715,8 @@
       "fk_ordem": 6,
       "fk_escola": 1,
       "fk_turma": 16,
-      "fk_professor": 26,
-      "fk_materia": 16
+      "fk_professor": 25,
+      "fk_materia": 21
     }
   },
   {
@@ -775,7 +775,7 @@
       "fk_ordem": 5,
       "fk_escola": 1,
       "fk_turma": 17,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 12
     }
   },
@@ -1039,8 +1039,8 @@
       "fk_ordem": 3,
       "fk_escola": 1,
       "fk_turma": 17,
-      "fk_professor": 26,
-      "fk_materia": 16
+      "fk_professor": 25,
+      "fk_materia": 21
     }
   },
   {
@@ -1051,8 +1051,8 @@
       "fk_ordem": 4,
       "fk_escola": 1,
       "fk_turma": 17,
-      "fk_professor": 26,
-      "fk_materia": 16
+      "fk_professor": 25,
+      "fk_materia": 21
     }
   },
   {
@@ -1099,7 +1099,7 @@
       "fk_ordem": 2,
       "fk_escola": 1,
       "fk_turma": 19,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 12
     }
   },
@@ -1375,8 +1375,8 @@
       "fk_ordem": 1,
       "fk_escola": 1,
       "fk_turma": 19,
-      "fk_professor": 26,
-      "fk_materia": 16
+      "fk_professor": 25,
+      "fk_materia": 21
     }
   },
   {
@@ -1387,8 +1387,8 @@
       "fk_ordem": 2,
       "fk_escola": 1,
       "fk_turma": 19,
-      "fk_professor": 26,
-      "fk_materia": 16
+      "fk_professor": 25,
+      "fk_materia": 21
     }
   },
   {
@@ -1447,7 +1447,7 @@
       "fk_ordem": 1,
       "fk_escola": 1,
       "fk_turma": 1,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -1531,7 +1531,7 @@
       "fk_ordem": 2,
       "fk_escola": 1,
       "fk_turma": 1,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -1555,7 +1555,7 @@
       "fk_ordem": 4,
       "fk_escola": 1,
       "fk_turma": 1,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -1627,7 +1627,7 @@
       "fk_ordem": 4,
       "fk_escola": 1,
       "fk_turma": 1,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -1711,7 +1711,7 @@
       "fk_ordem": 5,
       "fk_escola": 1,
       "fk_turma": 1,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -1879,7 +1879,7 @@
       "fk_ordem": 1,
       "fk_escola": 1,
       "fk_turma": 2,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -1975,7 +1975,7 @@
       "fk_ordem": 3,
       "fk_escola": 1,
       "fk_turma": 2,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2059,7 +2059,7 @@
       "fk_ordem": 4,
       "fk_escola": 1,
       "fk_turma": 2,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2083,7 +2083,7 @@
       "fk_ordem": 6,
       "fk_escola": 1,
       "fk_turma": 2,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2119,7 +2119,7 @@
       "fk_ordem": 3,
       "fk_escola": 1,
       "fk_turma": 2,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2191,7 +2191,7 @@
       "fk_ordem": 3,
       "fk_escola": 1,
       "fk_turma": 4,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2263,7 +2263,7 @@
       "fk_ordem": 3,
       "fk_escola": 1,
       "fk_turma": 4,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2371,7 +2371,7 @@
       "fk_ordem": 6,
       "fk_escola": 1,
       "fk_turma": 4,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2395,7 +2395,7 @@
       "fk_ordem": 2,
       "fk_escola": 1,
       "fk_turma": 4,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2467,7 +2467,7 @@
       "fk_ordem": 2,
       "fk_escola": 1,
       "fk_turma": 4,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2563,7 +2563,7 @@
       "fk_ordem": 4,
       "fk_escola": 1,
       "fk_turma": 5,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2659,7 +2659,7 @@
       "fk_ordem": 6,
       "fk_escola": 1,
       "fk_turma": 5,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2719,7 +2719,7 @@
       "fk_ordem": 5,
       "fk_escola": 1,
       "fk_turma": 5,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2743,7 +2743,7 @@
       "fk_ordem": 1,
       "fk_escola": 1,
       "fk_turma": 5,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },
@@ -2815,7 +2815,7 @@
       "fk_ordem": 1,
       "fk_escola": 1,
       "fk_turma": 5,
-      "fk_professor": 25,
+      "fk_professor": 24,
       "fk_materia": 2
     }
   },

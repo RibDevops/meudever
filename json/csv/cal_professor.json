@@ -133,20 +133,14 @@
     },
     {
         "fk_escola_id": 1,
-        "fk_materia_id": 12,
-        "id": 24,
-        "nome_professor": "Yasmin-123"
-    },
-    {
-        "fk_escola_id": 1,
         "fk_materia_id": 2,
-        "id": 25,
+        "id": 24,
         "nome_professor": "Yasmin"
     },
     {
         "fk_escola_id": 1,
-        "fk_materia_id": 16,
-        "id": 26,
+        "fk_materia_id": 21,
+        "id": 25,
         "nome_professor": "Projeto de Vida"
     }
 ]

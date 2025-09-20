@@ -78,5 +78,9 @@
     {
         "id": 20,
         "nome_materia": "Tec. Integradas"
+    },
+    {
+        "id": 21,
+        "nome_materia": "Projeto de Vida"
     }
 ]
