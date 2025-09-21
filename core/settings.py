@@ -215,40 +215,40 @@ CSRF_TRUSTED_ORIGINS = [
     # Adicione outros domínios se necessário
 ]
 
-# Cookie settings
-CSRF_COOKIE_NAME = 'csrftoken'
-CSRF_COOKIE_AGE = 31449600  # 1 ano em segundos
-CSRF_COOKIE_PATH = '/'
-CSRF_COOKIE_DOMAIN = None
-CSRF_COOKIE_SAMESITE = 'Lax'
+# # Cookie settings
+# CSRF_COOKIE_NAME = 'csrftoken'
+# CSRF_COOKIE_AGE = 31449600  # 1 ano em segundos
+# CSRF_COOKIE_PATH = '/'
+# CSRF_COOKIE_DOMAIN = None
+# CSRF_COOKIE_SAMESITE = 'Lax'
 
 
 
-# settings.py - Adicionar logging detalhado
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-        },
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'debug.log',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console', 'file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-        'login': {
-            'handlers': ['console', 'file'],
-            'level': 'DEBUG',
-            'propagate': False,
-        },
-    },
-}
+# # settings.py - Adicionar logging detalhado
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#         },
+#         'file': {
+#             'level': 'DEBUG',
+#             'class': 'logging.FileHandler',
+#             'filename': 'debug.log',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console', 'file'],
+#             'level': 'DEBUG',
+#             'propagate': True,
+#         },
+#         'login': {
+#             'handlers': ['console', 'file'],
+#             'level': 'DEBUG',
+#             'propagate': False,
+#         },
+#     },
+# }
