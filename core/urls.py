@@ -22,4 +22,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('cal.urls', namespace='cal')),
     path('', include('login.urls', namespace='login')),
+
+    path('password_reset/', include('django.contrib.auth.urls')),
 ]

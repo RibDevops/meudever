@@ -19,6 +19,8 @@ class Escola(models.Model):
     def __str__(self):
         return self.nome_escola
 
+
+
 # **Model Turma**
 class Turma(models.Model):
     id = models.AutoField(primary_key=True)

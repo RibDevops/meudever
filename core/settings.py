@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'cal',
     'login',
     'rolepermissions',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -74,7 +75,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "core.wsgi.application"
 
-AUTH_USER_MODEL = 'login.User'
+
 
 
 # Database
@@ -141,7 +142,113 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/agendamento/core/static'
 STATIC_URL = '/static/'
 
+AUTH_USER_MODEL = 'login.User'
 # settings.py
-LOGIN_URL = '/login/'  # Mude para usar /login/ em vez de /accounts/login/
-LOGIN_REDIRECT_URL = '/'
+
+
 LOGOUT_REDIRECT_URL = '/'
+
+
+# settings.py
+
+# Configurações de Email (usando console para desenvolvimento)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# Para produção, configure um servidor de email real:
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'seu-email@gmail.com'
+# EMAIL_HOST_PASSWORD = 'sua-senha'
+
+# URL para redirecionamento após reset de senha
+LOGIN_REDIRECT_URL = '/calendario/'
+LOGIN_URL = '/login/'
+
+# settings.py - Alternativa para debug
+# Tempo de expiração do token (em segundos)
+PASSWORD_RESET_TIMEOUT = 259200  # 3 dias - padrão do Django
+
+# settings.py - Configurações finais
+EMAIL_SUBJECT_PREFIX = '[Sistema de Agenda] '
+
+# Para produção, considere adicionar:
+DEFAULT_FROM_EMAIL = 'Sistema de Agenda <andernet@gmail.com>'
+SERVER_EMAIL = 'erros@sistemaagenda.com'
+
+# Headers para melhor organização no Gmail
+EMAIL_EXTRA_HEADERS = {
+    'X-Priority': '1',
+    'Importance': 'High',
+    'X-Mailer': 'Django SMTP',
+}
+
+# Produção - Configurações Gmail Corrigidas
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False  # IMPORTANTE: TLS e SSL são mutuamente exclusivos
+EMAIL_HOST_USER = 'andernet@gmail.com'
+EMAIL_HOST_PASSWORD = 'ktdu sqae najt thmj'
+DEFAULT_FROM_EMAIL = 'andernet@gmail.com'  # Deve ser o mesmo que EMAIL_HOST_USER
+SERVER_EMAIL = 'andernet@gmail.com'
+
+# Configurações adicionais importantes
+EMAIL_TIMEOUT = 30  # Timeout em segundos
+
+
+
+
+# Configurações adicionais de CSRF (opcionais)
+CSRF_COOKIE_SECURE = False  # True em produção com HTTPS
+CSRF_COOKIE_HTTPONLY = False
+CSRF_USE_SESSIONS = False
+CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'  # View padrão
+
+# Se estiver usando subdomínios ou domínios diferentes
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+    # Adicione outros domínios se necessário
+]
+
+# Cookie settings
+CSRF_COOKIE_NAME = 'csrftoken'
+CSRF_COOKIE_AGE = 31449600  # 1 ano em segundos
+CSRF_COOKIE_PATH = '/'
+CSRF_COOKIE_DOMAIN = None
+CSRF_COOKIE_SAMESITE = 'Lax'
+
+
+
+# settings.py - Adicionar logging detalhado
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'login': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}

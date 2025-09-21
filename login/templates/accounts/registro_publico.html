@@ -1,0 +1,170 @@
+<!-- login/templates/accounts/registro_publico.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="fas fa-user-plus me-2"></i>
+                        Criar Conta de Pai/Responsável
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Esta conta é destinada a pais e responsáveis. Para outros tipos de conta, entre em contato com a administração.
+                    </div>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {% for error in form.non_field_errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="{{ form.username.id_for_label }}" class="form-label">
+                                        {{ form.username.label }} *
+                                    </label>
+                                    {{ form.username }}
+                                    {% if form.username.help_text %}
+                                    <div class="form-text">{{ form.username.help_text }}</div>
+                                    {% endif %}
+                                    {% for error in form.username.errors %}
+                                    <div class="invalid-feedback d-block">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="{{ form.email.id_for_label }}" class="form-label">
+                                        {{ form.email.label }} *
+                                    </label>
+                                    {{ form.email }}
+                                    {% for error in form.email.errors %}
+                                    <div class="invalid-feedback d-block">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="{{ form.first_name.id_for_label }}" class="form-label">
+                                        {{ form.first_name.label }} *
+                                    </label>
+                                    {{ form.first_name }}
+                                    {% for error in form.first_name.errors %}
+                                    <div class="invalid-feedback d-block">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="{{ form.last_name.id_for_label }}" class="form-label">
+                                        {{ form.last_name.label }}
+                                    </label>
+                                    {{ form.last_name }}
+                                    {% for error in form.last_name.errors %}
+                                    <div class="invalid-feedback d-block">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="{{ form.telefone.id_for_label }}" class="form-label">
+                                        {{ form.telefone.label }} *
+                                    </label>
+                                    {{ form.telefone }}
+                                    {% for error in form.telefone.errors %}
+                                    <div class="invalid-feedback d-block">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="{{ form.password1.id_for_label }}" class="form-label">
+                                        Senha *
+                                    </label>
+                                    {{ form.password1 }}
+                                    {% if form.password1.help_text %}
+                                    <div class="form-text">{{ form.password1.help_text }}</div>
+                                    {% endif %}
+                                    {% for error in form.password1.errors %}
+                                    <div class="invalid-feedback d-block">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="{{ form.password2.id_for_label }}" class="form-label">
+                                        Confirmar Senha *
+                                    </label>
+                                    {{ form.password2 }}
+                                    {% for error in form.password2.errors %}
+                                    <div class="invalid-feedback d-block">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <a href="{% url 'login:login' %}" class="btn btn-secondary me-md-2">
+                                <i class="fas fa-arrow-left me-1"></i>Voltar para Login
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-user-plus me-1"></i>Criar Conta
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .form-control {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ced4da;
+        border-radius: 0.375rem;
+        font-size: 1rem;
+    }
+    
+    .form-control:focus {
+        border-color: #4e73df;
+        box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+    }
+    
+    .invalid-feedback {
+        display: block;
+        color: #dc3545;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+    }
+    
+    .form-text {
+        font-size: 0.875rem;
+        color: #6c757d;
+        margin-top: 0.25rem;
+    }
+</style>
+{% endblock %}

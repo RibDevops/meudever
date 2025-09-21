@@ -1,23 +1,58 @@
+# login/models.py - Atualizar a importação da Escola
+
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, Group, Permission
+from django.utils.translation import gettext_lazy as _
 
+# Importar Escola do app cal
+from cal.models import Escola
 
+class TipoUsuario(models.Model):
+    TIPOS = (
+        ('superuser', 'Superusuário'),
+        ('admin', 'Administrador'),
+        ('coordenador', 'Coordenador'),
+        ('professor', 'Professor'),
+        ('aluno', 'Aluno'),
+        ('pai', 'Pai/Responsável'),
+    )
+    
+    nome = models.CharField(max_length=50, choices=TIPOS, unique=True)
+    descricao = models.TextField(blank=True)
+    permissoes = models.ManyToManyField(
+        Permission,
+        verbose_name='permissoes',
+        blank=True,
+        related_name='tipos_usuario'
+    )
+    
+    class Meta:
+        verbose_name = 'Tipo de Usuário'
+        verbose_name_plural = 'Tipos de Usuário'
+    
+    def __str__(self):
+        return self.get_nome_display()
 
 class User(AbstractUser):
-    # Use string reference em vez de import direto
-    # fk_escola = models.ManyToManyField(
-    #     'cal.Escola',
-    #     null=True,
-    #     blank=True,
-    #     related_name="login_escola",
-    #     verbose_name="Escola",
-    #     default=None  # Mude para None ou um valor válido
-    # )
-    # fk_escola = models.ForeignKey(Escola, null=True, blank=True, on_delete=models.SET_NULL)
-    fk_escola = models.ForeignKey('cal.Escola', null=True, blank=True, on_delete=models.SET_NULL, verbose_name="Escola")
-
+    TIPO_CHOICES = (
+        ('superuser', 'Superusuário'),
+        ('admin', 'Administrador'),
+        ('coordenador', 'Coordenador'),
+        ('professor', 'Professor'),
+        ('aluno', 'Aluno'),
+        ('pai', 'Pai/Responsável'),
+    )
+    
+    # Referência correta para a Escola do app cal
+    fk_escola = models.ForeignKey(Escola, null=True, blank=True, on_delete=models.SET_NULL, verbose_name="Escola")
+    tipo_usuario = models.CharField(max_length=20, choices=TIPO_CHOICES, default='professor')
+    # data_nascimento = models.DateField(null=True, blank=True)
+    telefone = models.CharField(max_length=20, blank=True)
+    ativo = models.BooleanField(default=True)
+    
+    # Relacionamentos existentes mantidos
     groups = models.ManyToManyField(
-        'auth.Group',
+        Group,
         verbose_name='groups',
         blank=True,
         help_text='The groups this user belongs to.',
@@ -25,7 +60,7 @@ class User(AbstractUser):
         related_query_name="user",
     )
     user_permissions = models.ManyToManyField(
-        'auth.Permission',
+        Permission,
         verbose_name='user permissions',
         blank=True,
         help_text='Specific permissions for this user.',
@@ -34,4 +69,18 @@ class User(AbstractUser):
     )
 
     class Meta:
-        db_table = 'custom_user'  # Nome personalizado da tabela
+        db_table = 'custom_user'
+        verbose_name = 'Usuário'
+        verbose_name_plural = 'Usuários'
+    
+    def __str__(self):
+        return f"{self.username} ({self.get_tipo_usuario_display()})"
+    
+    def is_superuser_type(self):
+        return self.tipo_usuario == 'superuser'
+    
+    def is_admin_type(self):
+        return self.tipo_usuario in ['superuser', 'admin']
+    
+    def can_manage_users(self):
+        return self.tipo_usuario in ['superuser', 'admin', 'coordenador']
