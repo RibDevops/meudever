@@ -8,6 +8,7 @@
     <thead>
         <tr>
             <th>Nome dos Alunos</th>
+            <th>Pai/Responsável</th>
             <th>Escola</th>
             <th>Turma</th>
             <th>Ações</th>
@@ -17,6 +18,21 @@
         {% for aluno in alunos %}
             <tr>
                 <td>{{ aluno.nome_aluno }}</td>
+                
+            <td>
+                {% if aluno.fk_user %}  <!-- Remova o _id -->
+                    {{ aluno.fk_user.get_full_name|default:aluno.fk_user.username }}
+                    <br>
+                    <small class="text-muted">{{ aluno.fk_user.email }}</small>
+                    {% if aluno.fk_user.telefone %}
+                        <br>
+                        <small class="text-muted">{{ aluno.fk_user.telefone }}</small>
+                    {% endif %}
+                {% else %}
+                    -
+                {% endif %}
+            </td>
+</td>
                 <td>{{ aluno.fk_escola.nome_escola }}</td>
                 <td>{{ aluno.fk_turma.turma }}</td>
                 <td>

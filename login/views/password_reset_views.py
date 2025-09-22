@@ -114,3 +114,5 @@ def send_custom_reset_email(self, user, email):
     # Renderizar conteúdo HTML
     html_content = render_to_string(self.email_template_name, context)
     # ... resto do código
+
+

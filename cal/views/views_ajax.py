@@ -36,3 +36,27 @@ def get_livros_ajax(request, materia_id, escola_id):
     print(f'livros: {livros}')
     data = [{"id": livro.id, "nome": livro.nome_livro} for livro in livros]
     return JsonResponse(data, safe=False)
+
+
+# Em suas views.py, adicione:
+from django.http import JsonResponse
+from ..models import Turma, Professor, Materia, Livro
+
+def ajax_get_turmas(request, escola_id):
+    turmas = Turma.objects.filter(fk_escola_id=escola_id).values('id', 'turma')
+    return JsonResponse(list(turmas), safe=False)
+
+def ajax_get_professores(request, escola_id):
+    professores = Professor.objects.filter(fk_escola_id=escola_id).values('id', 'nome_professor')
+    return JsonResponse(list(professores), safe=False)
+
+def ajax_get_materia(request, professor_id):
+    try:
+        professor = Professor.objects.get(id=professor_id)
+        return JsonResponse({'id': professor.fk_materia.id, 'nome': professor.fk_materia.nome_materia})
+    except Professor.DoesNotExist:
+        return JsonResponse({'error': 'Professor não encontrado'})
+
+def ajax_get_livros(request, materia_id, escola_id):
+    livros = Livro.objects.filter(fk_materia_id=materia_id, fk_escola_id=escola_id).values('id', 'nome_livro')
+    return JsonResponse(list(livros), safe=False)

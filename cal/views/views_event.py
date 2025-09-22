@@ -82,19 +82,6 @@ def next_month(d):
     return month
 
 def event(request, event_id=None):
-#     instance = Event()
-#     if event_id:
-#         instance = get_object_or_404(Event, pk=event_id)
-#     else:
-#         instance = Event()
-
-#     form = EventForm(request.POST or None, instance=instance)
-#     if request.POST and form.is_valid():
-#         form.save()
-#         return HttpResponseRedirect(reverse('cal:event_new'))
-
-#     return render(request, 'cal/event.html', {'form': form})
-# def dever_create(request):
     if request.method == 'POST':
         form = EventForm(request.POST)
         logger.debug("Dados do POST: %s", request.POST)
@@ -132,55 +119,182 @@ def excluir_evento(request, event_id):
 from django.db.models import F
 from django.db.models.functions import Coalesce, Cast
 from django.db.models import DateField
+from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 
-#@login_required
+from django.db.models import Q
+from django.contrib.auth.decorators import login_required
+
+@login_required
 def listar_eventos(request):
-    deveres_por_escola = defaultdict(lambda: defaultdict(list))
-    # deveres = Event.objects.select_related('fk_turma', 'fk_turma__fk_escola', 'fk_materia', 'fk_professor').annotate(data_ordem=Coalesce('data_entrega', F('data_postagem'))).order_by('fk_turma__fk_escola__nome_escola', 'fk_turma__turma', 'data_ordem')
+    # Inicializar queryset base
     deveres = Event.objects.select_related(
-            'fk_turma', 'fk_turma__fk_escola', 'fk_materia', 'fk_professor'
-        ).annotate(
-            data_ordem=Coalesce(
-                'data_entrega',
-                Cast('data_postagem', output_field=DateField())
-            )
-        ).order_by(
-            'fk_turma__fk_escola__nome_escola',
-            'fk_turma__turma',
-            'data_ordem'
+        'fk_turma', 'fk_turma__fk_escola', 'fk_materia', 'fk_professor'
+    ).annotate(
+        data_ordem=Coalesce(
+            'data_entrega',
+            Cast('data_postagem', output_field=DateField())
         )
-    for dever in deveres:
-        # print(f'qtd: {dever.dias_para_entrega()}')
-        dias_para_entrega = dever.dias_para_entrega()  # CORREÇÃO: usar 'dever'
-        if dias_para_entrega <= 1:
-            dever.cor_fundo = "vermelho"  # CORREÇÃO: usar 'dever'
-        elif dias_para_entrega == 2:
-            dever.cor_fundo = "amarelo"  # CORREÇÃO: usar 'dever'
+    )
+    
+    # Aplicar filtros baseados no tipo de usuário
+    user = request.user
+    
+    if user.tipo_usuario == 'superuser':
+        # Superuser vê tudo - sem filtro adicional
+        pass
+        
+    elif user.tipo_usuario == 'admin':
+        # Admin vê tudo da sua escola
+        if user.fk_escola:
+            deveres = deveres.filter(fk_turma__fk_escola=user.fk_escola)
         else:
-            dever.cor_fundo = "verde"  # CORREÇÃO: usar 'dever'
-
-        escola_nome = dever.fk_turma.fk_escola.nome_escola  # CORREÇÃO: usar 'dever'
-        turma_nome = dever.fk_turma.turma  # CORREÇÃO: usar 'dever'
+            deveres = deveres.none()
+            messages.info(request, "Você não está vinculado a nenhuma escola.")
+            
+    elif user.tipo_usuario == 'coordenador':
+        # Coordenador vê tudo da sua escola
+        if user.fk_escola:
+            deveres = deveres.filter(fk_turma__fk_escola=user.fk_escola)
+        else:
+            deveres = deveres.none()
+            messages.info(request, "Você não está vinculado a nenhuma escola.")
+            
+    elif user.tipo_usuario == 'professor':
+        # Professor vê os seus deveres de TODAS as turmas
+        # Busca por correspondência no nome do professor
+        professor_nome = user.get_full_name() or user.username
+        
+        # Primeiro tenta encontrar exatamente pelo nome
+        professor_exato = Professor.objects.filter(
+            nome_professor__iexact=professor_nome
+        ).first()
+        
+        if professor_exato:
+            deveres = deveres.filter(fk_professor=professor_exato)
+        else:
+            # Se não encontrar exato, busca por partes do nome
+            if user.first_name and user.last_name:
+                deveres = deveres.filter(
+                    Q(fk_professor__nome_professor__icontains=user.first_name) |
+                    Q(fk_professor__nome_professor__icontains=user.last_name)
+                )
+            else:
+                deveres = deveres.filter(
+                    fk_professor__nome_professor__icontains=professor_nome
+                )
+        
+        # Se ainda não encontrou, mostra mensagem
+        if not deveres.exists():
+            messages.info(request, f"Nenhum dever encontrado para o professor '{professor_nome}'.")
+            
+    elif user.tipo_usuario == 'pai':
+        # Pai vê os deveres de TODOS os seus filhos
+        alunos_filhos = Alunos.objects.filter(fk_user=user).select_related('fk_turma', 'fk_escola')
+        
+        if not alunos_filhos.exists():
+            deveres = deveres.none()
+            messages.info(request, "Nenhum aluno vinculado à sua conta.")
+        else:
+            # Coletar TODAS as turmas dos filhos
+            turmas_ids = []
+            escolas_ids = []
+            
+            for aluno in alunos_filhos:
+                turmas_ids.append(aluno.fk_turma.id)
+                escolas_ids.append(aluno.fk_escola.id)
+            
+            # Filtrar por TODAS as turmas dos filhos
+            deveres = deveres.filter(
+                fk_turma__id__in=turmas_ids,
+                fk_turma__fk_escola__id__in=escolas_ids
+            )
+            
+            # Adicionar informação de qual filho está relacionado a cada dever
+            for dever in deveres:
+                # Encontrar TODOS os filhos nesta turma
+                filhos_na_turma = alunos_filhos.filter(fk_turma=dever.fk_turma)
+                if filhos_na_turma.exists():
+                    nomes_filhos = [aluno.nome_aluno for aluno in filhos_na_turma]
+                    dever.alunos_nomes = ", ".join(nomes_filhos)
+                else:
+                    dever.alunos_nomes = "Filho"
+            
+            if not deveres.exists():
+                nomes_filhos = [aluno.nome_aluno for aluno in alunos_filhos]
+                messages.info(request, f"Nenhum dever encontrado para seus filhos: {', '.join(nomes_filhos)}")
+                
+    else:
+        # Para outros tipos (aluno, etc.), não mostra nada
+        deveres = deveres.none()
+        messages.info(request, "Você não tem permissão para visualizar deveres.")
+    
+    # Ordenar os resultados
+    deveres = deveres.order_by('fk_turma__fk_escola__nome_escola', 'fk_turma__turma', 'data_ordem')
+    
+    # Processar cores baseadas nos dias para entrega
+    for dever in deveres:
+        dias_para_entrega = dever.dias_para_entrega()
+        if dias_para_entrega <= 1:
+            dever.cor_fundo = "table-danger"  # Vermelho - Urgente
+            dever.status = "Urgente"
+        elif dias_para_entrega <= 3:
+            dever.cor_fundo = "table-warning"  # Amarelo - Atenção
+            dever.status = "Atenção"
+        else:
+            dever.cor_fundo = "table-success"  # Verde - No prazo
+            dever.status = "No prazo"
+    
+    # Agrupar por escola e turma
+    deveres_por_escola = defaultdict(lambda: defaultdict(list))
+    for dever in deveres:
+        escola_nome = dever.fk_turma.fk_escola.nome_escola
+        turma_nome = dever.fk_turma.turma
         deveres_por_escola[escola_nome][turma_nome].append(dever)
-
+    
     def convert_defaultdict_to_dict(d):
         if isinstance(d, defaultdict):
             d = {k: convert_defaultdict_to_dict(v) for k, v in d.items()}
         elif isinstance(d, dict):
             d = {k: convert_defaultdict_to_dict(v) for k, v in d.items()}
         return d
-
+    
     context = {
         'deveres_por_escola': convert_defaultdict_to_dict(deveres_por_escola),
-        'tem_deveres': any(deveres)
+        'tem_deveres': deveres.exists(),
+        'user_tipo': user.tipo_usuario,
+        'user': user
     }
-
+    
+    # Adicionar alunos_filhos no contexto para pais
+    if user.tipo_usuario == 'pai':
+        context['alunos_filhos'] = Alunos.objects.filter(fk_user=user).select_related('fk_turma', 'fk_escola')
+    
     return render(request, 'dever/dever_list.html', context)
 
+#@login_required
+# def dever_create(request):
+#     if request.method == 'POST':
+#         form = EventForm(request.POST)
+#         logger.debug("Dados do POST: %s", request.POST)
+#         print("Dados do POST:", request.POST)
+#         if form.is_valid():
+#             dever = form.save()
+#             messages.success(request, "Dever cadastrado com sucesso.")
+#             return redirect('cal:listar_eventos')
+#         else:
+#             # loga e mostra os erros campo a campo
+#             logger.warning("Form inválido ao tentar criar cal: %s", form.errors)
+#             print("Erros do form:", form.errors)
+#             for field, error_list in form.errors.items():
+#                 for error in error_list:
+#                     texto = f"Erro no campo {field}: {error}"
+#                     messages.error(request, texto)
+#     else:
+#         form = EventForm()
 
-def dever_detail(request, pk):
-    dever = get_object_or_404(Event, pk=pk)
-    return render(request, 'dever/dever_detail.html', {'dever': dever})
+#     escolas = Escola.objects.all()
+#     return render(request, 'dever/dever_form.html', {'form': form, 'escolas': escolas})
 
 #@login_required
 def dever_create(request):
@@ -193,7 +307,6 @@ def dever_create(request):
             messages.success(request, "Dever cadastrado com sucesso.")
             return redirect('cal:listar_eventos')
         else:
-            # loga e mostra os erros campo a campo
             logger.warning("Form inválido ao tentar criar cal: %s", form.errors)
             print("Erros do form:", form.errors)
             for field, error_list in form.errors.items():
@@ -204,8 +317,29 @@ def dever_create(request):
         form = EventForm()
 
     escolas = Escola.objects.all()
-    return render(request, 'dever/dever_form.html', {'form': form, 'escolas': escolas})
-
+    
+    # Adicionar informações do usuário para o template
+    user = request.user
+    professor_obj = None
+    professor_materia = None
+    
+    if user.tipo_usuario == 'professor':
+        # Buscar o professor pelo nome do usuário
+        professor_nome = user.get_full_name() or user.username
+        professor_obj = Professor.objects.filter(
+            nome_professor__iexact=professor_nome
+        ).first()
+        
+        if professor_obj:
+            professor_materia = professor_obj.fk_materia
+    
+    return render(request, 'dever/dever_form.html', {
+        'form': form, 
+        'escolas': escolas,
+        'user_tipo': user.tipo_usuario,
+        'professor_obj': professor_obj,
+        'professor_materia': professor_materia
+    })
 
 #@login_required
 def dever_update(request, pk):

@@ -18,6 +18,7 @@
                 <div class="navbar-nav">
                    
                         <a class="nav-link" href="{% url 'cal:calendar' %}">Calendário</a>
+                        <a class="nav-link" href="{% url 'cal:semana_alunos' %}">Semana</a>
                         <a class="nav-link" href="{% url 'cal:event_new' %}">Novo</a>
                         <a class="nav-link" href="{% url 'cal:listar_eventos' %}">Lista</a>
                         <a class="nav-link" href="{% url 'cal:lista_escolas' %}">Escolas</a>
@@ -34,23 +35,38 @@
                    
                 </div>
                 <ul class="navbar-nav ms-auto">
-                    {% if user.is_authenticated %}
-                    <li class="nav-link">
-                        <span class="navbar-text me-3">
-                          Olá, {{ user.username }}
-                        </span>
-                      </li>
-                    <li class="nav-item">                    
-                            <form method="post" action="{% url 'login:logout' %}" class="d-flex">
-                                {% csrf_token %}
-                                
-                                <button type="submit" class="btn btn-outline-danger">Sair</button>
-                            </form>
-                        {% else %}
-                            <a href="{% url 'login:login' %}" class="btn btn-outline-success">Login</a>
-                        {% endif %}
-                    </li>
-                </ul>
+    {% if user.is_authenticated %}
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user me-1"></i>{{ user.username }}
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="{% url 'login:perfil' %}">
+                <i class="fas fa-user me-2"></i>Meu Perfil
+            </a></li>
+            <li><a class="dropdown-item" href="{% url 'login:editar_perfil' %}">
+                <i class="fas fa-edit me-2"></i>Editar Perfil
+            </a></li>
+            <li><a class="dropdown-item" href="{% url 'login:alterar_senha' %}">
+                <i class="fas fa-key me-2"></i>Alterar Senha
+            </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <form method="post" action="{% url 'login:logout' %}" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="dropdown-item">
+                        <i class="fas fa-sign-out-alt me-2"></i>Sair
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </li>
+    {% else %}
+    <li class="nav-item">
+        <a href="{% url 'login:login' %}" class="btn btn-outline-success">Login</a>
+    </li>
+    {% endif %}
+</ul>
             </div>
         </div>
     </div>

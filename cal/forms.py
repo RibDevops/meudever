@@ -35,27 +35,6 @@ class EventForm(ModelForm):
         else:
             self.fields['fk_materia'].queryset = Materia.objects.none()
 
-# class EventForm(forms.ModelForm):
-#     class Meta:
-#         model = Event
-#         fields = ['fk_escola', 'fk_turma', 'fk_materia', 'fk_livro', 'fk_professor', 'conteudo','dever', 'data_entrega', 'data_conteudo']
-    
-#     def __init__(self, *args, **kwargs):
-#         super().__init__(*args, **kwargs)
-#         # Filtra as matérias se um professor foi selecionado
-#         if 'fk_professor' in self.data:
-#             try:
-#                 professor_id = int(self.data.get('fk_professor'))
-#                 # self.fields['fk_materia'].queryset = Materia.objects.filter(materias_professor=professor_id)
-#                 self.fields['fk_materia'].queryset = Materia.objects.filter(professor_materias=professor_id)
-
-#             except (ValueError, TypeError):
-#                 pass  # Se fk_professor não for válido, ignora o filtro
-#         else:
-#             self.fields['fk_materia'].queryset = Materia.objects.none()
-
-
-
 class EscolaForm(forms.ModelForm):
     class Meta:
         model = Escola

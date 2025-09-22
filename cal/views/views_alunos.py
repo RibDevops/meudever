@@ -7,8 +7,12 @@ from django.shortcuts import get_object_or_404, redirect
 from django.contrib import messages
 
 #@login_required
+# def lista_alunos(request):
+#     alunos = Alunos.objects.all()
+#     return render(request, 'alunos/lista.html', {'alunos': alunos})
+
 def lista_alunos(request):
-    alunos = Alunos.objects.all()
+    alunos = Alunos.objects.select_related('fk_user', 'fk_escola', 'fk_turma').all()
     return render(request, 'alunos/lista.html', {'alunos': alunos})
 
 #@login_required

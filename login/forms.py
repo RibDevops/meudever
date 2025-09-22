@@ -113,3 +113,70 @@ class RegistroUsuarioForm(forms.ModelForm):
                 (tipo, nome) for tipo, nome in User.TIPO_CHOICES 
                 if tipo not in ['superuser', 'admin']
             ]
+    def __init__(self, *args, **kwargs):
+        self.user = kwargs.pop('user', None)
+        self.editing_own_profile = kwargs.pop('editing_own_profile', False)
+        super().__init__(*args, **kwargs)
+        
+        # Se estiver editando o próprio perfil, remove a seleção de tipo de usuário
+        if self.editing_own_profile:
+            self.fields.pop('tipo_usuario', None)
+            self.fields.pop('fk_escola', None)
+        
+        # Restringe as opções baseado no usuário logado
+        elif self.user and not self.user.is_superuser_type():
+            self.fields['tipo_usuario'].choices = [
+                (tipo, nome) for tipo, nome in User.TIPO_CHOICES 
+                if tipo not in ['superuser', 'admin']
+            ]
+
+class AlterarSenhaForm(forms.Form):
+    """Formulário para alteração de senha pelo próprio usuário"""
+    
+    senha_atual = forms.CharField(
+        label='Senha Atual',
+        widget=forms.PasswordInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Digite sua senha atual'
+        }),
+        required=True
+    )
+    
+    nova_senha = forms.CharField(
+        label='Nova Senha',
+        widget=forms.PasswordInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Digite a nova senha'
+        }),
+        required=True,
+        help_text='Sua senha deve conter pelo menos 8 caracteres, incluindo letras e números.'
+    )
+    
+    confirmar_senha = forms.CharField(
+        label='Confirmar Nova Senha',
+        widget=forms.PasswordInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Confirme a nova senha'
+        }),
+        required=True
+    )
+    
+    def __init__(self, user=None, *args, **kwargs):
+        self.user = user
+        super().__init__(*args, **kwargs)
+    
+    def clean_senha_atual(self):
+        senha_atual = self.cleaned_data.get('senha_atual')
+        if not self.user.check_password(senha_atual):
+            raise forms.ValidationError('Senha atual incorreta.')
+        return senha_atual
+    
+    def clean(self):
+        cleaned_data = super().clean()
+        nova_senha = cleaned_data.get('nova_senha')
+        confirmar_senha = cleaned_data.get('confirmar_senha')
+        
+        if nova_senha and confirmar_senha and nova_senha != confirmar_senha:
+            raise forms.ValidationError('As novas senhas não coincidem.')
+        
+        return cleaned_data

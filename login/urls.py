@@ -4,8 +4,10 @@ from django.contrib import admin
 from django.urls import path, include, reverse_lazy
 from django.contrib.auth import views as auth_views
 
+from login.views import views_perfil
 from login.views.password_reset_views import CustomPasswordResetView
 from . import views
+from .views import *
 
 app_name = 'login' 
 
@@ -48,4 +50,9 @@ urlpatterns = [
              template_name='accounts/password_reset_complete.html'
          ), 
          name='password_reset_complete'),
+
+    path('perfil/', views_perfil.perfil, name='perfil'),
+    path('perfil/editar/', views_perfil.editar_perfil, name='editar_perfil'),
+    path('alterar-senha/', views_perfil.alterar_senha, name='alterar_senha'),
+    
 ]

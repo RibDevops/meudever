@@ -84,3 +84,6 @@ class User(AbstractUser):
     
     def can_manage_users(self):
         return self.tipo_usuario in ['superuser', 'admin', 'coordenador']
+    
+    def is_pai_type(self):
+        return self.tipo_usuario == 'pai'

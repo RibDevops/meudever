@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid py-3">
+    <!-- Cabeçalho com botões de navegação -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h1 class="h4 mb-0">Semana dos Filhos</h1>
+            <h4 class="text-secondary">Semana: {{ semana_range }}</h4>
+        </div>
+        <div class="btn-group" role="group">
+            <a href="{% url 'cal:semana_alunos' %}?data={{ semana_anterior }}" 
+               class="btn btn-outline-primary">
+                <i class="fas fa-chevron-left"></i> Semana Anterior
+            </a>
+            <a href="{% url 'cal:semana_alunos' %}?data={{ hoje }}" 
+               class="btn btn-outline-secondary">
+                <i class="fas fa-calendar-day"></i> Hoje
+            </a>
+            <a href="{% url 'cal:semana_alunos' %}?data={{ proxima_semana }}" 
+               class="btn btn-outline-primary">
+                Próxima Semana <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+
+    {% if mensagem %}
+        <div class="alert alert-info">
+            <i class="fas fa-info-circle"></i> {{ mensagem }}
+        </div>
+    {% endif %}
+
+    {% for aluno_data in alunos %}
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">
+                <i class="fas fa-user-graduate"></i> 
+                {{ aluno_data.aluno.nome_aluno }} - {{ aluno_data.aluno.fk_turma.turma }}
+                <small class="float-end">{{ aluno_data.aluno.fk_escola.nome_escola }}</small>
+            </h5>
+        </div>
+        
+        {% if aluno_data.tem_dados %}
+            {% for dia in aluno_data.dias_semana %}
+            <div class="card-body border-bottom">
+                <h6 class="text-primary">
+                    <i class="fas fa-calendar-day"></i> 
+                    {{ dia.nome_dia }} - {{ dia.data|date:"d/m/Y" }}
+                    {% if dia.data|date:"Y-m-d" == hoje %}
+                        <span class="badge bg-success">Hoje</span>
+                    {% endif %}
+                </h6>
+                
+                <div class="table-responsive">
+                    <table class="table table-bordered table-sm">
+                        <thead class="table-info">
+                            <tr>
+                                <th width="10%">Horário</th>
+                                <th width="15%">Disciplina</th>
+                                <th width="15%">Professor</th>
+                                <th width="20%">Conteúdo</th>
+                                <th width="15%">Dever</th>
+                                <th width="15%">Entrega</th>
+                                <th width="10%">Livro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for linha in dia.linhas %}
+                            <tr>
+                                <td class="fw-bold">{{ linha.horario }}</td>
+                                <td>{{ linha.disciplina }}</td>
+                                <td>{{ linha.professor }}</td>
+                                <td>{{ linha.conteudo|default:"-" }}</td>
+                                <td>{{ linha.dever|default:"-" }}</td>
+                                <td>{{ linha.entrega|default:"-" }}</td>
+                                <td>{{ linha.livro|default:"-" }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="card-body">
+                <div class="alert alert-warning mb-0">
+                    <i class="fas fa-exclamation-triangle"></i> 
+                    Nenhum dado encontrado para esta semana.
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+<style>
+.table th {
+    background-color: #e3f2fd;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.table td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+.card-header {
+    font-weight: bold;
+}
+</style>
+{% endblock %}
