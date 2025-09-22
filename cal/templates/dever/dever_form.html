@@ -11,8 +11,9 @@
             <form method="post" id="dever-form" novalidate>
                 {% csrf_token %}
 
-                <!-- Campo Escola - Dinâmico por tipo de usuário -->
+                <!-- Controle de usuário -->
                 {% if user.is_superuser %}
+                <!-- Superuser -->
                 <div class="mb-3">
                     <label for="id_fk_escola" class="form-label">Escola *</label>
                     <select id="id_fk_escola" name="fk_escola" class="form-control" required>
@@ -22,21 +23,37 @@
                         {% endfor %}
                     </select>
                 </div>
+                
                 {% elif user.tipo_usuario == "coordenador" %}
+                <!-- Coordenador -->
                 <input type="hidden" id="id_fk_escola" name="fk_escola" value="{{ user.fk_escola.id }}">
+                <div class="alert alert-info small">
+                    <i class="fas fa-school me-1"></i> Escola: <strong>{{ user.fk_escola.nome_escola }}</strong>
+                </div>
+                
                 {% elif user.tipo_usuario == "professor" %}
-                <input type="hidden" id="id_fk_escola" name="fk_escola" value="{{ user.fk_professor.fk_escola.id }}">
-                {% endif %}
+<input type="hidden" id="id_fk_escola" name="fk_escola" value="{{ user.fk_escola.id }}">
+<input type="hidden" id="id_fk_professor" name="fk_professor" value="{{ professor_usuario.id }}">
+<input type="hidden" id="id_fk_materia_id" name="fk_materia" value="{{ materia_id }}">
 
-                <!-- Campo Turma - Sempre visível exceto para superuser/coordenador quando não tem escola -->
-                <div class="mb-3" id="turma-field">
+<div class="alert alert-info small">
+    Escola: <strong>{{ user.fk_escola.nome_escola }}</strong><br>
+    Professor: <strong>{{ professor_usuario.nome_professor }}</strong><br>
+    Matéria: <strong>{{ professor_usuario.fk_materia.nome_materia }}</strong>
+</div>
+{% endif %}
+
+
+
+                <!-- Campo Turma - Sempre visível para todos -->
+                <div class="mb-3">
                     <label for="id_fk_turma" class="form-label">Turma *</label>
                     <select id="id_fk_turma" name="fk_turma" class="form-control" required>
                         <option value="">Selecione uma Turma</option>
                     </select>
                 </div>
 
-                <!-- Campos Professor e Matéria - Visíveis apenas para superuser e coordenador -->
+                <!-- Campos Professor e Matéria - Apenas para superuser/coordenador -->
                 {% if user.is_superuser or user.tipo_usuario == "coordenador" %}
                 <div class="mb-3">
                     <label for="id_fk_professor" class="form-label">Professor *</label>
@@ -50,29 +67,31 @@
                     <input type="text" id="id_fk_materia_display" class="form-control" readonly>
                     <input type="hidden" id="id_fk_materia_id" name="fk_materia">
                 </div>
-                {% elif user.tipo_usuario == "professor" %}
-                <!-- Professor tem valores fixos -->
-                <input type="hidden" id="id_fk_professor" name="fk_professor" value="{{ user.fk_professor.id }}">
-                <input type="hidden" id="id_fk_materia_id" name="fk_materia" value="{{ user.fk_professor.fk_materia.id }}">
                 {% endif %}
 
                 <!-- Campo Livro - Sempre visível -->
                 <div class="mb-3">
-                    <label for="id_fk_livro" class="form-label">Livro</label>
+                    <label for="id_fk_livro" class="form-label">Livro (Opcional)</label>
                     <select id="id_fk_livro" name="fk_livro" class="form-control">
-                        <option value="">Selecione um Livro (Opcional)</option>
+                        <option value="">Selecione um Livro</option>
                     </select>
                 </div>
-
-                <!-- Conteúdo e Dever -->
+                <div>
+                    <div class="col-md-6 mb-3">
+                        <label for="id_start_time" class="form-label">Data do Conteúdo *</label>
+                        <input type="date" id="id_start_time" name="start_time" class="form-control" required>
+                    </div>
+                </div>
+                <!-- Conteúdo Ministrado (title) -->
                 <div class="mb-3">
-                    <label for="id_conteudo" class="form-label">Conteúdo Ministrado *</label>
-                    <textarea id="id_conteudo" name="conteudo" class="form-control" rows="3" required></textarea>
+                    <label for="id_title" class="form-label">Conteúdo Ministrado *</label>
+                    <textarea id="id_title" name="title" class="form-control" rows="3" placeholder="Descreva o conteúdo ministrado em aula..." required></textarea>
                 </div>
 
+                <!-- Dever de Casa -->
                 <div class="mb-3">
                     <label for="id_dever" class="form-label">Dever de Casa *</label>
-                    <textarea id="id_dever" name="dever" class="form-control" rows="3" required></textarea>
+                    <textarea id="id_dever" name="dever" class="form-control" rows="3" placeholder="Descreva o dever de casa para os alunos..." required></textarea>
                 </div>
 
                 <!-- Datas -->
@@ -81,14 +100,13 @@
                         <label for="id_data_entrega" class="form-label">Data de Entrega *</label>
                         <input type="date" id="id_data_entrega" name="data_entrega" class="form-control" required>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="id_data_conteudo" class="form-label">Data do Conteúdo *</label>
-                        <input type="date" id="id_data_conteudo" name="start_time" class="form-control" required>
-                    </div>
                 </div>
+                    
 
                 <div class="d-flex justify-content-end gap-2">
-                    
+                    <a href="{% url 'cal:listar_eventos' %}" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left me-1"></i>Voltar
+                    </a>
                     <button type="submit" class="btn btn-primary">
                         <i class="fas fa-save me-1"></i>Salvar Dever
                     </button>
@@ -135,10 +153,19 @@
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
-.form-label {
-    font-weight: 600;
-    color: #495057;
-    margin-bottom: 8px;
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+    color: #0c5460;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    color: #856404;
 }
 
 /* Responsividade */
@@ -159,6 +186,34 @@
     .d-flex.justify-content-end {
         flex-direction: column;
     }
+    
+    .row {
+        margin: 0;
+    }
+    
+    .col-md-6 {
+        padding: 0 5px;
+    }
+}
+
+/* Melhorias para mobile */
+@media (max-width: 576px) {
+    .container-py-3 {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    
+    h4 {
+        font-size: 1.3rem;
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+    }
+    
+    .alert {
+        font-size: 0.85rem;
+    }
 }
 </style>
 
@@ -172,9 +227,35 @@ document.addEventListener("DOMContentLoaded", function () {
     const materiaHidden = document.getElementById("id_fk_materia_id");
     const livroSelect = document.getElementById("id_fk_livro");
 
+    // Determinar tipo de usuário
+    const isSuperuser = {% if user.is_superuser %}true{% else %}false{% endif %};
+    const isCoordenador = {% if user.tipo_usuario == "coordenador" %}true{% else %}false{% endif %};
+    const isProfessor = {% if user.tipo_usuario == "professor" %}true{% else %}false{% endif %};
+
     // Estado atual
     let currentEscolaId = null;
     let currentProfessorId = null;
+    let currentMateriaId = null;
+
+    // Função para obter o ID da escola baseado no usuário
+    function getEscolaId() {
+        if (isSuperuser && escolaSelect && escolaSelect.value) {
+            return escolaSelect.value;
+        } else if ((isCoordenador || isProfessor) && escolaSelect) {
+            return escolaSelect.value; // Já vem preenchido do hidden
+        }
+        return null;
+    }
+
+    // Função para obter o ID do professor baseado no usuário
+    function getProfessorId() {
+        if (isProfessor) {
+            return document.getElementById('id_fk_professor').value;
+        } else if ((isSuperuser || isCoordenador) && professorSelect && professorSelect.value) {
+            return professorSelect.value;
+        }
+        return null;
+    }
 
     // Função para carregar turmas
     async function carregarTurmas(escolaId) {
@@ -185,13 +266,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
             const response = await fetch(`/ajax/get-turmas/${escolaId}/`);
-            const turmas = await response.json();
+            if (!response.ok) throw new Error('Erro na requisição');
             
+            const turmas = await response.json();
             turmaSelect.innerHTML = '<option value="">Selecione uma Turma</option>';
+            
             turmas.forEach(turma => {
                 const option = document.createElement("option");
                 option.value = turma.id;
-                option.textContent = turma.nome;
+                option.textContent = turma.nome || turma.nome_turma;
                 turmaSelect.appendChild(option);
             });
         } catch (error) {
@@ -202,15 +285,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Função para carregar professores
     async function carregarProfessores(escolaId) {
-        if (!professorSelect || !escolaId) {
-            return;
-        }
+        if (!professorSelect || !escolaId) return;
 
         try {
             const response = await fetch(`/ajax/get-professores/${escolaId}/`);
-            const professores = await response.json();
+            if (!response.ok) throw new Error('Erro na requisição');
             
+            const professores = await response.json();
             professorSelect.innerHTML = '<option value="">Selecione um Professor</option>';
+            
             professores.forEach(professor => {
                 const option = document.createElement("option");
                 option.value = professor.id;
@@ -223,31 +306,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Função para carregar matéria do professor
+    // Função para carregar matéria
     async function carregarMateria(professorId) {
-        if (!materiaDisplay || !materiaHidden || !professorId) {
-            return;
-        }
+        if ((!materiaDisplay && !materiaHidden) || !professorId) return;
 
         try {
             const response = await fetch(`/ajax/get-materia/${professorId}/`);
+            if (!response.ok) throw new Error('Erro na requisição');
+            
             const data = await response.json();
             
             if (data.error) {
-                materiaDisplay.value = '';
-                materiaHidden.value = '';
-                livroSelect.innerHTML = '<option value="">Selecione um Livro</option>';
+                if (materiaDisplay) materiaDisplay.value = '';
+                if (materiaHidden) materiaHidden.value = '';
+                currentMateriaId = null;
             } else {
-                materiaDisplay.value = data.nome;
-                materiaHidden.value = data.id;
+                if (materiaDisplay) materiaDisplay.value = data.nome;
+                if (materiaHidden) materiaHidden.value = data.id;
+                currentMateriaId = data.id;
                 
-                // Carregar livros da matéria
-                await carregarLivros(data.id, currentEscolaId);
+                // Carregar livros
+                await carregarLivros(data.id, getEscolaId());
             }
         } catch (error) {
             console.error('Erro ao carregar matéria:', error);
-            materiaDisplay.value = '';
-            materiaHidden.value = '';
+            if (materiaDisplay) materiaDisplay.value = '';
+            if (materiaHidden) materiaHidden.value = '';
         }
     }
 
@@ -260,9 +344,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
             const response = await fetch(`/ajax/get-livros/${materiaId}/${escolaId}/`);
-            const livros = await response.json();
+            if (!response.ok) throw new Error('Erro na requisição');
             
+            const livros = await response.json();
             livroSelect.innerHTML = '<option value="">Selecione um Livro</option>';
+            
             livros.forEach(livro => {
                 const option = document.createElement("option");
                 option.value = livro.id;
@@ -275,39 +361,33 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Inicialização baseada no tipo de usuário
+    // Inicialização do formulário
     function inicializarFormulario() {
-        // Determinar escola ID baseado no tipo de usuário
-        if ({% if user.is_superuser %}false{% else %}true{% endif %}) {
-            // Coordenador ou Professor - escola já está definida
-            currentEscolaId = escolaSelect ? escolaSelect.value : null;
-            
-            if (currentEscolaId) {
-                carregarTurmas(currentEscolaId);
-                
-                // Se for coordenador, carregar professores
-                if ({% if user.tipo_usuario == "coordenador" %}true{% else %}false{% endif %} && professorSelect) {
-                    carregarProfessores(currentEscolaId);
-                }
-                
-                // Se for professor, carregar matéria e livros
-                if ({% if user.tipo_usuario == "professor" %}true{% else %}false{% endif %}) {
-                    currentProfessorId = document.getElementById('id_fk_professor').value;
-                    const materiaId = document.getElementById('id_fk_materia_id').value;
-                    
-                    if (currentProfessorId && materiaId) {
-                        // Preencher display da matéria se existir
-                        if (materiaDisplay) {
-                            materiaDisplay.value = '{{ user.fk_professor.fk_materia.nome_materia }}';
-                        }
-                        carregarLivros(materiaId, currentEscolaId);
-                    }
-                }
+        currentEscolaId = getEscolaId();
+        currentProfessorId = getProfessorId();
+        
+        console.log('Inicializando:', { currentEscolaId, currentProfessorId, isProfessor, isCoordenador, isSuperuser });
+
+        // Carregar turmas se temos escola
+        if (currentEscolaId) {
+            carregarTurmas(currentEscolaId);
+        }
+
+        // Para superuser/coordenador: carregar professores
+        if ((isSuperuser || isCoordenador) && currentEscolaId && professorSelect) {
+            carregarProfessores(currentEscolaId);
+        }
+
+        // Para professor: carregar livros diretamente
+        if (isProfessor && currentEscolaId && currentProfessorId) {
+            currentMateriaId = document.getElementById('id_fk_materia_id').value;
+            if (currentMateriaId) {
+                carregarLivros(currentMateriaId, currentEscolaId);
             }
         }
     }
 
-    // Event Listeners
+    // Event Listeners para superuser/coordenador
     if (escolaSelect && escolaSelect.tagName === 'SELECT') {
         escolaSelect.addEventListener('change', function() {
             currentEscolaId = this.value;
@@ -345,13 +425,28 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
         
+        // Validar datas
+        const dataConteudo = document.getElementById('id_start_time');
+        const dataEntrega = document.getElementById('id_data_entrega');
+        
+        if (dataConteudo.value && dataEntrega.value) {
+            if (new Date(dataEntrega.value) < new Date(dataConteudo.value)) {
+                isValid = false;
+                alert('A data de entrega não pode ser anterior à data do conteúdo!');
+            }
+        }
+        
         if (!isValid) {
             e.preventDefault();
-            alert('Por favor, preencha todos os campos obrigatórios.');
+            // Scroll para o primeiro erro
+            const firstInvalid = this.querySelector('.is-invalid');
+            if (firstInvalid) {
+                firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         }
     });
 
-    // Inicializar o formulário
+    // Inicializar
     inicializarFormulario();
 });
 </script>

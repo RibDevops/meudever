@@ -6,14 +6,18 @@ def get_professores_by_escola(request, escola_id):
     data = [{'id': prof.id, 'nome': prof.nome_professor} for prof in professores]
     return JsonResponse(data, safe=False)
 
+from django.http import JsonResponse
+from cal.models import Turma
+
 def get_turmas_by_escola(request, escola_id):
-    # print(escola_id)
-    turmas = Turma.objects.filter(fk_escola_id=escola_id)
-    # print(turmas)
+    # Usar o related_name correto do modelo Horarios
+    turmas = Turma.objects.filter(fk_escola_id=escola_id, horarios_turma__isnull=False).distinct()
+
     data = [{'id': turma.id, 'nome': turma.turma} for turma in turmas]
-    # print(data)
 
     return JsonResponse(data, safe=False)
+
+
 
 def get_materia_by_professor(request, professor_id):
     print(professor_id)

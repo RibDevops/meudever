@@ -1,11 +1,8 @@
-# login/models.py - Atualizar a importação da Escola
+# login/models.py
 
 from django.db import models
 from django.contrib.auth.models import AbstractUser, Group, Permission
-from django.utils.translation import gettext_lazy as _
-
-# Importar Escola do app cal
-from cal.models import Escola
+from cal.models import Escola, Professor
 
 class TipoUsuario(models.Model):
     TIPOS = (
@@ -43,14 +40,24 @@ class User(AbstractUser):
         ('pai', 'Pai/Responsável'),
     )
     
-    # Referência correta para a Escola do app cal
-    fk_escola = models.ForeignKey(Escola, null=True, blank=True, on_delete=models.SET_NULL, verbose_name="Escola")
+    fk_escola = models.ForeignKey(
+        Escola,
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        verbose_name="Escola"
+    )
+    fk_professor = models.ForeignKey(
+        Professor,
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        verbose_name="Professor"
+    )
     tipo_usuario = models.CharField(max_length=20, choices=TIPO_CHOICES, default='professor')
-    # data_nascimento = models.DateField(null=True, blank=True)
     telefone = models.CharField(max_length=20, blank=True)
     ativo = models.BooleanField(default=True)
-    
-    # Relacionamentos existentes mantidos
+
     groups = models.ManyToManyField(
         Group,
         verbose_name='groups',
@@ -76,6 +83,7 @@ class User(AbstractUser):
     def __str__(self):
         return f"{self.username} ({self.get_tipo_usuario_display()})"
     
+    # Métodos de verificação de tipo de usuário
     def is_superuser_type(self):
         return self.tipo_usuario == 'superuser'
     

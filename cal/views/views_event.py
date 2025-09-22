@@ -272,29 +272,6 @@ def listar_eventos(request):
     
     return render(request, 'dever/dever_list.html', context)
 
-#@login_required
-# def dever_create(request):
-#     if request.method == 'POST':
-#         form = EventForm(request.POST)
-#         logger.debug("Dados do POST: %s", request.POST)
-#         print("Dados do POST:", request.POST)
-#         if form.is_valid():
-#             dever = form.save()
-#             messages.success(request, "Dever cadastrado com sucesso.")
-#             return redirect('cal:listar_eventos')
-#         else:
-#             # loga e mostra os erros campo a campo
-#             logger.warning("Form inválido ao tentar criar cal: %s", form.errors)
-#             print("Erros do form:", form.errors)
-#             for field, error_list in form.errors.items():
-#                 for error in error_list:
-#                     texto = f"Erro no campo {field}: {error}"
-#                     messages.error(request, texto)
-#     else:
-#         form = EventForm()
-
-#     escolas = Escola.objects.all()
-#     return render(request, 'dever/dever_form.html', {'form': form, 'escolas': escolas})
 
 #@login_required
 from django.contrib.auth.decorators import login_required
@@ -302,29 +279,56 @@ from django.http import HttpResponseForbidden
 
 @login_required
 def dever_create(request):
-    user = request.user
-    
-    # bloqueia pais
-    if user.tipo_usuario == "pai":
-        return HttpResponseForbidden("Você não tem acesso a esta página.")
+    print('dever_create')
 
-    # superuser
-    if user.is_superuser:
-        escolas = Escola.objects.all()
-    
-    # coordenador
-    elif user.tipo_usuario == "coordenador":
-        escolas = [user.fk_escola]  # apenas a escola dele
-    
-    # professor
-    elif user.tipo_usuario == "professor":
-        escolas = [user.fk_professor.fk_escola]
+    # Se for POST, processa o formulário
+    if request.method == "POST":
+        form = EventForm(request.POST, user=request.user)
 
+        if form.is_valid():
+            event = form.save(commit=False)  # Não salva ainda, podemos ajustar campos extras
+
+            # Para professores, garantir que fk_escola, fk_professor e fk_materia estão corretos
+            if request.user.tipo_usuario == "professor" and hasattr(request.user, 'fk_professor'):
+                professor = request.user.fk_professor
+                event.fk_professor = professor
+                event.fk_escola = professor.fk_escola
+                event.fk_materia = professor.fk_materia
+
+            # Para coordenador, podemos garantir que fk_escola vem do usuário
+            elif request.user.tipo_usuario == "coordenador":
+                if hasattr(request.user, 'fk_escola'):
+                    event.fk_escola = request.user.fk_escola
+
+            # Salva o objeto
+            event.save()
+            print(f"Evento salvo: {event.id}")
+
+            # Redireciona para lista ou página de sucesso
+            return redirect('cal:listar_eventos')
+
+        else:
+            print("Form inválido")
+            print(form.errors)  # mostra os erros no console
+    else:
+        # Se não for POST, apenas exibe o formulário
+        form = EventForm(user=request.user)
+
+    # Monta o contexto para o template
     context = {
-        "escolas": escolas,
-        "user": user,
+        'form': form,
+        'escolas': Escola.objects.all(),
     }
-    return render(request, "dever_form.html", context)
+
+    # Adiciona professor/materia para usuários do tipo professor
+    if request.user.tipo_usuario == "professor" and hasattr(request.user, 'fk_professor'):
+        professor = request.user.fk_professor
+        context['professor_usuario'] = professor
+        context['materia_id'] = professor.fk_materia.id if hasattr(professor, 'fk_materia') else None
+
+    return render(request, "dever/dever_form.html", context)
+
+
 
 
 #@login_required
