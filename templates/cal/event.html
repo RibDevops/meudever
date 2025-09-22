@@ -47,9 +47,9 @@
                 <label for="id_data_entrega">Data de Entrega:</label>
                 <input type="date" id="id_data_entrega" name="data_entrega" class="form-control">
 
-                <label for="id_data_conteudo">Data do conteúdo ministrado:</label>
-                <!-- name corrigido para o que o form/model espera: data_conteudo -->
-                <input type="date" id="id_data_conteudo" name="data_conteudo" class="form-control">
+                <label for="id_start_time">Data do conteúdo ministrado:</label>
+                <!-- name corrigido para o que o form/model espera: start_time -->
+                <input type="date" id="id_start_time" name="start_time" class="form-control">
 
                 <button type="submit" class="btn btn-primary mt-3">Salvar</button>
             </form>
@@ -57,83 +57,91 @@
     </div>
 
     <script>
-        document.getElementById("id_fk_escola").addEventListener("change", function () {
+       document.addEventListener("DOMContentLoaded", function () {
+    const escolaSelect = document.getElementById("id_fk_escola");
+    const professorSelect = document.getElementById("id_fk_professor");
+
+    if (escolaSelect) {
+        escolaSelect.addEventListener("change", function () {
             var escolaId = this.value;
-        
+
             // Carrega turmas da escola
             fetch(`/ajax/get-turmas/${escolaId}/`)
                 .then(response => response.json())
                 .then(data => {
                     var turmaSelect = document.getElementById("id_fk_turma");
-                    turmaSelect.innerHTML = '<option value="">Selecione uma Turma</option>';
-                    data.forEach(turma => {
-                        var option = document.createElement("option");
-                        option.value = turma.id;
-                        option.textContent = turma.nome;
-                        turmaSelect.appendChild(option);
-                    });
+                    if (turmaSelect) {
+                        turmaSelect.innerHTML = '<option value="">Selecione uma Turma</option>';
+                        data.forEach(turma => {
+                            var option = document.createElement("option");
+                            option.value = turma.id;
+                            option.textContent = turma.nome;
+                            turmaSelect.appendChild(option);
+                        });
+                    }
                 });
-        
+
             // Carrega professores da escola
             fetch(`/ajax/get-professores/${escolaId}/`)
                 .then(response => response.json())
                 .then(data => {
-                    var professorSelect = document.getElementById("id_fk_professor");
-                    professorSelect.innerHTML = '<option value="">Selecione um Professor</option>';
-                    data.forEach(professor => {
-                        var option = document.createElement("option");
-                        option.value = professor.id;
-                        option.textContent = professor.nome;
-                        professorSelect.appendChild(option);
-                    });
-        
+                    if (professorSelect) {
+                        professorSelect.innerHTML = '<option value="">Selecione um Professor</option>';
+                        data.forEach(professor => {
+                            var option = document.createElement("option");
+                            option.value = professor.id;
+                            option.textContent = professor.nome;
+                            professorSelect.appendChild(option);
+                        });
+                    }
+
                     // Limpa os campos de matéria e livro
-                    document.getElementById("id_fk_materia_display").value = '';
-                    document.getElementById("id_fk_materia_id").value = '';
+                    let materiaDisplay = document.getElementById("id_fk_materia_display");
+                    let materiaHidden = document.getElementById("id_fk_materia_id");
+                    if (materiaDisplay) materiaDisplay.value = '';
+                    if (materiaHidden) materiaHidden.value = '';
                     document.getElementById("id_fk_livro").innerHTML = '<option value="">Selecione um Livro</option>';
                 });
         });
-        
-        // Quando o professor for selecionado, carrega a matéria e os livros
-        document.getElementById("id_fk_professor").addEventListener("change", function () {
+    }
+
+    if (professorSelect) {
+        professorSelect.addEventListener("change", function () {
             var professorId = this.value;
-            
+
             if (professorId) {
-                // Busca a matéria do professor
                 fetch(`/ajax/get-materia/${professorId}/`)
                     .then(response => response.json())
                     .then(data => {
                         if (!data.error) {
-                            // Preenche a matéria de exibição (não tem name) e o hidden com o id
-                            document.getElementById("id_fk_materia_display").value = data.nome;
-                            document.getElementById("id_fk_materia_id").value = data.id;
+                            let materiaDisplay = document.getElementById("id_fk_materia_display");
+                            let materiaHidden = document.getElementById("id_fk_materia_id");
 
-                            // Busca os livros da matéria e da escola
-                            var escolaId = document.getElementById("id_fk_escola").value;
-                            fetch(`/ajax/get-livros/${data.id}/${escolaId}/`)
-                                .then(response => response.json())
-                                .then(livros => {
-                                    var livroSelect = document.getElementById("id_fk_livro");
-                                    livroSelect.innerHTML = '<option value="">Selecione um Livro</option>';
-                                    livros.forEach(livro => {
-                                        var option = document.createElement("option");
-                                        option.value = livro.id;
-                                        option.textContent = livro.nome;
-                                        livroSelect.appendChild(option);
+                            if (materiaDisplay) materiaDisplay.value = data.nome;
+                            if (materiaHidden) materiaHidden.value = data.id;
+
+                            var escolaId = escolaSelect ? escolaSelect.value : null;
+                            if (escolaId) {
+                                fetch(`/ajax/get-livros/${data.id}/${escolaId}/`)
+                                    .then(response => response.json())
+                                    .then(livros => {
+                                        var livroSelect = document.getElementById("id_fk_livro");
+                                        livroSelect.innerHTML = '<option value="">Selecione um Livro</option>';
+                                        livros.forEach(livro => {
+                                            var option = document.createElement("option");
+                                            option.value = livro.id;
+                                            option.textContent = livro.nome;
+                                            livroSelect.appendChild(option);
+                                        });
                                     });
-                                });
-                        } else {
-                            document.getElementById("id_fk_materia_display").value = '';
-                            document.getElementById("id_fk_materia_id").value = '';
-                            document.getElementById("id_fk_livro").innerHTML = '<option value="">Selecione um Livro</option>';
+                            }
                         }
                     });
-            } else {
-                document.getElementById("id_fk_materia_display").value = '';
-                document.getElementById("id_fk_materia_id").value = '';
-                document.getElementById("id_fk_livro").innerHTML = '<option value="">Selecione um Livro</option>';
             }
         });
+    }
+});
+
     </script>
         
 {% endblock %}

@@ -297,49 +297,35 @@ def listar_eventos(request):
 #     return render(request, 'dever/dever_form.html', {'form': form, 'escolas': escolas})
 
 #@login_required
-def dever_create(request):
-    if request.method == 'POST':
-        form = EventForm(request.POST)
-        logger.debug("Dados do POST: %s", request.POST)
-        print("Dados do POST:", request.POST)
-        if form.is_valid():
-            dever = form.save()
-            messages.success(request, "Dever cadastrado com sucesso.")
-            return redirect('cal:listar_eventos')
-        else:
-            logger.warning("Form inválido ao tentar criar cal: %s", form.errors)
-            print("Erros do form:", form.errors)
-            for field, error_list in form.errors.items():
-                for error in error_list:
-                    texto = f"Erro no campo {field}: {error}"
-                    messages.error(request, texto)
-    else:
-        form = EventForm()
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseForbidden
 
-    escolas = Escola.objects.all()
-    
-    # Adicionar informações do usuário para o template
+@login_required
+def dever_create(request):
     user = request.user
-    professor_obj = None
-    professor_materia = None
     
-    if user.tipo_usuario == 'professor':
-        # Buscar o professor pelo nome do usuário
-        professor_nome = user.get_full_name() or user.username
-        professor_obj = Professor.objects.filter(
-            nome_professor__iexact=professor_nome
-        ).first()
-        
-        if professor_obj:
-            professor_materia = professor_obj.fk_materia
+    # bloqueia pais
+    if user.tipo_usuario == "pai":
+        return HttpResponseForbidden("Você não tem acesso a esta página.")
+
+    # superuser
+    if user.is_superuser:
+        escolas = Escola.objects.all()
     
-    return render(request, 'dever/dever_form.html', {
-        'form': form, 
-        'escolas': escolas,
-        'user_tipo': user.tipo_usuario,
-        'professor_obj': professor_obj,
-        'professor_materia': professor_materia
-    })
+    # coordenador
+    elif user.tipo_usuario == "coordenador":
+        escolas = [user.fk_escola]  # apenas a escola dele
+    
+    # professor
+    elif user.tipo_usuario == "professor":
+        escolas = [user.fk_professor.fk_escola]
+
+    context = {
+        "escolas": escolas,
+        "user": user,
+    }
+    return render(request, "dever_form.html", context)
+
 
 #@login_required
 def dever_update(request, pk):

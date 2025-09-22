@@ -27,12 +27,6 @@ urlpatterns = [
     path('<int:pk>/editar/', dever_update, name='dever_update'),
     path('<int:pk>/deletar/', dever_delete, name='dever_delete'),
 
-    # Outras rotas
-    # path('ajax/get-professores/<int:escola_id>/', views.get_professores_by_escola, name='get_professores_by_escola'),
-    # path('ajax/get-materia/<int:professor_id>/', views.get_materia_by_professor, name='get_materia_by_professor'),
-    # path('ajax/get-livros/<int:materia_id>/', views.get_livros_by_materia, name='get_livros_by_materia'),
-
-
     path('ajax/get-professores/<int:escola_id>/', views_ajax.get_professores_by_escola, name='get_professores'),
     path('ajax/get-turmas/<int:escola_id>/', views_ajax.get_turmas_by_escola, name='get_turmas'),
     path('ajax/get-materia/<int:professor_id>/', views_ajax.get_materia_by_professor, name='get_materia'),
@@ -92,19 +86,21 @@ urlpatterns = [
     path('semana/completa/<int:turma_id>/', views_semana.semana_turma_completa, name='semana_completa'),
     path('semana-alunos/', views_semana_pai.semana_alunos, name='semana_alunos'),
 
-    path('ajax/get-turmas/<int:escola_id>/', views.ajax_get_turmas, name='ajax_get_turmas'),
-    path('ajax/get-professores/<int:escola_id>/', views.ajax_get_professores, name='ajax_get_professores'),
-    path('ajax/get-materia/<int:professor_id>/', views.ajax_get_materia, name='ajax_get_materia'),
-    path('ajax/get-livros/<int:materia_id>/<int:escola_id>/', views.ajax_get_livros, name='ajax_get_livros'),
+    # path('ajax/get-turmas/<int:escola_id>/', views.ajax_get_turmas, name='ajax_get_turmas'),
+    # path('ajax/get-professores/<int:escola_id>/', views.ajax_get_professores, name='ajax_get_professores'),
+    # path('ajax/get-materia/<int:professor_id>/', views.ajax_get_materia, name='ajax_get_materia'),
+    # path('ajax/get-livros/<int:materia_id>/<int:escola_id>/', views.ajax_get_livros, name='ajax_get_livros'),
 
-    path('get_professores_by_escola/<int:escola_id>/', views.get_professores_by_escola, name='get_professores_by_escola'),
-    path('get_turmas_by_escola/<int:escola_id>/', views.get_turmas_by_escola, name='get_turmas_by_escola'),
-    path('get_materia_by_professor/<int:professor_id>/', views.get_materia_by_professor, name='get_materia_by_professor'),
-    path('get_livros_ajax/<int:materia_id>/<int:escola_id>/', views.get_livros_ajax, name='get_livros_ajax'),
+    # path('get_professores_by_escola/<int:escola_id>/', views.get_professores_by_escola, name='get_professores_by_escola'),
+    # path('get_turmas_by_escola/<int:escola_id>/', views.get_turmas_by_escola, name='get_turmas_by_escola'),
+    # path('get_materia_by_professor/<int:professor_id>/', views.get_materia_by_professor, name='get_materia_by_professor'),
+    # path('get_livros_ajax/<int:materia_id>/<int:escola_id>/', views.get_livros_ajax, name='get_livros_ajax'),
 
     
     # path('horarios/create/', views.horario_create, name='horario_create'),
     
-    
+    path('ajax/get-professores/<int:escola_id>/', views.get_professores_by_escola, name='get_professores_by_escola'),
+    path('ajax/get-materia/<int:professor_id>/', views.get_materia_by_professor, name='get_materia_by_professor'),
+    path('ajax/get-livros/<int:materia_id>/', views.get_livros_by_materia, name='get_livros_by_materia'),
     
 ]
