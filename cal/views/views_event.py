@@ -333,21 +333,27 @@ def dever_create(request):
 
 #@login_required
 def dever_update(request, pk):
-    dever = get_object_or_404(Event, pk=pk)
+    event = get_object_or_404(Event, pk=pk)
+    
     if request.method == 'POST':
-        form = EventForm(request.POST, instance=dever)
+        form = EventForm(request.POST, instance=event)
         if form.is_valid():
             form.save()
-            messages.success(request, "Atualizado com sucesso.")
             return redirect('cal:listar_eventos')
-        else:
-            for field, error_list in form.errors.items():
-                for error in error_list:
-                    messages.error(request, f"Erro no campo {field}: {error}")
     else:
-        form = EventForm(instance=dever)
-        escolas = Escola.objects.all()
-    return render(request, 'dever/dever_update.html', {'form': form, 'escolas': escolas})
+        form = EventForm(instance=event)
+    
+    context = {
+        'form': form,
+        'escolas': Escola.objects.all(),
+    }
+    
+    # Adicionar contexto para professor
+    if request.user.tipo_usuario == "professor":
+        context['professor_usuario'] = request.user.fk_professor
+        context['materia_id'] = request.user.fk_professor.fk_materia.id
+    
+    return render(request, 'dever/dever_update.html', context)
 
 def dever_delete(request, pk):
     dever = get_object_or_404(Event, pk=pk)

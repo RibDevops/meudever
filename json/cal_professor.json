@@ -139,7 +139,7 @@
     },
     {
         "fk_escola_id": 1,
-        "fk_materia_id": 21,
+        "fk_materia_id": 16,
         "id": 25,
         "nome_professor": "Projeto de Vida"
     }
