@@ -1,6 +1,9 @@
-asarPy==1.0.1
-asgiref==3.9.1
-Django==5.2.6
+asgiref==3.8.1
+charset-normalizer==3.4.3
+Django==5.2.1
 django-role-permissions==3.2.0
 django-widget-tweaks==1.5.0
+pillow==11.3.0
+reportlab==4.4.4
 sqlparse==0.5.3
+typing_extensions==4.13.2

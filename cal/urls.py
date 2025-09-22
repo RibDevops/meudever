@@ -102,5 +102,7 @@ urlpatterns = [
     path('ajax/get-professores/<int:escola_id>/', views.get_professores_by_escola, name='get_professores_by_escola'),
     path('ajax/get-materia/<int:professor_id>/', views.get_materia_by_professor, name='get_materia_by_professor'),
     path('ajax/get-livros/<int:materia_id>/', views.get_livros_by_materia, name='get_livros_by_materia'),
+
+    path('semana/gerar-pdf-todas-turmas/', views_semana.gerar_pdf_todas_turmas, name='gerar_pdf_todas_turmas'),
     
 ]

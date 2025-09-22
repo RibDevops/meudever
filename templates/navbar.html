@@ -2,12 +2,12 @@
     <div class="container-fluid">
         <!-- Logo/Brand -->
         <a class="navbar-brand" href="{% url 'cal:home' %}">Home</a>
-        
+
         <!-- Botão Toggler para Offcanvas -->
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <!-- Offcanvas Menu -->
         <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar">
             <div class="offcanvas-header">
@@ -16,7 +16,10 @@
             </div>
             <div class="offcanvas-body">
                 <div class="navbar-nav">
-                   {% if user.is_authenticated %}
+
+                {% if user.is_authenticated %}
+                    
+                    {% if user.is_superuser or user.tipo_usuario == "coordenador" %}
                         <a class="nav-link" href="{% url 'cal:calendar' %}">Calendário</a>
                         <a class="nav-link" href="{% url 'cal:semana_alunos' %}">Semana</a>
                         <a class="nav-link" href="{% url 'cal:dever_create' %}">Novo</a>
@@ -29,45 +32,54 @@
                         <a class="nav-link" href="{% url 'cal:lista_alunos' %}">Alunos</a>
                         <a class="nav-link" href="{% url 'cal:listar_horarios' %}">Horários</a>
                         <a class="nav-link" href="{% url 'login:lista_usuarios' %}">Usuários</a>
-                        
-                        
-                        <!-- <a class="nav-link" href="#">Login</a> -->
-                   
+
+                    {% elif user.tipo_usuario == "professor" %}
+                        <a class="nav-link" href="{% url 'cal:dever_create' %}">Novo</a>
+                        <a class="nav-link" href="{% url 'cal:listar_eventos' %}">Lista</a>
+                        <a class="nav-link" href="{% url 'cal:lista_turma' %}">Turmas</a>
+
+                    {% elif user.tipo_usuario == "pai" %}
+                        <a class="nav-link" href="{% url 'cal:semana_alunos' %}">Semana</a>
+                        <a class="nav-link" href="{% url 'cal:listar_eventos' %}">Lista</a>
+                    {% endif %}
+
+                {% else %}
+                    <a href="{% url 'login:login' %}" class="btn btn-outline-success">Login</a>
+                {% endif %}
+                
                 </div>
+
+                {% if user.is_authenticated %}
+                <!-- Usuário logado: dropdown -->
                 <ul class="navbar-nav ms-auto">
-    
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fas fa-user me-1"></i>{{ user.username }}
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="{% url 'login:perfil' %}">
-                <i class="fas fa-user me-2"></i>Meu Perfil
-            </a></li>
-            <li><a class="dropdown-item" href="{% url 'login:editar_perfil' %}">
-                <i class="fas fa-edit me-2"></i>Editar Perfil
-            </a></li>
-            <li><a class="dropdown-item" href="{% url 'login:alterar_senha' %}">
-                <i class="fas fa-key me-2"></i>Alterar Senha
-            </a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li>
-                <form method="post" action="{% url 'login:logout' %}" class="d-inline">
-                    {% csrf_token %}
-                    <button type="submit" class="dropdown-item">
-                        <i class="fas fa-sign-out-alt me-2"></i>Sair
-                    </button>
-                </form>
-            </li>
-        </ul>
-    </li>
-    {% else %}
-    <li class="nav-item mr-sm-2">
-        <a href="{% url 'login:login' %}" class="btn btn-outline-success">Login</a>
-    </li>
-    {% endif %}
-</ul>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user me-1"></i>{{ user.username }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="{% url 'login:perfil' %}">
+                                <i class="fas fa-user me-2"></i>Meu Perfil
+                            </a></li>
+                            <li><a class="dropdown-item" href="{% url 'login:editar_perfil' %}">
+                                <i class="fas fa-edit me-2"></i>Editar Perfil
+                            </a></li>
+                            <li><a class="dropdown-item" href="{% url 'login:alterar_senha' %}">
+                                <i class="fas fa-key me-2"></i>Alterar Senha
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <form method="post" action="{% url 'login:logout' %}" class="d-inline">
+                                    {% csrf_token %}
+                                    <button type="submit" class="dropdown-item">
+                                        <i class="fas fa-sign-out-alt me-2"></i>Sair
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                {% endif %}
             </div>
         </div>
     </div>
-  </nav>
+</nav>
