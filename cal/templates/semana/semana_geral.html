@@ -1,0 +1,331 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid py-4">
+    <!-- Cabeçalho principal -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="h3 mb-1 text-primary">
+                        <i class="fas fa-calendar-alt me-2"></i>Controle Geral de Conteúdos
+                    </h1>
+                    <p class="text-muted mb-0">Visualização semanal de todas as turmas</p>
+                </div>
+                <div class="btn-group" role="group">
+                    <a href="{% url 'cal:semana_geral' %}?data={{ semana_anterior }}" 
+                       class="btn btn-outline-primary">
+                        <i class="fas fa-chevron-left me-1"></i> Semana Anterior
+                    </a>
+                    <a href="{% url 'cal:semana_geral' %}?data={{ hoje }}" 
+                       class="btn btn-primary">
+                        <i class="fas fa-calendar-day me-1"></i> Hoje
+                    </a>
+                    <a href="{% url 'cal:semana_geral' %}?data={{ proxima_semana }}" 
+                       class="btn btn-outline-primary">
+                        Próxima Semana <i class="fas fa-chevron-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card de informações da semana -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body bg-gradient-info text-white rounded-3">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-calendar-week fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Semana Atual</h5>
+                                    <h3 class="mb-0 fw-bold">{{ semana_range }}</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-end align-items-center gap-3">
+                                <div class="text-center">
+                                    <div class="h4 mb-0 fw-bold">{{ total_turmas }}</div>
+                                    <small>Turmas Ativas</small>
+                                </div>
+                                <div class="vr bg-white opacity-50" style="height: 40px;"></div>
+                                <div class="text-center">
+                                    <div class="h4 mb-0 fw-bold">{{ hoje|date:"d/m/Y" }}</div>
+                                    <small>Data de Hoje</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botões de ação -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'cal:lista_turma' %}">Turmas</a></li>
+                        <li class="breadcrumb-item active">Semana Geral</li>
+                    </ol>
+                </nav>
+                <div>
+                    <a href="{% url 'cal:lista_turma' %}" class="btn btn-outline-secondary me-2">
+                        <i class="fas fa-arrow-left me-1"></i> Voltar para Turmas
+                    </a>
+                    <a href="{% url 'cal:gerar_pdf_todas_turmas' %}" class="btn btn-success">
+                        <i class="fas fa-file-pdf me-1"></i> Gerar PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lista de turmas -->
+    {% if turmas_com_dados %}
+        <div class="row">
+            <div class="col-12">
+                {% for turma_data in turmas_com_dados %}
+                    <div class="card shadow-sm mb-4 border-0">
+                        <!-- Cabeçalho da turma -->
+                        <div class="card-header bg-primary text-white border-0 rounded-top-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-users fa-lg me-3"></i>
+                                    <div>
+                                        <h4 class="mb-0 fw-bold">{{ turma_data.turma.turma }}</h4>
+                                        <small class="opacity-75">{{ turma_data.turma.fk_escola.nome_escola }}</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    {% if not turma_data.tem_dados %}
+                                        <span class="badge bg-warning bg-opacity-25 text-warning border border-warning">
+                                            <i class="fas fa-clock me-1"></i> Sem horários
+                                        </span>
+                                    {% else %}
+                                        <span class="badge bg-success bg-opacity-25 text-success border border-success">
+                                            <i class="fas fa-check me-1"></i> Com horários
+                                        </span>
+                                    {% endif %}
+                                    <a href="{% url 'cal:semana_completa' turma_data.turma.pk %}?data={{ data_atual }}" 
+                                       class="btn btn-sm btn-light ms-2">
+                                        <i class="fas fa-external-link-alt me-1"></i> Ver Detalhes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Conteúdo da turma -->
+                        {% if turma_data.tem_dados %}
+                            <div class="card-body p-0">
+                                {% for dia in turma_data.dias_semana %}
+                                    <div class="border-bottom {% if forloop.last %}border-bottom-0{% endif %}">
+                                        <div class="p-4 {% cycle 'bg-light' 'bg-white' %}">
+                                            <!-- Cabeçalho do dia -->
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <h5 class="mb-0 text-primary">
+                                                    <i class="fas fa-calendar-day me-2"></i>
+                                                    {{ dia.nome_dia }} - {{ dia.data|date:"d/m/Y" }}
+                                                </h5>
+                                                {% if dia.data|date:"Y-m-d" == hoje %}
+                                                    <span class="badge bg-success">
+                                                        <i class="fas fa-star me-1"></i> Hoje
+                                                    </span>
+                                                {% endif %}
+                                            </div>
+
+                                            <!-- Tabela de horários -->
+                                            {% if dia.linhas %}
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover table-sm mb-0">
+                                                        <thead class="table-primary">
+                                                            <tr>
+                                                                <th class="text-center" width="10%">
+                                                                    <i class="fas fa-clock"></i> Horário
+                                                                </th>
+                                                                <th width="15%">
+                                                                    <i class="fas fa-book"></i> Disciplina
+                                                                </th>
+                                                                <th width="15%">
+                                                                    <i class="fas fa-user-tie"></i> Professor
+                                                                </th>
+                                                                <th width="20%">
+                                                                    <i class="fas fa-chalkboard"></i> Conteúdo
+                                                                </th>
+                                                                <th width="15%">
+                                                                    <i class="fas fa-tasks"></i> Dever
+                                                                </th>
+                                                                <th width="15%">
+                                                                    <i class="fas fa-calendar-check"></i> Entrega
+                                                                </th>
+                                                                <th width="10%">
+                                                                    <i class="fas fa-book-open"></i> Livro
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {% for linha in dia.linhas %}
+                                                            <tr class="{% if forloop.counter|divisibleby:2 %}bg-light{% endif %}">
+                                                                <td class="text-center fw-bold text-primary">
+                                                                    {{ linha.horario }}º
+                                                                </td>
+                                                                <td class="fw-semibold">{{ linha.disciplina }}</td>
+                                                                <td>
+                                                                    <small class="text-muted">{{ linha.professor }}</small>
+                                                                </td>
+                                                                <td>
+                                                                    <span class="{% if linha.conteudo %}text-dark{% else %}text-muted fst-italic{% endif %}">
+                                                                        {{ linha.conteudo|default:"-" }}
+                                                                    </span>
+                                                                </td>
+                                                                <td>
+                                                                    <span class="{% if linha.dever %}text-dark{% else %}text-muted fst-italic{% endif %}">
+                                                                        {{ linha.dever|default:"-" }}
+                                                                    </span>
+                                                                </td>
+                                                                <td>
+                                                                    <span class="{% if linha.entrega %}text-success fw-semibold{% else %}text-muted{% endif %}">
+                                                                        {{ linha.entrega|default:"-" }}
+                                                                    </span>
+                                                                </td>
+                                                                <td>
+                                                                    <small class="{% if linha.livro %}text-info{% else %}text-muted{% endif %}">
+                                                                        {{ linha.livro|default:"-" }}
+                                                                    </small>
+                                                                </td>
+                                                            </tr>
+                                                            {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            {% else %}
+                                                <div class="text-center py-3">
+                                                    <i class="fas fa-calendar-times fa-2x text-muted mb-2"></i>
+                                                    <p class="text-muted mb-0">Nenhum horário registrado para este dia</p>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <!-- Mensagem quando não há dados -->
+                            <div class="card-body text-center py-5">
+                                <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                                <h5 class="text-muted">Nenhum horário registrado</h5>
+                                <p class="text-muted mb-3">Esta turma não possui horários cadastrados para a semana selecionada.</p>
+                                <a href="{% url 'cal:semana_completa' turma_data.turma.pk %}" class="btn btn-outline-primary">
+                                    <i class="fas fa-plus me-1"></i> Ver Detalhes da Turma
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% else %}
+        <!-- Mensagem quando não há turmas -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center py-5">
+                        <i class="fas fa-calendar-times fa-4x text-muted mb-4"></i>
+                        <h3 class="text-muted">Nenhuma turma encontrada</h3>
+                        <p class="text-muted mb-4">Não há turmas com horários registrados no sistema.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="{% url 'cal:lista_turma' %}" class="btn btn-primary">
+                                <i class="fas fa-arrow-left me-1"></i> Voltar para Turmas
+                            </a>
+                            <a href="{% url 'cal:cria_turma' %}" class="btn btn-success">
+                                <i class="fas fa-plus me-1"></i> Cadastrar Turma
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+<style>
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.table th {
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table td {
+    font-size: 0.8rem;
+    vertical-align: middle;
+}
+
+.bg-gradient-info {
+    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05) !important;
+}
+
+.border-bottom:last-child {
+    border-bottom: none !important;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Adicionar animação de carregamento suave
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('animate__animated', 'animate__fadeInUp');
+    });
+
+    // Destacar a linha do dia atual
+    const today = new Date('{{ hoje }}');
+    const todayFormatted = today.toISOString().split('T')[0];
+    
+    document.querySelectorAll('.card-header').forEach(header => {
+        const dateElement = header.querySelector('h5');
+        if (dateElement) {
+            const dateText = dateElement.textContent;
+            const dateMatch = dateText.match(/\d{2}\/\d{2}\/\d{4}/);
+            if (dateMatch) {
+                const [day, month, year] = dateMatch[0].split('/');
+                const rowDate = new Date(`${year}-${month}-${day}`);
+                const rowDateFormatted = rowDate.toISOString().split('T')[0];
+                
+                if (rowDateFormatted === todayFormatted) {
+                    header.classList.add('bg-success', 'text-white');
+                }
+            }
+        }
+    });
+});
+</script>
+
+<!-- Adicionar animate.css para animações -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+{% endblock %}

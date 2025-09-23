@@ -85,6 +85,8 @@ urlpatterns = [
 
     path('semana/completa/<int:turma_id>/', views_semana.semana_turma_completa, name='semana_completa'),
     path('semana-alunos/', views_semana_pai.semana_alunos, name='semana_alunos'),
+    # Adicionar esta linha no arquivo urls.py
+    path('semana/geral/', views_semana.semana_geral, name='semana_geral'),
 
     # path('ajax/get-turmas/<int:escola_id>/', views.ajax_get_turmas, name='ajax_get_turmas'),
     # path('ajax/get-professores/<int:escola_id>/', views.ajax_get_professores, name='ajax_get_professores'),

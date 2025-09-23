@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { text-align: center; color: #2c3e50; }
+        .turma { page-break-after: always; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 6px; font-size: 11px; }
+        th { background-color: #2c3e50; color: white; text-align: center; }
+        td { text-align: center; }
+        .dia { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Controle de Conteúdos e Atividades</h1>
+    <p style="text-align:center"><b>Semana:</b> {{ periodo }}</p>
+
+    {% for turma in turmas %}
+        <div class="turma">
+            <h2>{{ turma.escola }} - {{ turma.turma }}</h2>
+            {% for dia in turma.dias_semana %}
+                <div class="dia">
+                    <h3>{{ dia.nome }} - {{ dia.data|date:"d/m/Y" }}</h3>
+                    {% if dia.linhas %}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Horário</th>
+                                    <th>Disciplina</th>
+                                    <th>Professor</th>
+                                    <th>Conteúdo</th>
+                                    <th>Dever</th>
+                                    <th>Entrega</th>
+                                    <th>Livro</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for linha in dia.linhas %}
+                                    <tr>
+                                        <td>{{ linha.ordem }}</td>
+                                        <td>{{ linha.materia }}</td>
+                                        <td>{{ linha.professor }}</td>
+                                        <td>{{ linha.conteudo }}</td>
+                                        <td>{{ linha.dever }}</td>
+                                        <td>{{ linha.entrega }}</td>
+                                        <td>{{ linha.livro }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <p><i>Nenhum horário registrado para este dia.</i></p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</body>
+</html>
