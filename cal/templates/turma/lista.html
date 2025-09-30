@@ -9,6 +9,11 @@
 <p><a href="{% url 'cal:listar_horarios' %}" class="btn btn-info">Ver Todos os Horários</a></p>
 <p><a href="{% url 'cal:semana_geral' %}" class="btn btn-primary"><i class="fas fa-calendar-week"></i> Ver Semana Geral</a></p>
 <p><a href="{% url 'cal:gerar_pdf_todas_turmas' %}" class="btn btn-danger"><i class="fas fa-file-pdf"></i> Gerar PDF de Todas as Turmas</a>
+<p>Clique no botão abaixo para baixar um arquivo .zip contendo o relatório semanal em PDF de todas as turmas ativas.</p>
+    <a href="{% url 'cal:gerar_relatorios_zip' %}" class="btn btn-primary">
+        <i class="bi bi-file-earmark-zip-fill"></i> Baixar Relatórios de Todas as Turmas
+    </a>
+
 
 <table class="table">
     <thead>

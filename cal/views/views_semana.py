@@ -450,23 +450,6 @@ def semana_geral(request):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @login_required
 def gerar_pdf_todas_turmas(request):
     from django.db.models import Exists, OuterRef
@@ -549,13 +532,13 @@ def gerar_pdf_todas_turmas(request):
             y_position = height - margin
         
         # Título principal
-        title = Paragraph("Controle de Conteúdos e Atividades", title_style)
+        title = Paragraph("Controle de Conteúdos e Atividades Semanais", title_style)
         title.wrapOn(pdf, width - 2 * margin, height)
         title.drawOn(pdf, margin, y_position)
         y_position -= 15 * mm
         
         # Nome da escola e turma
-        escola_nome = turma.fk_escola.nome_escola if hasattr(turma, 'fk_escola') and turma.fk_escola else "COLÉGIO PERPÉTUO SOCORRO"
+        escola_nome = turma.fk_escola.nome_escola if hasattr(turma, 'fk_escola') and turma.fk_escola else "COLÉGIO"
         turma_info = Paragraph(f"{escola_nome} - {turma.turma}", subtitle_style)
         turma_info.wrapOn(pdf, width - 2 * margin, height)
         turma_info.drawOn(pdf, margin, y_position)
@@ -678,5 +661,174 @@ def gerar_pdf_todas_turmas(request):
     buffer.seek(0)
     response = HttpResponse(buffer, content_type='application/pdf')
     response['Content-Disposition'] = 'attachment; filename="relatorio_semanal_todas_turmas.pdf"'
+    
+    return response
+
+
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
+from django.db.models import Exists, OuterRef
+from ..models import Turma, Horarios, Event, Dias
+
+# Importações para PDF e ZIP
+import io
+import zipfile
+from datetime import date, timedelta
+from collections import defaultdict
+
+# Importações do ReportLab
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, PageBreak
+from reportlab.lib.pagesizes import A4, landscape
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib import colors
+from reportlab.lib.units import mm
+
+
+def _gerar_pdf_para_turma(turma):
+    """
+    Função auxiliar que gera um PDF para uma ÚNICA turma e o retorna em um buffer de memória.
+    Esta função usa a API Platypus para um layout mais robusto e bonito.
+    """
+    buffer = io.BytesIO()
+    
+    # 1. Obtenção de Dados
+    data_referencia = date.today()
+    segunda = data_referencia - timedelta(days=data_referencia.weekday())
+    
+    horarios = Horarios.objects.filter(fk_turma=turma).select_related(
+        "fk_dias", "fk_ordem", "fk_professor", "fk_materia"
+    ).order_by("fk_dias__ordem", "fk_ordem__id")
+    
+    eventos = Event.objects.filter(
+        fk_turma=turma,
+        start_time__gte=segunda,
+        start_time__lte=segunda + timedelta(days=6)
+    ).select_related("fk_materia", "fk_professor", "fk_livro")
+
+    eventos_por_data_materia = defaultdict(dict)
+    for evento in eventos:
+        if evento.start_time:
+            data_key = evento.start_time.strftime("%Y-%m-%d")
+            eventos_por_data_materia[data_key][evento.fk_materia_id] = evento
+
+    # 2. Construção do Documento PDF
+    elements = []
+    styles = getSampleStyleSheet()
+
+    # Estilos customizados para um visual mais limpo
+    title_style = ParagraphStyle('TitleStyle', parent=styles['h1'], fontSize=16, alignment=1, spaceAfter=4, textColor=colors.HexColor("#003366"))
+    subtitle_style = ParagraphStyle('SubtitleStyle', parent=styles['h2'], fontSize=12, alignment=1, spaceAfter=12, textColor=colors.HexColor("#4A4A4A"))
+    day_header_style = ParagraphStyle('DayHeader', parent=styles['h3'], fontSize=11, spaceBefore=10, spaceAfter=5, textColor=colors.HexColor("#003366"), fontName='Helvetica-Bold')
+    table_header_style = ParagraphStyle('TableHeader', parent=styles['Normal'], fontSize=7, alignment=1, textColor=colors.white, fontName='Helvetica-Bold')
+    table_cell_style = ParagraphStyle('TableCell', parent=styles['Normal'], fontSize=7, alignment=1, leading=9)
+    
+    # Títulos do Documento
+    escola_nome = turma.fk_escola.nome_escola if turma.fk_escola else "NOME DA ESCOLA"
+    elements.append(Paragraph(escola_nome, title_style))
+    elements.append(Paragraph(f"Relatório Semanal de Atividades - Turma: {turma.turma}", subtitle_style))
+    semana_str = f"<b>Semana de {segunda.strftime('%d/%m/%Y')} a {(segunda + timedelta(days=4)).strftime('%d/%m/%Y')}</b>"
+    elements.append(Paragraph(semana_str, styles['Normal']))
+    elements.append(Spacer(1, 8*mm))
+
+    # Loop pelos dias da semana para criar as tabelas
+    dias_da_semana = Dias.objects.filter(id__lte=5).order_by('ordem')
+    for dia_obj in dias_da_semana:
+        dia_data = segunda + timedelta(days=dia_obj.ordem - 1)
+        elements.append(Paragraph(f"{dia_obj.dias} ({dia_data.strftime('%d/%m')})", day_header_style))
+        
+        horarios_dia = [h for h in horarios if h.fk_dias_id == dia_obj.id]
+        
+        if not horarios_dia:
+            elements.append(Paragraph("Nenhum horário registrado para este dia.", styles['Italic']))
+            elements.append(Spacer(1, 8*mm))
+            continue
+
+        # Montagem da Tabela de Horários
+        table_data = [[
+            Paragraph('Horário', table_header_style), Paragraph('Disciplina', table_header_style),
+            Paragraph('Professor', table_header_style), Paragraph('Conteúdo', table_header_style),
+            Paragraph('Dever', table_header_style), Paragraph('Entrega', table_header_style), Paragraph('Livro', table_header_style)
+        ]]
+
+        for horario in horarios_dia:
+            data_key = dia_data.strftime("%Y-%m-%d")
+            evento = eventos_por_data_materia.get(data_key, {}).get(horario.fk_materia_id)
+            
+            row = [
+                Paragraph(horario.fk_ordem.ordem, table_cell_style),
+                Paragraph(horario.fk_materia.nome_materia, table_cell_style),
+                Paragraph(horario.fk_professor.nome_professor, table_cell_style),
+                Paragraph(evento.title if evento else "-", table_cell_style),
+                Paragraph(evento.dever if evento else "-", table_cell_style),
+                Paragraph(evento.data_entrega.strftime("%d/%m") if evento and evento.data_entrega else "-", table_cell_style),
+                Paragraph(evento.fk_livro.nome_livro if evento and evento.fk_livro else "-", table_cell_style)
+            ]
+            table_data.append(row)
+        
+        # Estilo visual aprimorado da tabela
+        table = Table(table_data, colWidths=[18*mm, 25*mm, 30*mm, 60*mm, 60*mm, 15*mm, 25*mm], repeatRows=1)
+        table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor("#003366")),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('GRID', (0, 0), (-1, -1), 0.5, colors.darkgrey),
+            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor("#E6F2FF")]), # Linhas com cores alternadas
+        ]))
+        elements.append(table)
+        elements.append(Spacer(1, 8*mm))
+
+    # Função para adicionar cabeçalho e rodapé em cada página
+    def header_footer(canvas, doc):
+        canvas.saveState()
+        # Cabeçalho
+        header = Paragraph("Relatório de Acompanhamento Pedagógico", styles['Normal'])
+        w, h = header.wrap(doc.width, doc.topMargin)
+        header.drawOn(canvas, doc.leftMargin, doc.height + doc.topMargin - h)
+        # Rodapé
+        footer = Paragraph(f"Página {doc.page}", styles['Normal'])
+        w, h = footer.wrap(doc.width, doc.bottomMargin)
+        footer.drawOn(canvas, doc.leftMargin, h)
+        canvas.restoreState()
+
+    # Compila o documento
+    doc = SimpleDocTemplate(buffer, pagesize=landscape(A4), topMargin=20*mm, bottomMargin=15*mm)
+    doc.build(elements, onFirstPage=header_footer, onLaterPages=header_footer)
+    
+    buffer.seek(0)
+    return buffer
+
+@login_required
+def gerar_relatorios_zip(request):
+    """
+    Busca todas as turmas, gera um PDF para cada uma em memória
+    e retorna um único arquivo .zip para download.
+    """
+    horarios_existem = Horarios.objects.filter(fk_turma=OuterRef('pk'))
+    turmas_com_horarios = Turma.objects.filter(Exists(horarios_existem)).distinct().order_by('turma')
+
+    if not turmas_com_horarios:
+        return HttpResponse("Nenhuma turma com horários registrados encontrada para gerar relatórios.")
+
+    # Cria um buffer de memória para o arquivo ZIP
+    zip_buffer = io.BytesIO()
+
+    # Cria o arquivo ZIP
+    with zipfile.ZipFile(zip_buffer, 'a', zipfile.ZIP_DEFLATED, False) as zip_file:
+        for turma in turmas_com_horarios:
+            print(f"Gerando PDF para a turma: {turma.turma}")
+            
+            # Gera o PDF para a turma atual
+            pdf_buffer = _gerar_pdf_para_turma(turma)
+            
+            # Define um nome de arquivo para o PDF dentro do ZIP
+            pdf_filename = f"Relatorio_Semanal_{turma.turma.replace(' ', '_').replace('°', '')}.pdf"
+            
+            # Adiciona o PDF ao arquivo ZIP
+            zip_file.writestr(pdf_filename, pdf_buffer.getvalue())
+
+    # Prepara a resposta HTTP
+    zip_buffer.seek(0)
+    response = HttpResponse(zip_buffer, content_type='application/zip')
+    response['Content-Disposition'] = f'attachment; filename="relatorios_semanais_{date.today()}.zip"'
     
     return response
