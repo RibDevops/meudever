@@ -727,9 +727,9 @@ def _gerar_pdf_para_turma(turma):
     escola_nome = turma.fk_escola.nome_escola if turma.fk_escola else "NOME DA ESCOLA"
     elements.append(Paragraph(escola_nome, title_style))
     elements.append(Paragraph(f"Relatório Semanal de Atividades - Turma: {turma.turma}", subtitle_style))
-    semana_str = f"<b>Semana de {segunda.strftime('%d/%m/%Y')} a {(segunda + timedelta(days=4)).strftime('%d/%m/%Y')}</b>"
-    elements.append(Paragraph(semana_str, styles['Normal']))
-    elements.append(Spacer(1, 8*mm))
+    # semana_str = f"<b>Semana de {segunda.strftime('%d/%m/%Y')} a {(segunda + timedelta(days=4)).strftime('%d/%m/%Y')}</b>"
+    # elements.append(Paragraph(semana_str, styles['Normal']))
+    # elements.append(Spacer(1, 2*mm))
 
     # Loop pelos dias da semana para criar as tabelas
     dias_da_semana = Dias.objects.filter(id__lte=5).order_by('ordem')
@@ -741,7 +741,7 @@ def _gerar_pdf_para_turma(turma):
         
         if not horarios_dia:
             elements.append(Paragraph("Nenhum horário registrado para este dia.", styles['Italic']))
-            elements.append(Spacer(1, 8*mm))
+            elements.append(Spacer(1, 2*mm))
             continue
 
         # Montagem da Tabela de Horários
@@ -775,15 +775,15 @@ def _gerar_pdf_para_turma(turma):
             ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor("#E6F2FF")]), # Linhas com cores alternadas
         ]))
         elements.append(table)
-        elements.append(Spacer(1, 8*mm))
+        elements.append(Spacer(1, 5*mm))
 
     # Função para adicionar cabeçalho e rodapé em cada página
     def header_footer(canvas, doc):
         canvas.saveState()
         # Cabeçalho
-        header = Paragraph("Relatório de Acompanhamento Pedagógico", styles['Normal'])
-        w, h = header.wrap(doc.width, doc.topMargin)
-        header.drawOn(canvas, doc.leftMargin, doc.height + doc.topMargin - h)
+        # header = Paragraph("Relatório de Acompanhamento Pedagógico", styles['Normal'])
+        # w, h = header.wrap(doc.width, doc.topMargin)
+        # header.drawOn(canvas, doc.leftMargin, doc.height + doc.topMargin - h)
         # Rodapé
         footer = Paragraph(f"Página {doc.page}", styles['Normal'])
         w, h = footer.wrap(doc.width, doc.bottomMargin)
@@ -791,7 +791,7 @@ def _gerar_pdf_para_turma(turma):
         canvas.restoreState()
 
     # Compila o documento
-    doc = SimpleDocTemplate(buffer, pagesize=landscape(A4), topMargin=20*mm, bottomMargin=15*mm)
+    doc = SimpleDocTemplate(buffer, pagesize=landscape(A4), topMargin=10*mm, bottomMargin=15*mm)
     doc.build(elements, onFirstPage=header_footer, onLaterPages=header_footer)
     
     buffer.seek(0)
