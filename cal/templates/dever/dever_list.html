@@ -22,18 +22,6 @@
         {% endif %}
     </div>
 
-    <!-- Mensagens do sistema -->
-    {% if messages %}
-    <div class="mb-3">
-        {% for message in messages %}
-        <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
-            {{ message }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        </div>
-        {% endfor %}
-    </div>
-    {% endif %}
-
     {% if not tem_deveres %}
     <div class="alert alert-info text-center mt-4">
         <i class="fas fa-info-circle fa-2x mb-3"></i>
